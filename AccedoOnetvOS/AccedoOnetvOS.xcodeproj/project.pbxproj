@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		8CE8C7DF1FEC9EE60041C284 /* AccedoOnetvOSBinary */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8CE8C7E21FEC9EE60041C284 /* Build configuration list for PBXAggregateTarget "AccedoOnetvOSBinary" */;
+			buildPhases = (
+				8CE8C7E31FEC9EED0041C284 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = AccedoOnetvOSBinary;
+			productName = AccedoOnetvOSBinary;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		061852C5EDE4E6AC11004AAD /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AEECD129884ECDEED20E57 /* PINMemoryCache.m */; };
+		2BAC7FDC9BB9292247C1FEEA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C976D427024A762BEB948054 /* AFURLResponseSerialization.m */; };
+		5C4E55718DB1D50671EC233B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 370042E46B0AC7B4041C86BE /* AFSecurityPolicy.m */; };
+		80A8AAA01AA9D337FA7BC343 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A966E324C01A1BE08B761EC0 /* AFHTTPSessionManager.m */; };
+		8C58B2721FECA23D00241AFA /* AccedoOneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C58B2711FECA23D00241AFA /* AccedoOneTests.m */; };
+		8CE8C7151FEC79E50041C284 /* AccedoOnetvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE8C70B1FEC79E50041C284 /* AccedoOnetvOS.framework */; };
+		8CE8C71C1FEC79E50041C284 /* AccedoOnetvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C70E1FEC79E50041C284 /* AccedoOnetvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7851FEC7E6B0041C284 /* AccedoOne.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7821FEC7E6A0041C284 /* AccedoOne.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7861FEC7E6B0041C284 /* AccedoOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7831FEC7E6A0041C284 /* AccedoOne.m */; };
+		8CE8C78F1FEC7ECA0041C284 /* AccedoOnetvOS.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C78E1FEC7ECA0041C284 /* AccedoOnetvOS.pch */; };
+		8CE8C7971FEC7EE20041C284 /* AOCMSOptionalParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7901FEC7EE20041C284 /* AOCMSOptionalParams.m */; };
+		8CE8C7981FEC7EE20041C284 /* AOServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7911FEC7EE20041C284 /* AOServiceComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7991FEC7EE20041C284 /* AOService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7921FEC7EE20041C284 /* AOService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C79A1FEC7EE20041C284 /* AOObjectParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7931FEC7EE20041C284 /* AOObjectParserProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C79B1FEC7EE20041C284 /* AOService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7941FEC7EE20041C284 /* AOService.m */; };
+		8CE8C79C1FEC7EE20041C284 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7951FEC7EE20041C284 /* AOCMSOptionalParams.h */; };
+		8CE8C79D1FEC7EE20041C284 /* AOServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7961FEC7EE20041C284 /* AOServiceComponent.m */; };
+		8CE8C7A21FEC7EF10041C284 /* AOPagingMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C79E1FEC7EF10041C284 /* AOPagingMetadata.m */; };
+		8CE8C7A31FEC7EF10041C284 /* AOPagingMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C79F1FEC7EF10041C284 /* AOPagingMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7A41FEC7EF10041C284 /* AORequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7A01FEC7EF10041C284 /* AORequestMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7A51FEC7EF10041C284 /* AORequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A11FEC7EF10041C284 /* AORequestMetadata.m */; };
+		8CE8C7B01FEC7EFF0041C284 /* AOAsynchBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A61FEC7EFF0041C284 /* AOAsynchBlockOperation.m */; };
+		8CE8C7B11FEC7EFF0041C284 /* AOError.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A71FEC7EFF0041C284 /* AOError.m */; };
+		8CE8C7B21FEC7EFF0041C284 /* AOFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A81FEC7EFF0041C284 /* AOFileUtils.m */; };
+		8CE8C7B31FEC7EFF0041C284 /* AOError.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7A91FEC7EFF0041C284 /* AOError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7B41FEC7EFF0041C284 /* NSString+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7AA1FEC7EFF0041C284 /* NSString+AO.m */; };
+		8CE8C7B51FEC7EFF0041C284 /* NSArray+AO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AB1FEC7EFF0041C284 /* NSArray+AO.h */; };
+		8CE8C7B61FEC7EFF0041C284 /* NSArray+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7AC1FEC7EFF0041C284 /* NSArray+AO.m */; };
+		8CE8C7B71FEC7EFF0041C284 /* AOAsynchBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AD1FEC7EFF0041C284 /* AOAsynchBlockOperation.h */; };
+		8CE8C7B81FEC7EFF0041C284 /* NSString+AO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AE1FEC7EFF0041C284 /* NSString+AO.h */; };
+		8CE8C7B91FEC7EFF0041C284 /* AOFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AF1FEC7EFF0041C284 /* AOFileUtils.h */; };
+		8CE8C7C11FEC7F180041C284 /* AOCacheDTO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7BA1FEC7F180041C284 /* AOCacheDTO.h */; };
+		8CE8C7C21FEC7F180041C284 /* AOCacheDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7BB1FEC7F180041C284 /* AOCacheDTO.m */; };
+		8CE8C7C31FEC7F180041C284 /* AOCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7BC1FEC7F180041C284 /* AOCacheHelper.m */; };
+		8CE8C7C41FEC7F180041C284 /* AOService+CacheController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7BD1FEC7F180041C284 /* AOService+CacheController.h */; };
+		8CE8C7C51FEC7F180041C284 /* AOService+CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7BE1FEC7F180041C284 /* AOService+CacheController.m */; };
+		8CE8C7C61FEC7F180041C284 /* AOCacheHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7BF1FEC7F180041C284 /* AOCacheHelper.h */; };
+		8CE8C7C71FEC7F180041C284 /* AOCacheHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7C01FEC7F180041C284 /* AOCacheHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CE8C7CF1FEC7F2B0041C284 /* AOCacheOverPINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7C81FEC7F2B0041C284 /* AOCacheOverPINCache.m */; };
+		8CE8C7D11FEC7F2B0041C284 /* AOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7CA1FEC7F2B0041C284 /* AOCache.h */; };
+		8CE8C7D21FEC7F2B0041C284 /* AOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7CB1FEC7F2B0041C284 /* AOCache.m */; };
+		8CE8C7D31FEC7F2B0041C284 /* AOCacheOverPINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7CC1FEC7F2B0041C284 /* AOCacheOverPINCache.h */; };
+		8CE8C7D41FEC7F2B0041C284 /* AOCacheOverNSCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7CD1FEC7F2B0041C284 /* AOCacheOverNSCache.h */; };
+		8CE8C7D51FEC7F2B0041C284 /* AOCacheOverNSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7CE1FEC7F2B0041C284 /* AOCacheOverNSCache.m */; };
+		8CE8C7D81FEC7F3E0041C284 /* AOCacheAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7D61FEC7F3E0041C284 /* AOCacheAtom.h */; };
+		8CE8C7D91FEC7F3E0041C284 /* AOCacheAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7D71FEC7F3E0041C284 /* AOCacheAtom.m */; };
+		8CF755BD1FED3B50000D7070 /* AccedoOneInsight.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B31FED3B50000D7070 /* AccedoOneInsight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF755BE1FED3B50000D7070 /* AccedoOneUserData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B41FED3B50000D7070 /* AccedoOneUserData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF755BF1FED3B50000D7070 /* AccedoOneInsight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755B51FED3B50000D7070 /* AccedoOneInsight.m */; };
+		8CF755C01FED3B50000D7070 /* AccedoOneDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755B61FED3B50000D7070 /* AccedoOneDetect.m */; };
+		8CF755C11FED3B50000D7070 /* AccedoOneDetect.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B71FED3B50000D7070 /* AccedoOneDetect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF755C21FED3B50000D7070 /* AccedoOneControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B81FED3B50000D7070 /* AccedoOneControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF755C31FED3B50000D7070 /* AccedoOnePublish.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B91FED3B50000D7070 /* AccedoOnePublish.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF755C41FED3B50000D7070 /* AccedoOneControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755BA1FED3B50000D7070 /* AccedoOneControl.m */; };
+		8CF755C51FED3B50000D7070 /* AccedoOneUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755BB1FED3B50000D7070 /* AccedoOneUserData.m */; };
+		8CF755C61FED3B50000D7070 /* AccedoOnePublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755BC1FED3B50000D7070 /* AccedoOnePublish.m */; };
+		97015C22C3CAD8985863D8B9 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D91BE977DBD7D1FE179AD89F /* AFURLRequestSerialization.m */; };
+		9DD6D05F8FB8AD92B755E3F4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40C21E45A2949895407CDB /* AFNetworkReachabilityManager.m */; };
+		B5BF2C33B9183F5B27F6FE44 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA39A3BDDCE8DEAE1134E26A /* AFURLSessionManager.m */; };
+		E0666CFD60F86EC4A0F80A4F /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D38AC160881372CDF9A0D36 /* PINDiskCache.m */; };
+		EF0AF1561B5B1CBD719B1E9D /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A21BD8ED62B36A9F8A2C37F /* PINCache.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CE8C7161FEC79E50041C284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CE8C7021FEC79E50041C284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CE8C70A1FEC79E50041C284;
+			remoteInfo = AccedoOnetvOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		100B3D1D00E8FDCE3324E892 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		1A0899D49E0DE986B4495552 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = AccedoOnetvOS/Libraries/PINCache/PINCache.h; sourceTree = "<group>"; };
+		1A21BD8ED62B36A9F8A2C37F /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = AccedoOnetvOS/Libraries/PINCache/PINCache.m; sourceTree = "<group>"; };
+		1D38AC160881372CDF9A0D36 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = AccedoOnetvOS/Libraries/PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		35AEECD129884ECDEED20E57 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = AccedoOnetvOS/Libraries/PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
+		370042E46B0AC7B4041C86BE /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		3F02C5558DB827E758A188D9 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		5B40C21E45A2949895407CDB /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		6864BA3D126F16874CB29373 /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = AccedoOnetvOS/Libraries/PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
+		6EE9B7D648363F71B185B5B4 /* AFNetworkingDependencies.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkingDependencies.h; path = AccedoOnetvOS/Libraries/Symbols/AFNetworkingDependencies.h; sourceTree = "<group>"; };
+		851045F5298FC14FF1C2C29C /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = AccedoOnetvOS/Libraries/PINCache/PINDiskCache.h; sourceTree = "<group>"; };
+		8C58B2711FECA23D00241AFA /* AccedoOneTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneTests.m; path = ../../Tests/AccedoOneTests.m; sourceTree = "<group>"; };
+		8CE8C70B1FEC79E50041C284 /* AccedoOnetvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccedoOnetvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE8C70E1FEC79E50041C284 /* AccedoOnetvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccedoOnetvOS.h; sourceTree = "<group>"; };
+		8CE8C70F1FEC79E50041C284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CE8C7141FEC79E50041C284 /* AccedoOnetvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccedoOnetvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CE8C71B1FEC79E50041C284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CE8C7821FEC7E6A0041C284 /* AccedoOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOne.h; path = ../../Common/AccedoOne.h; sourceTree = "<group>"; };
+		8CE8C7831FEC7E6A0041C284 /* AccedoOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOne.m; path = ../../Common/AccedoOne.m; sourceTree = "<group>"; };
+		8CE8C78E1FEC7ECA0041C284 /* AccedoOnetvOS.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccedoOnetvOS.pch; sourceTree = "<group>"; };
+		8CE8C7901FEC7EE20041C284 /* AOCMSOptionalParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCMSOptionalParams.m; path = ../../../Common/Service/AOCMSOptionalParams.m; sourceTree = "<group>"; };
+		8CE8C7911FEC7EE20041C284 /* AOServiceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOServiceComponent.h; path = ../../../Common/Service/AOServiceComponent.h; sourceTree = "<group>"; };
+		8CE8C7921FEC7EE20041C284 /* AOService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOService.h; path = ../../../Common/Service/AOService.h; sourceTree = "<group>"; };
+		8CE8C7931FEC7EE20041C284 /* AOObjectParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOObjectParserProtocol.h; path = ../../../Common/Service/AOObjectParserProtocol.h; sourceTree = "<group>"; };
+		8CE8C7941FEC7EE20041C284 /* AOService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOService.m; path = ../../../Common/Service/AOService.m; sourceTree = "<group>"; };
+		8CE8C7951FEC7EE20041C284 /* AOCMSOptionalParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCMSOptionalParams.h; path = ../../../Common/Service/AOCMSOptionalParams.h; sourceTree = "<group>"; };
+		8CE8C7961FEC7EE20041C284 /* AOServiceComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOServiceComponent.m; path = ../../../Common/Service/AOServiceComponent.m; sourceTree = "<group>"; };
+		8CE8C79E1FEC7EF10041C284 /* AOPagingMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOPagingMetadata.m; path = ../../../Common/Request/AOPagingMetadata.m; sourceTree = "<group>"; };
+		8CE8C79F1FEC7EF10041C284 /* AOPagingMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOPagingMetadata.h; path = ../../../Common/Request/AOPagingMetadata.h; sourceTree = "<group>"; };
+		8CE8C7A01FEC7EF10041C284 /* AORequestMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AORequestMetadata.h; path = ../../../Common/Request/AORequestMetadata.h; sourceTree = "<group>"; };
+		8CE8C7A11FEC7EF10041C284 /* AORequestMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AORequestMetadata.m; path = ../../../Common/Request/AORequestMetadata.m; sourceTree = "<group>"; };
+		8CE8C7A61FEC7EFF0041C284 /* AOAsynchBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOAsynchBlockOperation.m; path = ../../../Common/Utils/AOAsynchBlockOperation.m; sourceTree = "<group>"; };
+		8CE8C7A71FEC7EFF0041C284 /* AOError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOError.m; path = ../../../Common/Utils/AOError.m; sourceTree = "<group>"; };
+		8CE8C7A81FEC7EFF0041C284 /* AOFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOFileUtils.m; path = ../../../Common/Utils/AOFileUtils.m; sourceTree = "<group>"; };
+		8CE8C7A91FEC7EFF0041C284 /* AOError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOError.h; path = ../../../Common/Utils/AOError.h; sourceTree = "<group>"; };
+		8CE8C7AA1FEC7EFF0041C284 /* NSString+AO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+AO.m"; path = "../../../Common/Utils/NSString+AO.m"; sourceTree = "<group>"; };
+		8CE8C7AB1FEC7EFF0041C284 /* NSArray+AO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+AO.h"; path = "../../../Common/Utils/NSArray+AO.h"; sourceTree = "<group>"; };
+		8CE8C7AC1FEC7EFF0041C284 /* NSArray+AO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+AO.m"; path = "../../../Common/Utils/NSArray+AO.m"; sourceTree = "<group>"; };
+		8CE8C7AD1FEC7EFF0041C284 /* AOAsynchBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOAsynchBlockOperation.h; path = ../../../Common/Utils/AOAsynchBlockOperation.h; sourceTree = "<group>"; };
+		8CE8C7AE1FEC7EFF0041C284 /* NSString+AO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+AO.h"; path = "../../../Common/Utils/NSString+AO.h"; sourceTree = "<group>"; };
+		8CE8C7AF1FEC7EFF0041C284 /* AOFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOFileUtils.h; path = ../../../Common/Utils/AOFileUtils.h; sourceTree = "<group>"; };
+		8CE8C7BA1FEC7F180041C284 /* AOCacheDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheDTO.h; path = ../../../Common/Cache/AOCacheDTO.h; sourceTree = "<group>"; };
+		8CE8C7BB1FEC7F180041C284 /* AOCacheDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheDTO.m; path = ../../../Common/Cache/AOCacheDTO.m; sourceTree = "<group>"; };
+		8CE8C7BC1FEC7F180041C284 /* AOCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheHelper.m; path = ../../../Common/Cache/AOCacheHelper.m; sourceTree = "<group>"; };
+		8CE8C7BD1FEC7F180041C284 /* AOService+CacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AOService+CacheController.h"; path = "../../../Common/Cache/AOService+CacheController.h"; sourceTree = "<group>"; };
+		8CE8C7BE1FEC7F180041C284 /* AOService+CacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AOService+CacheController.m"; path = "../../../Common/Cache/AOService+CacheController.m"; sourceTree = "<group>"; };
+		8CE8C7BF1FEC7F180041C284 /* AOCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheHelper.h; path = ../../../Common/Cache/AOCacheHelper.h; sourceTree = "<group>"; };
+		8CE8C7C01FEC7F180041C284 /* AOCacheHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheHandler.h; path = ../../../Common/Cache/AOCacheHandler.h; sourceTree = "<group>"; };
+		8CE8C7C81FEC7F2B0041C284 /* AOCacheOverPINCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheOverPINCache.m; path = ../../../../Common/Cache/Providers/AOCacheOverPINCache.m; sourceTree = "<group>"; };
+		8CE8C7CA1FEC7F2B0041C284 /* AOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCache.h; path = ../../../../Common/Cache/Providers/AOCache.h; sourceTree = "<group>"; };
+		8CE8C7CB1FEC7F2B0041C284 /* AOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCache.m; path = ../../../../Common/Cache/Providers/AOCache.m; sourceTree = "<group>"; };
+		8CE8C7CC1FEC7F2B0041C284 /* AOCacheOverPINCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheOverPINCache.h; path = ../../../../Common/Cache/Providers/AOCacheOverPINCache.h; sourceTree = "<group>"; };
+		8CE8C7CD1FEC7F2B0041C284 /* AOCacheOverNSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheOverNSCache.h; path = ../../../../Common/Cache/Providers/AOCacheOverNSCache.h; sourceTree = "<group>"; };
+		8CE8C7CE1FEC7F2B0041C284 /* AOCacheOverNSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheOverNSCache.m; path = ../../../../Common/Cache/Providers/AOCacheOverNSCache.m; sourceTree = "<group>"; };
+		8CE8C7D61FEC7F3E0041C284 /* AOCacheAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheAtom.h; path = ../../../../../Common/Cache/Providers/Model/AOCacheAtom.h; sourceTree = "<group>"; };
+		8CE8C7D71FEC7F3E0041C284 /* AOCacheAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheAtom.m; path = ../../../../../Common/Cache/Providers/Model/AOCacheAtom.m; sourceTree = "<group>"; };
+		8CF755B31FED3B50000D7070 /* AccedoOneInsight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneInsight.h; path = ../../../Common/API/AccedoOneInsight.h; sourceTree = "<group>"; };
+		8CF755B41FED3B50000D7070 /* AccedoOneUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneUserData.h; path = ../../../Common/API/AccedoOneUserData.h; sourceTree = "<group>"; };
+		8CF755B51FED3B50000D7070 /* AccedoOneInsight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneInsight.m; path = ../../../Common/API/AccedoOneInsight.m; sourceTree = "<group>"; };
+		8CF755B61FED3B50000D7070 /* AccedoOneDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneDetect.m; path = ../../../Common/API/AccedoOneDetect.m; sourceTree = "<group>"; };
+		8CF755B71FED3B50000D7070 /* AccedoOneDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneDetect.h; path = ../../../Common/API/AccedoOneDetect.h; sourceTree = "<group>"; };
+		8CF755B81FED3B50000D7070 /* AccedoOneControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneControl.h; path = ../../../Common/API/AccedoOneControl.h; sourceTree = "<group>"; };
+		8CF755B91FED3B50000D7070 /* AccedoOnePublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOnePublish.h; path = ../../../Common/API/AccedoOnePublish.h; sourceTree = "<group>"; };
+		8CF755BA1FED3B50000D7070 /* AccedoOneControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneControl.m; path = ../../../Common/API/AccedoOneControl.m; sourceTree = "<group>"; };
+		8CF755BB1FED3B50000D7070 /* AccedoOneUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneUserData.m; path = ../../../Common/API/AccedoOneUserData.m; sourceTree = "<group>"; };
+		8CF755BC1FED3B50000D7070 /* AccedoOnePublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOnePublish.m; path = ../../../Common/API/AccedoOnePublish.m; sourceTree = "<group>"; };
+		90EFC088A0B42467801D03AE /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		98B06F0309ED0B071376DFB2 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		A966E324C01A1BE08B761EC0 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		BD73EEFA6EB617336E8A21F3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		C976D427024A762BEB948054 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		D6D54405BC271BEB7125EBFE /* PINCacheDependencies.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheDependencies.h; path = AccedoOnetvOS/Libraries/Symbols/PINCacheDependencies.h; sourceTree = "<group>"; };
+		D91BE977DBD7D1FE179AD89F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		E8C40C071D6219C4C25780E3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		EA39A3BDDCE8DEAE1134E26A /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		EB84B9BAB9AE77EE05FAC625 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		EC1B214AE8B4BCEA57659470 /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = AccedoOnetvOS/Libraries/PINCache/Nullability.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CE8C7071FEC79E50041C284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE8C7111FEC79E50041C284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE8C7151FEC79E50041C284 /* AccedoOnetvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CE8C7011FEC79E50041C284 = {
+			isa = PBXGroup;
+			children = (
+				8CE8C70D1FEC79E50041C284 /* AccedoOnetvOS */,
+				8CE8C7181FEC79E50041C284 /* AccedoOnetvOSTests */,
+				8CE8C70C1FEC79E50041C284 /* Products */,
+				B3A19992AE8CD774416C09E7 /* AFNetworking */,
+				DE466F672BD53F89E80B1D08 /* PINCache */,
+				E46B632DEA137D223F1B15A0 /* Symbols */,
+			);
+			sourceTree = "<group>";
+		};
+		8CE8C70C1FEC79E50041C284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C70B1FEC79E50041C284 /* AccedoOnetvOS.framework */,
+				8CE8C7141FEC79E50041C284 /* AccedoOnetvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CE8C70D1FEC79E50041C284 /* AccedoOnetvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8CF755B21FED3B3F000D7070 /* API */,
+				8CE8C78D1FEC7E9E0041C284 /* Service */,
+				8CE8C78C1FEC7E970041C284 /* Request */,
+				8CE8C78B1FEC7E890041C284 /* Utils */,
+				8CE8C7881FEC7E740041C284 /* Cache */,
+				8CE8C7821FEC7E6A0041C284 /* AccedoOne.h */,
+				8CE8C7831FEC7E6A0041C284 /* AccedoOne.m */,
+				8CE8C70E1FEC79E50041C284 /* AccedoOnetvOS.h */,
+				8CE8C78E1FEC7ECA0041C284 /* AccedoOnetvOS.pch */,
+				8CE8C70F1FEC79E50041C284 /* Info.plist */,
+			);
+			path = AccedoOnetvOS;
+			sourceTree = "<group>";
+		};
+		8CE8C7181FEC79E50041C284 /* AccedoOnetvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C58B2711FECA23D00241AFA /* AccedoOneTests.m */,
+				8CE8C71B1FEC79E50041C284 /* Info.plist */,
+			);
+			path = AccedoOnetvOSTests;
+			sourceTree = "<group>";
+		};
+		8CE8C7881FEC7E740041C284 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C7BA1FEC7F180041C284 /* AOCacheDTO.h */,
+				8CE8C7BB1FEC7F180041C284 /* AOCacheDTO.m */,
+				8CE8C7C01FEC7F180041C284 /* AOCacheHandler.h */,
+				8CE8C7BF1FEC7F180041C284 /* AOCacheHelper.h */,
+				8CE8C7BC1FEC7F180041C284 /* AOCacheHelper.m */,
+				8CE8C7BD1FEC7F180041C284 /* AOService+CacheController.h */,
+				8CE8C7BE1FEC7F180041C284 /* AOService+CacheController.m */,
+				8CE8C7891FEC7E7A0041C284 /* Providers */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		8CE8C7891FEC7E7A0041C284 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C7CA1FEC7F2B0041C284 /* AOCache.h */,
+				8CE8C7CB1FEC7F2B0041C284 /* AOCache.m */,
+				8CE8C7CD1FEC7F2B0041C284 /* AOCacheOverNSCache.h */,
+				8CE8C7CE1FEC7F2B0041C284 /* AOCacheOverNSCache.m */,
+				8CE8C7CC1FEC7F2B0041C284 /* AOCacheOverPINCache.h */,
+				8CE8C7C81FEC7F2B0041C284 /* AOCacheOverPINCache.m */,
+				8CE8C78A1FEC7E810041C284 /* Model */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		8CE8C78A1FEC7E810041C284 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C7D61FEC7F3E0041C284 /* AOCacheAtom.h */,
+				8CE8C7D71FEC7F3E0041C284 /* AOCacheAtom.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8CE8C78B1FEC7E890041C284 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C7AD1FEC7EFF0041C284 /* AOAsynchBlockOperation.h */,
+				8CE8C7A61FEC7EFF0041C284 /* AOAsynchBlockOperation.m */,
+				8CE8C7A91FEC7EFF0041C284 /* AOError.h */,
+				8CE8C7A71FEC7EFF0041C284 /* AOError.m */,
+				8CE8C7AF1FEC7EFF0041C284 /* AOFileUtils.h */,
+				8CE8C7A81FEC7EFF0041C284 /* AOFileUtils.m */,
+				8CE8C7AB1FEC7EFF0041C284 /* NSArray+AO.h */,
+				8CE8C7AC1FEC7EFF0041C284 /* NSArray+AO.m */,
+				8CE8C7AE1FEC7EFF0041C284 /* NSString+AO.h */,
+				8CE8C7AA1FEC7EFF0041C284 /* NSString+AO.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8CE8C78C1FEC7E970041C284 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C79F1FEC7EF10041C284 /* AOPagingMetadata.h */,
+				8CE8C79E1FEC7EF10041C284 /* AOPagingMetadata.m */,
+				8CE8C7A01FEC7EF10041C284 /* AORequestMetadata.h */,
+				8CE8C7A11FEC7EF10041C284 /* AORequestMetadata.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		8CE8C78D1FEC7E9E0041C284 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8CE8C7951FEC7EE20041C284 /* AOCMSOptionalParams.h */,
+				8CE8C7901FEC7EE20041C284 /* AOCMSOptionalParams.m */,
+				8CE8C7931FEC7EE20041C284 /* AOObjectParserProtocol.h */,
+				8CE8C7921FEC7EE20041C284 /* AOService.h */,
+				8CE8C7941FEC7EE20041C284 /* AOService.m */,
+				8CE8C7911FEC7EE20041C284 /* AOServiceComponent.h */,
+				8CE8C7961FEC7EE20041C284 /* AOServiceComponent.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8CF755B21FED3B3F000D7070 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8CF755B81FED3B50000D7070 /* AccedoOneControl.h */,
+				8CF755BA1FED3B50000D7070 /* AccedoOneControl.m */,
+				8CF755B71FED3B50000D7070 /* AccedoOneDetect.h */,
+				8CF755B61FED3B50000D7070 /* AccedoOneDetect.m */,
+				8CF755B31FED3B50000D7070 /* AccedoOneInsight.h */,
+				8CF755B51FED3B50000D7070 /* AccedoOneInsight.m */,
+				8CF755B91FED3B50000D7070 /* AccedoOnePublish.h */,
+				8CF755BC1FED3B50000D7070 /* AccedoOnePublish.m */,
+				8CF755B41FED3B50000D7070 /* AccedoOneUserData.h */,
+				8CF755BB1FED3B50000D7070 /* AccedoOneUserData.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B3A19992AE8CD774416C09E7 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C976D427024A762BEB948054 /* AFURLResponseSerialization.m */,
+				A966E324C01A1BE08B761EC0 /* AFHTTPSessionManager.m */,
+				EA39A3BDDCE8DEAE1134E26A /* AFURLSessionManager.m */,
+				D91BE977DBD7D1FE179AD89F /* AFURLRequestSerialization.m */,
+				5B40C21E45A2949895407CDB /* AFNetworkReachabilityManager.m */,
+				370042E46B0AC7B4041C86BE /* AFSecurityPolicy.m */,
+				100B3D1D00E8FDCE3324E892 /* AFSecurityPolicy.h */,
+				98B06F0309ED0B071376DFB2 /* AFNetworkReachabilityManager.h */,
+				E8C40C071D6219C4C25780E3 /* AFURLSessionManager.h */,
+				90EFC088A0B42467801D03AE /* AFURLRequestSerialization.h */,
+				3F02C5558DB827E758A188D9 /* AFURLResponseSerialization.h */,
+				EB84B9BAB9AE77EE05FAC625 /* AFNetworking.h */,
+				BD73EEFA6EB617336E8A21F3 /* AFHTTPSessionManager.h */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		DE466F672BD53F89E80B1D08 /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				1A21BD8ED62B36A9F8A2C37F /* PINCache.m */,
+				35AEECD129884ECDEED20E57 /* PINMemoryCache.m */,
+				1D38AC160881372CDF9A0D36 /* PINDiskCache.m */,
+				851045F5298FC14FF1C2C29C /* PINDiskCache.h */,
+				1A0899D49E0DE986B4495552 /* PINCache.h */,
+				EC1B214AE8B4BCEA57659470 /* Nullability.h */,
+				6864BA3D126F16874CB29373 /* PINMemoryCache.h */,
+			);
+			name = PINCache;
+			sourceTree = "<group>";
+		};
+		E46B632DEA137D223F1B15A0 /* Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9B7D648363F71B185B5B4 /* AFNetworkingDependencies.h */,
+				D6D54405BC271BEB7125EBFE /* PINCacheDependencies.h */,
+			);
+			name = Symbols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8CE8C7081FEC79E50041C284 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE8C7B71FEC7EFF0041C284 /* AOAsynchBlockOperation.h in Headers */,
+				8CE8C7B31FEC7EFF0041C284 /* AOError.h in Headers */,
+				8CE8C7A41FEC7EF10041C284 /* AORequestMetadata.h in Headers */,
+				8CE8C7991FEC7EE20041C284 /* AOService.h in Headers */,
+				8CE8C7981FEC7EE20041C284 /* AOServiceComponent.h in Headers */,
+				8CE8C7C71FEC7F180041C284 /* AOCacheHandler.h in Headers */,
+				8CF755C31FED3B50000D7070 /* AccedoOnePublish.h in Headers */,
+				8CF755BD1FED3B50000D7070 /* AccedoOneInsight.h in Headers */,
+				8CF755C11FED3B50000D7070 /* AccedoOneDetect.h in Headers */,
+				8CF755BE1FED3B50000D7070 /* AccedoOneUserData.h in Headers */,
+				8CF755C21FED3B50000D7070 /* AccedoOneControl.h in Headers */,
+				8CE8C7A31FEC7EF10041C284 /* AOPagingMetadata.h in Headers */,
+				8CE8C79A1FEC7EE20041C284 /* AOObjectParserProtocol.h in Headers */,
+				8CE8C7851FEC7E6B0041C284 /* AccedoOne.h in Headers */,
+				8CE8C7D11FEC7F2B0041C284 /* AOCache.h in Headers */,
+				8CE8C7D81FEC7F3E0041C284 /* AOCacheAtom.h in Headers */,
+				8CE8C71C1FEC79E50041C284 /* AccedoOnetvOS.h in Headers */,
+				8CE8C7B81FEC7EFF0041C284 /* NSString+AO.h in Headers */,
+				8CE8C7D41FEC7F2B0041C284 /* AOCacheOverNSCache.h in Headers */,
+				8CE8C7C41FEC7F180041C284 /* AOService+CacheController.h in Headers */,
+				8CE8C7C11FEC7F180041C284 /* AOCacheDTO.h in Headers */,
+				8CE8C78F1FEC7ECA0041C284 /* AccedoOnetvOS.pch in Headers */,
+				8CE8C7D31FEC7F2B0041C284 /* AOCacheOverPINCache.h in Headers */,
+				8CE8C7B91FEC7EFF0041C284 /* AOFileUtils.h in Headers */,
+				8CE8C79C1FEC7EE20041C284 /* AOCMSOptionalParams.h in Headers */,
+				8CE8C7C61FEC7F180041C284 /* AOCacheHelper.h in Headers */,
+				8CE8C7B51FEC7EFF0041C284 /* NSArray+AO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8CE8C70A1FEC79E50041C284 /* AccedoOnetvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CE8C71F1FEC79E50041C284 /* Build configuration list for PBXNativeTarget "AccedoOnetvOS" */;
+			buildPhases = (
+				8CE8C7061FEC79E50041C284 /* Sources */,
+				8CE8C7071FEC79E50041C284 /* Frameworks */,
+				8CE8C7081FEC79E50041C284 /* Headers */,
+				8CE8C7091FEC79E50041C284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccedoOnetvOS;
+			productName = AccedoOnetvOS;
+			productReference = 8CE8C70B1FEC79E50041C284 /* AccedoOnetvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8CE8C7131FEC79E50041C284 /* AccedoOnetvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CE8C7221FEC79E50041C284 /* Build configuration list for PBXNativeTarget "AccedoOnetvOSTests" */;
+			buildPhases = (
+				8CE8C7101FEC79E50041C284 /* Sources */,
+				8CE8C7111FEC79E50041C284 /* Frameworks */,
+				8CE8C7121FEC79E50041C284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CE8C7171FEC79E50041C284 /* PBXTargetDependency */,
+			);
+			name = AccedoOnetvOSTests;
+			productName = AccedoOnetvOSTests;
+			productReference = 8CE8C7141FEC79E50041C284 /* AccedoOnetvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CE8C7021FEC79E50041C284 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Gabor Bottyan";
+				TargetAttributes = {
+					8CE8C70A1FEC79E50041C284 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8CE8C7131FEC79E50041C284 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8CE8C7DF1FEC9EE60041C284 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8CE8C7051FEC79E50041C284 /* Build configuration list for PBXProject "AccedoOnetvOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8CE8C7011FEC79E50041C284;
+			productRefGroup = 8CE8C70C1FEC79E50041C284 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CE8C70A1FEC79E50041C284 /* AccedoOnetvOS */,
+				8CE8C7131FEC79E50041C284 /* AccedoOnetvOSTests */,
+				8CE8C7DF1FEC9EE60041C284 /* AccedoOnetvOSBinary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CE8C7091FEC79E50041C284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE8C7121FEC79E50041C284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CE8C7E31FEC9EED0041C284 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\nNULL=\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nif [ -d ${PROJECT_NAME}.xcworkspace ]; then\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\nelse\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\nfi\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\nmkdir -p \"${PROJECT_DIR}/../Binary\"\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/../Binary\"\nTARGET_DIR=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$TARGET_DIR\"\nmkdir -p \"$TARGET_DIR\"\n\ncp -rf \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$TARGET_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CE8C7061FEC79E50041C284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CE8C79B1FEC7EE20041C284 /* AOService.m in Sources */,
+				8CE8C7861FEC7E6B0041C284 /* AccedoOne.m in Sources */,
+				8CE8C7D51FEC7F2B0041C284 /* AOCacheOverNSCache.m in Sources */,
+				8CE8C7D91FEC7F3E0041C284 /* AOCacheAtom.m in Sources */,
+				8CE8C7C31FEC7F180041C284 /* AOCacheHelper.m in Sources */,
+				8CF755C61FED3B50000D7070 /* AccedoOnePublish.m in Sources */,
+				8CE8C7B61FEC7EFF0041C284 /* NSArray+AO.m in Sources */,
+				8CE8C7B01FEC7EFF0041C284 /* AOAsynchBlockOperation.m in Sources */,
+				8CE8C7B41FEC7EFF0041C284 /* NSString+AO.m in Sources */,
+				8CF755C01FED3B50000D7070 /* AccedoOneDetect.m in Sources */,
+				8CE8C7A51FEC7EF10041C284 /* AORequestMetadata.m in Sources */,
+				8CE8C7C21FEC7F180041C284 /* AOCacheDTO.m in Sources */,
+				8CE8C7D21FEC7F2B0041C284 /* AOCache.m in Sources */,
+				8CE8C7C51FEC7F180041C284 /* AOService+CacheController.m in Sources */,
+				8CF755C41FED3B50000D7070 /* AccedoOneControl.m in Sources */,
+				8CF755BF1FED3B50000D7070 /* AccedoOneInsight.m in Sources */,
+				8CE8C7CF1FEC7F2B0041C284 /* AOCacheOverPINCache.m in Sources */,
+				8CE8C7B21FEC7EFF0041C284 /* AOFileUtils.m in Sources */,
+				8CE8C7A21FEC7EF10041C284 /* AOPagingMetadata.m in Sources */,
+				8CE8C7971FEC7EE20041C284 /* AOCMSOptionalParams.m in Sources */,
+				8CE8C7B11FEC7EFF0041C284 /* AOError.m in Sources */,
+				8CE8C79D1FEC7EE20041C284 /* AOServiceComponent.m in Sources */,
+				2BAC7FDC9BB9292247C1FEEA /* AFURLResponseSerialization.m in Sources */,
+				80A8AAA01AA9D337FA7BC343 /* AFHTTPSessionManager.m in Sources */,
+				B5BF2C33B9183F5B27F6FE44 /* AFURLSessionManager.m in Sources */,
+				97015C22C3CAD8985863D8B9 /* AFURLRequestSerialization.m in Sources */,
+				9DD6D05F8FB8AD92B755E3F4 /* AFNetworkReachabilityManager.m in Sources */,
+				5C4E55718DB1D50671EC233B /* AFSecurityPolicy.m in Sources */,
+				8CF755C51FED3B50000D7070 /* AccedoOneUserData.m in Sources */,
+				EF0AF1561B5B1CBD719B1E9D /* PINCache.m in Sources */,
+				061852C5EDE4E6AC11004AAD /* PINMemoryCache.m in Sources */,
+				E0666CFD60F86EC4A0F80A4F /* PINDiskCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CE8C7101FEC79E50041C284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C58B2721FECA23D00241AFA /* AccedoOneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CE8C7171FEC79E50041C284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CE8C70A1FEC79E50041C284 /* AccedoOnetvOS */;
+			targetProxy = 8CE8C7161FEC79E50041C284 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8CE8C71D1FEC79E50041C284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8CE8C71E1FEC79E50041C284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8CE8C7201FEC79E50041C284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/AccedoOnetvOS.pch";
+				INFOPLIST_FILE = AccedoOnetvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.accedo.AccedoOnetvOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		8CE8C7211FEC79E50041C284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/AccedoOnetvOS.pch";
+				INFOPLIST_FILE = AccedoOnetvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.accedo.AccedoOnetvOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		8CE8C7231FEC79E50041C284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				INFOPLIST_FILE = AccedoOnetvOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.accedo.AccedoOnetvOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		8CE8C7241FEC79E50041C284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				INFOPLIST_FILE = AccedoOnetvOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.accedo.AccedoOnetvOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		8CE8C7E01FEC9EE60041C284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8CE8C7E11FEC9EE60041C284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CE8C7051FEC79E50041C284 /* Build configuration list for PBXProject "AccedoOnetvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CE8C71D1FEC79E50041C284 /* Debug */,
+				8CE8C71E1FEC79E50041C284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CE8C71F1FEC79E50041C284 /* Build configuration list for PBXNativeTarget "AccedoOnetvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CE8C7201FEC79E50041C284 /* Debug */,
+				8CE8C7211FEC79E50041C284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CE8C7221FEC79E50041C284 /* Build configuration list for PBXNativeTarget "AccedoOnetvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CE8C7231FEC79E50041C284 /* Debug */,
+				8CE8C7241FEC79E50041C284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CE8C7E21FEC9EE60041C284 /* Build configuration list for PBXAggregateTarget "AccedoOnetvOSBinary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CE8C7E01FEC9EE60041C284 /* Debug */,
+				8CE8C7E11FEC9EE60041C284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CE8C7021FEC79E50041C284 /* Project object */;
+}

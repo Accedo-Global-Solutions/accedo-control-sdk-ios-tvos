@@ -1,0 +1,37 @@
+platform :ios, "9.0"
+
+target "GenerateSymbols" do
+	pod 'AFNetworking',    '3.1.0'
+  pod 'PINCache',        '2.2.2'
+end
+
+xcode_build_script_name = 'Unique Run Script Name'
+f = File.open("Script/script.sh", "r") 
+data = ''
+f.each_line do |line|
+   data += line
+end
+post_install do |installer_representation|
+    installer_representation.pods_project.targets.each do |target|
+    	target.build_configurations.each do |config|
+               config.build_settings['CLANG_ENABLE_CODE_COVERAGE'] = 'NO'
+        end
+        puts "#{target.name}"
+		if (target.name.index("Pods") != 0) 
+			path_to_xcode_build_script = "header=$SRCROOT/../#{target.name}Dependencies.h" + 
+			"\nprefix=\"AGR\"\n" + data
+			
+			script_installed = false
+			target.shell_script_build_phases.each { |run_script|
+			  script_installed = true if run_script.name == xcode_build_script_name
+			}
+			if (!script_installed)
+			  puts "Installing run script in Xcode project #{target.name}"
+			  phase = target.new_shell_script_build_phase(xcode_build_script_name)
+			  phase.shell_script = path_to_xcode_build_script
+			else
+			  puts "Run script already installed"
+			end
+		end
+    end
+end

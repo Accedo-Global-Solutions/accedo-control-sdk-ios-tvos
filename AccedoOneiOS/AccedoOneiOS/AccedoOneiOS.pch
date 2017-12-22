@@ -1,0 +1,25 @@
+//
+//  AccedoOneiOS.pch
+//  AccedoOneiOS
+//
+//  Copyright (c) 2017 - present Accedo Broadband AB. All Rights Reserved
+//  Unauthorized copying of this file, via any medium is strictly prohibited
+//  Proprietary and confidential
+//
+
+#ifndef AccedoOneiOS_pch
+#define AccedoOneiOS_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AFNetworkingDependencies.h"
+#import "PINCacheDependencies.h"
+
+#define TLog(frm, ...) NSLog(frm, ##__VA_ARGS__);
+#define DLog(frm, ...) NSLog(frm, ##__VA_ARGS__);
+#define ILog(frm, ...) NSLog(frm, ##__VA_ARGS__);
+#define WLog(frm, ...) NSLog(frm, ##__VA_ARGS__);
+#define ELog(frm, ...) NSLog(frm, ##__VA_ARGS__);
+
+#endif /* AccedoOneiOS_pch */
