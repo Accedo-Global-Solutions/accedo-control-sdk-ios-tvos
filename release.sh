@@ -19,8 +19,9 @@ err_log() {
 }
 
 create_archives () {
-	copy LICENSE.md Binary/LICENSE
+	cp LICENSE.md Binary
 	cd Binary
+	mv LICENSE.md LICENSE
 	zip -r AccedoOneiOS.zip LICENSE AccedoOneiOS.framework
 	zip -r AccedoOnetvOS.zip LICENSE AccedoOnetvOS.framework
 	cd ..
