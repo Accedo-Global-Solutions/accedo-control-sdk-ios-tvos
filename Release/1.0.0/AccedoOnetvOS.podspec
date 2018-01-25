@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :path => "." }
   s.platform     = :tvOS
-  s.vendored_frameworks = 'Release/AccedoOneiOS/1.0.0/AccedoOnetvOS.framework'
+  s.vendored_frameworks = 'AccedoOnetvOS.framework'
   s.ios.deployment_target  = "9.0"
   s.source = { 
 	:http => 'https://github.com/Accedo-Products/accedo-one-sdk-ios-tvos/blob/master/Release/1.0.0/AccedoOnetvOS.zip?raw=true'
