@@ -27,6 +27,7 @@ create_archives () {
 }
 
 create_release () {
+	
 	if ! [ -d "Release/$1" ]; then
 		mkdir "Release/$1"
 	fi
@@ -38,8 +39,8 @@ create_release () {
 }
 
 generate_podspecs () {
-	./podgenerator ./Templates/AccedoOneiOS.podspec $1 ./AccedoOneiOS.podspec
-	./podgenerator ./Templates/AccedoOnetvOS.podspec $1 ./AccedoOnetvOS.podspec
+	./podgenerator ./Templates/AccedoOneiOS.podspec.local $1 ./AccedoOneiOS.podspec
+	./podgenerator ./Templates/AccedoOnetvOS.podspec.local $1 ./AccedoOnetvOS.podspec
 	./podgenerator ./Templates/AccedoOneiOS.podspec $1 ./Release/$1/AccedoOneiOS.podspec
 	./podgenerator ./Templates/AccedoOnetvOS.podspec $1 ./Release/$1/AccedoOnetvOS.podspec
 }
