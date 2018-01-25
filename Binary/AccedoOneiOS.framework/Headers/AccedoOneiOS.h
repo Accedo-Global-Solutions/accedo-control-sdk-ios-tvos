@@ -29,5 +29,6 @@ FOUNDATION_EXPORT const unsigned char AccedoOneiOSVersionString[];
 #import <AccedoOneiOS/AccedoOneUserData.h>
 #import <AccedoOneiOS/AccedoOnePublish.h>
 #import <AccedoOneiOS/AccedoOneControl.h>
+#import <AccedoOneiOS/AOCMSOptionalParams.h>
 
 

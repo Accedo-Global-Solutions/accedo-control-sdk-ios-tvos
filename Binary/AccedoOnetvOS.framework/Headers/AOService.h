@@ -12,7 +12,7 @@
 #import "AOServiceComponent.h"
 #import "AOCacheHandler.h"
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 /**
  * AOService is a generic HTTP service to serve as a base fo all Service implementations
@@ -24,13 +24,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AOService : AOServiceComponent
 
 @property (nonatomic, strong, nullable) id<AOCacheHandler> cacheHandler;
-@property (nonatomic, readonly) NSMutableDictionary *fetchQueues;
+@property (nonatomic, readonly) NSMutableDictionary * _Nonnull fetchQueues;
 
 #pragma mark - Instantiation
 
-- (instancetype) initWithURL:(nonnull NSString *) baseURL;
-- (instancetype) initWithURL:(nonnull NSString *) baseURL requestTimeout:(NSTimeInterval) timeoutInterval;
-- (instancetype) initWithURL:(nonnull NSString *) baseURL requestTimeout:(NSTimeInterval) timeoutInterval cacheHandler:(nullable id<AOCacheHandler>) cacheHandler;
+- (instancetype _Nonnull) initWithURL:(nonnull NSString *) baseURL;
+- (instancetype _Nonnull) initWithURL:(nonnull NSString *) baseURL requestTimeout:(NSTimeInterval) timeoutInterval;
+- (instancetype _Nonnull) initWithURL:(nonnull NSString *) baseURL requestTimeout:(NSTimeInterval) timeoutInterval cacheHandler:(nullable id<AOCacheHandler>) cacheHandler;
 
 #pragma mark - Service parameter handling
 
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AOJSONService : AOService
 
 //Entry to override queryParameters serialization (optional)
-- (void)setQueryStringSerializationWithBlock:(nullable NSString *(^)(NSURLRequest * _Nullable request, id _Nullable obj, NSError *__autoreleasing * _Nullable error))block;
+- (void)setQueryStringSerializationWithBlock:(NSString *_Nullable(^_Nullable)(NSURLRequest * _Nullable request, id _Nullable obj, NSError * _Nullable  __autoreleasing * _Nullable error))block;
 
 @end
 
@@ -79,8 +79,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AOXMLService  : AOService
 
 //Entry to override queryParameters serialization (optional)
-- (void)setQueryStringSerializationWithBlock:(nullable NSString *(^)(NSURLRequest * _Nullable request, id _Nullable obj, NSError *__autoreleasing * _Nullable error))block;
+- (void)setQueryStringSerializationWithBlock:(nullable NSString *_Nullable(^)(NSURLRequest * _Nullable request, id _Nullable obj, NSError * _Nullable __autoreleasing * _Nullable error))block;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		8CE8C7DA1FEC9E920041C284 /* AccedoOneiOSBinary */ = {
+		8C16495D20086C1600357F77 /* AccedoOneiOSRelease */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 8CE8C7DD1FEC9E920041C284 /* Build configuration list for PBXAggregateTarget "AccedoOneiOSBinary" */;
+			buildConfigurationList = 8C16495F20086C1600357F77 /* Build configuration list for PBXAggregateTarget "AccedoOneiOSRelease" */;
 			buildPhases = (
-				8CE8C7DE1FEC9EB10041C284 /* ShellScript */,
+				8C16495E20086C1600357F77 /* Run Script */,
 			);
 			dependencies = (
 			);
-			name = AccedoOneiOSBinary;
+			name = AccedoOneiOSRelease;
 			productName = AccedoOneiOSBinary;
 		};
 /* End PBXAggregateTarget section */
@@ -54,7 +54,7 @@
 		8CE8C7691FEC7DC80041C284 /* AOService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7621FEC7DC80041C284 /* AOService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CE8C76A1FEC7DC80041C284 /* AOObjectParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7631FEC7DC80041C284 /* AOObjectParserProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CE8C76B1FEC7DC80041C284 /* AOService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7641FEC7DC80041C284 /* AOService.m */; };
-		8CE8C76C1FEC7DC80041C284 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7651FEC7DC80041C284 /* AOCMSOptionalParams.h */; };
+		8CE8C76C1FEC7DC80041C284 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7651FEC7DC80041C284 /* AOCMSOptionalParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CE8C76D1FEC7DC80041C284 /* AOServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7661FEC7DC80041C284 /* AOServiceComponent.m */; };
 		8CE8C7781FEC7DD90041C284 /* AOAsynchBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C76E1FEC7DD90041C284 /* AOAsynchBlockOperation.m */; };
 		8CE8C7791FEC7DD90041C284 /* AOError.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C76F1FEC7DD90041C284 /* AOError.m */; };
@@ -400,8 +400,8 @@
 				8CF755AD1FED3B1C000D7070 /* AccedoOneControl.h in Headers */,
 				8CE8C7421FEC7D340041C284 /* AOCacheHandler.h in Headers */,
 				8CE8C76A1FEC7DC80041C284 /* AOObjectParserProtocol.h in Headers */,
-				8CE8C74F1FEC7D5B0041C284 /* AOCache.h in Headers */,
 				8CE8C76C1FEC7DC80041C284 /* AOCMSOptionalParams.h in Headers */,
+				8CE8C74F1FEC7D5B0041C284 /* AOCache.h in Headers */,
 				8CE8C7531FEC7D730041C284 /* AOCacheAtom.h in Headers */,
 				8CE8C7811FEC7DD90041C284 /* AOFileUtils.h in Headers */,
 				8CE8C73C1FEC7D340041C284 /* AOCacheDTO.h in Headers */,
@@ -465,15 +465,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Gabor Bottyan";
 				TargetAttributes = {
+					8C16495D20086C1600357F77 = {
+						ProvisioningStyle = Automatic;
+					};
 					8CE8C6E61FEC79C20041C284 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 					8CE8C6EF1FEC79C20041C284 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					8CE8C7DA1FEC9E920041C284 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -493,7 +492,7 @@
 			targets = (
 				8CE8C6E61FEC79C20041C284 /* AccedoOneiOS */,
 				8CE8C6EF1FEC79C20041C284 /* AccedoOneiOSTests */,
-				8CE8C7DA1FEC9E920041C284 /* AccedoOneiOSBinary */,
+				8C16495D20086C1600357F77 /* AccedoOneiOSRelease */,
 			);
 		};
 /* End PBXProject section */
@@ -516,18 +515,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8CE8C7DE1FEC9EB10041C284 /* ShellScript */ = {
+		8C16495E20086C1600357F77 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "######################\n# Options\n######################\nNULL=\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nif [ -d ${PROJECT_NAME}.xcworkspace ]; then\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\nelse\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\nfi\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\nmkdir -p \"${PROJECT_DIR}/../Binary\"\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/../Binary\"\nTARGET_DIR=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$TARGET_DIR\"\nmkdir -p \"$TARGET_DIR\"\n\ncp -rf \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$TARGET_DIR\"\n\nif [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\nopen \"${OUTPUT_DIR}/\"\nfi";
+			shellScript = "######################\n# Options\n######################\nNULL=\n\nREVEAL_ARCHIVE_IN_FINDER=true\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n######################\n# Build Frameworks\n######################\n\nif [ -d ${PROJECT_NAME}.xcworkspace ]; then\necho \"BUILDING WORKSPACE\"\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\nelse\necho \"BUILDING PROJECT\"\necho \"${CONFIGURATION}\"\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -scheme ${PROJECT_NAME} -sdk iphoneos -configuration Release clean archive OTHER_CFLAGS=\"-fembed-bitcode\" CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\nfi\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\nmkdir -p \"${PROJECT_DIR}/../Binary\"\nmkdir \"${FRAMEWORK}\"\nmkdir\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\nif [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule\\/${NULL}* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\nfi\n\n######################\n# On Release, copy the result to release directory\n######################\nOUTPUT_DIR=\"${PROJECT_DIR}/../Binary\"\nTARGET_DIR=\"${OUTPUT_DIR}/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n\nrm -rf \"$TARGET_DIR\"\nmkdir -p \"$TARGET_DIR\"\n\ncp -rf \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\ncp -r \"${FRAMEWORK}\" \"$TARGET_DIR\"\n\n#cd \"$OUTPUT_DIR\"\n#zip -r \"${RELEASE_DIR}/${PROJECT_NAME}/${CURRENT_PROJECT_VERSION}/${PROJECT_NAME}.zip\" LICENSE.md \"${PROJECT_NAME}.framework\"\n#cp -r \"${PROJECT_NAME}.framework\" \"${RELEASE_DIR}/${PROJECT_NAME}/${CURRENT_PROJECT_VERSION}\"\n\n#if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n#open \"${OUTPUT_DIR}/\"\n#fi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -590,10 +590,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8C16496020086C1600357F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		8C16496120086C1600357F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEVELOPMENT_TEAM = W244RLEDMB;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
 		8CE8C6F91FEC79C20041C284 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -642,6 +665,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -652,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -693,6 +718,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -703,8 +729,10 @@
 		8CE8C6FC1FEC79C20041C284 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W244RLEDMB;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -716,18 +744,22 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
 				PRODUCT_BUNDLE_IDENTIFIER = tv.accedo.AccedoOneiOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
 		8CE8C6FD1FEC79C20041C284 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W244RLEDMB;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -739,10 +771,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = tv.accedo.AccedoOneiOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
 		};
@@ -772,27 +806,18 @@
 			};
 			name = Release;
 		};
-		8CE8C7DB1FEC9E920041C284 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W244RLEDMB;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8CE8C7DC1FEC9E920041C284 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W244RLEDMB;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8C16495F20086C1600357F77 /* Build configuration list for PBXAggregateTarget "AccedoOneiOSRelease" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C16496020086C1600357F77 /* Debug */,
+				8C16496120086C1600357F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8CE8C6E11FEC79C20041C284 /* Build configuration list for PBXProject "AccedoOneiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -816,15 +841,6 @@
 			buildConfigurations = (
 				8CE8C6FF1FEC79C20041C284 /* Debug */,
 				8CE8C7001FEC79C20041C284 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8CE8C7DD1FEC9E920041C284 /* Build configuration list for PBXAggregateTarget "AccedoOneiOSBinary" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8CE8C7DB1FEC9E920041C284 /* Debug */,
-				8CE8C7DC1FEC9E920041C284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
