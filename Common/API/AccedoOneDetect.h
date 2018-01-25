@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 /**
  * Log level types used for remote logging
@@ -26,12 +26,12 @@ typedef NS_ENUM(NSUInteger, AOServiceLogLevel) {
 @class AccedoOne;
 
 @interface AccedoOneDetect : NSObject
--(instancetype) initWithService:(AccedoOne *) service;
+-(instancetype _Nonnull ) initWithService:(nonnull AccedoOne *) service;
 
-- (void) logWithLevel:(AOServiceLogLevel)logLevel code:(NSUInteger)code message:(NSString *)message dimensions:(NSDictionary *)dimensions;
+- (void) logWithLevel:(AOServiceLogLevel)logLevel code:(NSUInteger)code message:(nonnull  NSString *)message dimensions:(nullable NSDictionary *)dimensions;
 
 @property (nonatomic, assign) AOServiceLogLevel logLevel;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

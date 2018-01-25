@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param response is either the raw response of the service, or if parser was provided, the parsed object
  */
-typedef void (^AOSuccessBlock)(id response);
+typedef void (^AOSuccessBlock)(id _Nullable response);
 
 
 #define SUCCESS_BLOCK(type) \

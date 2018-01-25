@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 @class AccedoOne;
 @class AOError;
@@ -23,13 +23,13 @@ typedef NS_ENUM(NSUInteger, AOUserDataScope) {
 
 
 @interface AccedoOneUserData : NSObject
--(instancetype) initWithService:(AccedoOne *) service;
+-(instancetype _Nonnull ) initWithService:(AccedoOne *_Nonnull) service;
 
-- (void) allDataForUser:(NSString *)userId scope:(AOUserDataScope)scope onComplete:(nullable void (^)(NSDictionary *userData, AOError *err))completionBlock;
-- (void) storeData:(NSDictionary *)data forUser:(NSString *)userId scope:(AOUserDataScope)scope onComplete:(nullable void(^)(AOError *err))completionBlock;
-- (void) dataForUser:(NSString *)userId key:(NSString *)key scope:(AOUserDataScope)scope onComplete:(nullable void(^)(NSString *value, AOError *err))completionBlock;
-- (void) storeValue:(NSString *)value key:(NSString *)key forUser:(NSString *)userId scope:(AOUserDataScope)scope onComplete:(nullable void(^)(AOError *err))completionBlock;
+- (void) allDataForUser:(nonnull NSString *)userId scope:(AOUserDataScope)scope onComplete:(nullable void (^)(NSDictionary * _Nullable userData, AOError * _Nullable err))completionBlock;
+- (void) storeData:(nonnull NSDictionary *)data forUser:(nonnull NSString *)userId scope:(AOUserDataScope)scope onComplete:(nullable void(^)(AOError * _Nullable err))completionBlock;
+- (void) dataForUser:(nonnull NSString *)userId key:(nonnull NSString *)key scope:(AOUserDataScope)scope onComplete:(nullable void(^)(NSString * _Nullable value, AOError * _Nullable err))completionBlock;
+- (void) storeValue:(nonnull NSString *)value key:(nonnull NSString *)key forUser:(nonnull NSString *)userId scope:(AOUserDataScope)scope onComplete:(nullable void(^)(AOError * _Nullable err))completionBlock;
 
 @end
 
-NS_ASSUME_NONNULL_END
+

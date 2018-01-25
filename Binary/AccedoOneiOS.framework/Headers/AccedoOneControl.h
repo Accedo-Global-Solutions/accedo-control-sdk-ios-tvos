@@ -9,26 +9,26 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 @class AOError;
 @class AccedoOne;
 
 @interface AccedoOneControl : NSObject
--(instancetype) initWithService:(AccedoOne *) service;
-- (void) applicationStatus:(void (^)(NSString *status, NSString *message, AOError *err))completionBlock;
-- (void) profileInfo:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock;
-- (void) profileInfoForGID:(nullable NSString*)gid onComplete:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock;
-- (void) allMetadata:(nullable void (^)(NSDictionary *allMetadata, AOError *err))completionBlock;
-- (void) allMetadataForGID:(nullable NSString *)gid onComplete:(nullable void (^)(NSDictionary *allMetadata, AOError *err))completionBlock;
+-(instancetype _Nonnull ) initWithService:(AccedoOne *_Nonnull) service;
+- (void) applicationStatus:(void (^_Nonnull)(NSString * _Nullable status, NSString * _Nullable message,  AOError * _Nullable err))completionBlock;
+- (void) profileInfo:(nullable void (^)(NSDictionary* _Nullable profileInfo, AOError* _Nullable err))completionBlock;
+- (void) profileInfoForGID:(nullable NSString*)gid onComplete:(nullable void (^)(NSDictionary* _Nullable profileInfo, AOError* _Nullable err))completionBlock;
+- (void) allMetadata:(nullable void (^)(NSDictionary * _Nullable allMetadata, AOError * _Nullable err))completionBlock;
+- (void) allMetadataForGID:(nullable NSString *)gid onComplete:(nullable void (^)(NSDictionary * _Nullable allMetadata, AOError * _Nullable err))completionBlock;
 
-- (void) metadataForKey:(nonnull NSString *)key onComplete:(nullable void (^)(id metadata, AOError * error))completionBlock;
-- (void) metadataForKey:(nonnull NSString *)key gid:(nullable NSString *)gid onComplete:(nullable void (^)(id metadata, AOError * error))completionBlock;
-- (void) metadataForKeys:(nonnull NSArray<NSString *>*)keys gid:(nullable NSString *)gid onComplete:(nullable void (^)(id metadata, AOError * error))completionBlock;
+- (void) metadataForKey:(nonnull NSString *)key onComplete:(nullable void (^)(id _Nullable metadata, AOError * _Nullable error))completionBlock;
+- (void) metadataForKey:(nonnull NSString *)key gid:(nullable NSString *)gid onComplete:(nullable void (^)(id _Nullable metadata, AOError * _Nullable error))completionBlock;
+- (void) metadataForKeys:(nonnull NSArray<NSString *>*)keys gid:(nullable NSString *)gid onComplete:(nullable void (^)(id _Nullable metadata, AOError * _Nullable error))completionBlock;
 
-- (void) allAssets:(nullable void (^)(NSDictionary *assetsMetadata, AOError *err))completionBlock;
-- (void) assetForKey:(NSString *)key onComplete:(nullable void (^)(NSData *asset, AOError *err))completionBlock;
+- (void) allAssets:(nullable void (^)(NSDictionary * _Nullable assetsMetadata, AOError *_Nullable err))completionBlock;
+- (void) assetForKey:(nonnull NSString *)key onComplete:(nullable void (^)(NSData * _Nullable asset, AOError * _Nullable err))completionBlock;
 - (void) clearCache;
 @end
 
-NS_ASSUME_NONNULL_END
+

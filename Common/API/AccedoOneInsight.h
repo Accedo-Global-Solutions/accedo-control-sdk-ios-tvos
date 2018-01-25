@@ -10,13 +10,13 @@
 #import <Foundation/Foundation.h>
 #import "AOServiceComponent.h"
 
-NS_ASSUME_NONNULL_BEGIN
+
 
 
 @class AccedoOne;
 
 @interface AccedoOneInsight : NSObject
--(instancetype) initWithService:(AccedoOne *) service;
+-(instancetype _Nonnull ) initWithService:(AccedoOne *_Nonnull) service;
 
 - (void) applicationStart;
 - (void) applicationStartSuccess:(nullable AOSuccessBlock)completionBlock onFailure:(nullable AOErrorBlock)failureBlock;
@@ -26,4 +26,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+
