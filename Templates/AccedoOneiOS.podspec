@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'Release/AccedoOneiOS/:version/AccedoOneiOS.framework'
   s.ios.deployment_target  = "9.0"
   s.source = { 
-	:http => 'https://github.com/Accedo-Products/accedo-one-sdk-ios-tvos/raw/master/Release/AccedoOneiOS/:version/AccedoOneiOS.zip'
+	:http => 'https://github.com/Accedo-Products/accedo-one-sdk-ios-tvos/blob/master/Release/:version/AccedoOneiOS.zip?raw=true'
   }
 end
