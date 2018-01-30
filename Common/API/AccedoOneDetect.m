@@ -10,16 +10,16 @@
 #import "AccedoOneDetect.h"
 #import "AccedoOne.h"
 
-static NSString *const kPathLogLevel         = @"application/log/level";
-static NSString *const kPathLogDebug         = @"application/log/debug";
-static NSString *const kPathLogWarn          = @"application/log/warn";
-static NSString *const kPathLogError         = @"application/log/error";
-static NSString *const kPathLogInfo          = @"application/log/info";
-
+static NSString *const kPathLogLevel = @"application/log/level";
+static NSString *const kPathLogDebug = @"application/log/debug";
+static NSString *const kPathLogWarn  = @"application/log/warn";
+static NSString *const kPathLogError = @"application/log/error";
+static NSString *const kPathLogInfo  = @"application/log/info";
 
 @interface AccedoOneDetect ()
 @property (nonatomic, strong) AccedoOne * service;
 @end
+
 
 @implementation AccedoOneDetect
 
@@ -29,6 +29,8 @@ static NSString *const kPathLogInfo          = @"application/log/info";
     }
     return self;
 }
+
+#pragma mark - AccedoOneDetectProtocol
 
 /**
  *  Remote logging for debug and support purposes. Remote logging will only be fired if the requested log level (logLevel)
@@ -41,23 +43,18 @@ static NSString *const kPathLogInfo          = @"application/log/info";
  */
 - (void) logWithLevel:(AOServiceLogLevel)logLevel code:(NSUInteger)code message:(NSString *)message dimensions:(NSDictionary *)dimensions {
     
-    if (self.logLevel == AOServiceLogLevelNotInitialized)
-    {
-        [self getLevel:^(AOServiceLogLevel configuredLogLevel)
-         {
+    if (self.logLevel == AOServiceLogLevelNotInitialized) {
+        [self getLevel:^(AOServiceLogLevel configuredLogLevel) {
              [self logToRemoteServiceCode:code message:message dimensions:dimensions requestedLogLevel:logLevel];
-         }
-             onFailure:^(AOError *error)
-         {
+        } onFailure:^(AOError *error) {
              ELog(@"AO-[error]: AccedoOneService logWithLevel failed with error: %@", error);
-         }];
-    }
-    else
-    {
+        }];
+    } else {
         [self logToRemoteServiceCode:code message:message dimensions:dimensions requestedLogLevel:logLevel];
     }
 }
 
+#pragma mark - Utils
 
 /**
  *  Log to the remote server if the current log level allows it
@@ -70,10 +67,9 @@ static NSString *const kPathLogInfo          = @"application/log/info";
 - (void) logToRemoteServiceCode:(NSUInteger)code
                         message:(NSString *)message
                      dimensions:(NSDictionary *)dimensions
-              requestedLogLevel:(AOServiceLogLevel)requestedLogLevel
-{
-    if ((requestedLogLevel >= self.logLevel) && (self.logLevel != AOServiceLogLevelOff))
-    {
+              requestedLogLevel:(AOServiceLogLevel)requestedLogLevel {
+
+    if ((requestedLogLevel >= self.logLevel) && (self.logLevel != AOServiceLogLevelOff)) {
         //Code and message are mandatory parameters, and code must be 5 digits tops
         NSParameterAssert(code);
         NSParameterAssert(message);
@@ -94,24 +90,21 @@ static NSString *const kPathLogInfo          = @"application/log/info";
     }
 }
 
-
 /**
  *  Get log level for the application as configured in AccedoOne.
  */
-- (void) getLevel:(void (^)(AOServiceLogLevel configuredLogLevel))completionBlock onFailure:(AOErrorBlock)failureBlock
-{
-    [self.service sendAuthenticatedGETRequest:kPathLogLevel queryParams:nil allowCache:NO onSuccess:^(NSDictionary *response)
-     {
+- (void) getLevel:(void (^)(AOServiceLogLevel configuredLogLevel))completionBlock onFailure:(AOErrorBlock)failureBlock {
+
+    [self.service sendAuthenticatedGETRequest:kPathLogLevel queryParams:nil allowCache:NO onSuccess:^(NSDictionary *response) {
          NSString *remoteLogLevel = [response valueForKey:@"logLevel"];
-         
+
          self.logLevel = [self stringToLogLevelType:remoteLogLevel];
          
          if (completionBlock) {
              completionBlock(self.logLevel);
          }
-     }
-                                 failureBlock:^(AOError *error)
-     {
+
+    } failureBlock:^(AOError *error) {
          self.logLevel = AOServiceLogLevelOff;
          
          if (failureBlock) {
@@ -164,6 +157,7 @@ static NSString *const kPathLogInfo          = @"application/log/info";
     else {
         ELog(@"AO-[error]: AAccedoOneService failed to map logLevel (%@) to a known value (AccedoOneServiceLogLevel). Fallback to:  AccedoOneServiceLogLevelOff", logLevel);
     }
+
     return result;
 }
 

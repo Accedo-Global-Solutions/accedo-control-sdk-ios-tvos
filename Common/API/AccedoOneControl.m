@@ -13,13 +13,13 @@
 #import "AOCache.h"
 #import "AOCacheOverPINCache.h"
 
-static NSString *const kPathStatus           = @"status";
-static NSString *const kPathGetProfileInfo   = @"profile";
-static NSString *const kPathGetMetadata      = @"metadata";
-static NSString *const kPathAsset            = @"asset";
-static NSString *const kCacheControllHeader  = @"If-Modified-Since";
+static NSString *const kPathStatus          = @"status";
+static NSString *const kPathGetProfileInfo  = @"profile";
+static NSString *const kPathGetMetadata     = @"metadata";
+static NSString *const kPathAsset           = @"asset";
+static NSString *const kCacheControllHeader = @"If-Modified-Since";
 
-static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
+static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
 
 @interface AccedoOneControl ()
 @property (nonatomic, strong) AccedoOne * service;
@@ -27,36 +27,36 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
 @property (nonatomic, strong) id<AOTimeBasedCacheHandler> assetCache; //used to cache assets (images, resource files, etc..)
 @end
 
+
 @implementation AccedoOneControl
 
 -(instancetype) initWithService:(AccedoOne *) service {
-    if (self = [super init]){
+    if (self = [super init]) {
         _service = service;
-        self.assetCache    = [AOCache cacheProvider:[AOCacheOverPINCache class] persistenceKey:@"AssetCache" defaultExpiration:kAssetCacheTimeout];
-        self.httpService   = [[AOService alloc] initWithURL:service.accedoOneURL requestTimeout:service.requestTimeout cacheHandler:self.assetCache];
+        self.assetCache = [AOCache cacheProvider:[AOCacheOverPINCache class] persistenceKey:@"AssetCache" defaultExpiration:kAssetCacheTimeout];
+        self.httpService = [[AOService alloc] initWithURL:service.accedoOneURL requestTimeout:service.requestTimeout cacheHandler:self.assetCache];
         [self.httpService setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     }
     return self;
 }
+
+#pragma mark - AccedoOneControlProtocol
 
 /**
  *  Check application availability
  *
  *  @param completionBlock A block executed on successful completion, passing it the status and message as a NSString
  */
-- (void) applicationStatus:(void (^)(NSString *status, NSString *message, AOError *err))completionBlock
-{
-    [self.service sendAuthenticatedGETRequest:kPathStatus queryParams:nil allowCache:NO onSuccess:^(NSDictionary *response)
-     {
+- (void) applicationStatus:(void (^)(NSString *status, NSString *message, AOError *err))completionBlock {
+
+    [self.service sendAuthenticatedGETRequest:kPathStatus queryParams:nil allowCache:NO onSuccess:^(NSDictionary *response) {
          if (completionBlock) {
              NSString *status  = response[@"status"];
              NSString *message = response[@"message"];
              
              completionBlock(status, message, nil);
          }
-     }
-                         failureBlock:^(AOError *error)
-     {
+     } failureBlock:^(AOError *error) {
          if (completionBlock) {
              completionBlock(nil, nil, error);
          }
@@ -68,13 +68,12 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
  *
  *  @param completionBlock block to be executed on completion, passing a dictionary as a parameter, or error if failure occured
  */
-- (void) profileInfo:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock;
-{
+- (void) profileInfo:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock; {
     [self profileInfoForGID:nil onComplete:completionBlock];
 }
 
-- (void) profileInfoForGID:(nullable NSString*)gid onComplete:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock
-{
+- (void) profileInfoForGID:(nullable NSString*)gid onComplete:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock {
+
     NSDictionary* params = gid ? @{@"gid" : gid} : nil;
     NSString* offlineKey = gid ? [NSString stringWithFormat:@"%@?gid=%@", kPathGetProfileInfo, gid] : kPathGetProfileInfo;
     
@@ -98,7 +97,6 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
         }
     }
 }
-
 
 /**
  *  Fetch all avaiable metadata values
@@ -184,36 +182,29 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
     }];
 }
 
-
-
 /**
  *  Get all asset IDs
  *
  *  @param completionBlock block to be executed on success, passing a dictionary containing all assets as a parameter
  */
-- (void) allAssets:(void (^)(NSDictionary *assetsMetadata, AOError *err))completionBlock
-{
-    if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline)
-    {
-        [self.service sendAuthenticatedGETRequest:kPathAsset queryParams:nil allowCache:YES onSuccess:^(NSDictionary *response)
-         {
+- (void) allAssets:(void (^)(NSDictionary *assetsMetadata, AOError *err))completionBlock {
+
+    if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
+        [self.service sendAuthenticatedGETRequest:kPathAsset queryParams:nil allowCache:YES onSuccess:^(NSDictionary *response) {
              [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:kPathAsset];
-             
+
              if (completionBlock) {
                  completionBlock(response, nil);
              }
-         }
-                             failureBlock:^(AOError *error)
-         {
+        }
+        failureBlock:^(AOError *error) {
              if (completionBlock) {
                  completionBlock(nil, error);
              }
          }];
-    }
-    else
-    {
+    } else {
         NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:kPathAsset];
-        
+
         if (completionBlock) {
             completionBlock(cachedResource, cachedResource ? nil : [AOError errorWithMessage:@"Offline metadata not present!"]);
         }
@@ -226,28 +217,28 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
  *  @param key the resource key
  *  @param completionBlock block to be executed on response, passing the resource as NSData
  */
-- (void) assetForKey:(NSString *)key onComplete:(void (^)(NSData *asset, AOError *err))completionBlock
-{
+- (void) assetForKey:(NSString *)key onComplete:(void (^)(NSData *asset, AOError *err))completionBlock {
+
     if (!key) {
         if (completionBlock) completionBlock(nil, [AOError errorWithMessage:@"AccedoOneService: key cannot be null!"]);
         return;
     }
     
-    [self allAssets:^(NSDictionary *allAssets, AOError *err)
-     {
-         if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline)
-         {
-             NSString *assetPath = allAssets[key];
+    [self allAssets:^(NSDictionary *allAssets, AOError *err) {
+
+        if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
+
+            NSString *assetPath = allAssets[key];
              
              if (!assetPath) {
                  if (completionBlock) completionBlock(nil, [AOError errorWithMessage:@"AccedoOneService: no asset (url) for provided key!"]);
                  return;
              }
-             
-             NSString *cacheKey            = [AOCacheHelper cacheKeyForMethod:assetPath parameters:nil];
-             AORequestMetadata * request  = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:cacheKey];
-             request.cacheExpiration       = @(kAssetCacheTimeout);
-             request.forceSendRequest      = YES;
+
+             NSString *cacheKey = [AOCacheHelper cacheKeyForMethod:assetPath parameters:nil];
+             AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:cacheKey];
+             request.cacheExpiration = @(kAssetCacheTimeout);
+             request.forceSendRequest = YES;
              
              NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:cacheKey];
              
@@ -257,29 +248,24 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
                  request.headerParameters = @{kCacheControllHeader : ifModifiedSinceDate};
              }
              
-             [self.httpService GET:request parser:nil success:^(id responseObject)
-              {
-                  if (completionBlock) {
-                      completionBlock(responseObject, nil);
-                  }
-              }
-                           failure:^(AOError *error)
-              {
-                  id cachedObject = [self.assetCache objectForKey:cacheKey];
-                  
-                  if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
-                      if (completionBlock) {
-                          completionBlock(cachedObject, nil);
-                      }
-                  } else {
-                      if (completionBlock) {
-                          completionBlock(nil, error);
-                      }
-                  }
-              }];
-         }
-         else
-         {
+             [self.httpService GET:request parser:nil success:^(id responseObject) {
+                 if (completionBlock) {
+                     completionBlock(responseObject, nil);
+                 }
+             } failure:^(AOError *error) {
+                 id cachedObject = [self.assetCache objectForKey:cacheKey];
+                 
+                 if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
+                     if (completionBlock) {
+                         completionBlock(cachedObject, nil);
+                     }
+                 } else {
+                     if (completionBlock) {
+                         completionBlock(nil, error);
+                     }
+                 }
+             }];
+         } else {
              NSData * cachedResource = (NSData *)[self.assetCache objectForKey:key];
              
              if (completionBlock) {
@@ -289,6 +275,7 @@ static int const kAssetCacheTimeout          = 604800; //seconds (1 week)
      }];
 }
 
+#pragma mark - Cache Util
 
 - (void) clearCache {
     [self.assetCache clearAllObjects];

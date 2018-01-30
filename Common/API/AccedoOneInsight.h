@@ -9,20 +9,13 @@
 
 #import <Foundation/Foundation.h>
 #import "AOServiceComponent.h"
-
-
-
+#import "AccedoOneInsightProtocol.h"
 
 @class AccedoOne;
 
-@interface AccedoOneInsight : NSObject
--(instancetype _Nonnull ) initWithService:(AccedoOne *_Nonnull) service;
+@interface AccedoOneInsight : NSObject <AccedoOneInsightProtocol>
 
-- (void) applicationStart;
-- (void) applicationStartSuccess:(nullable AOSuccessBlock)completionBlock onFailure:(nullable AOErrorBlock)failureBlock;
-
-- (void) applicationStop;
-- (void) applicationStop:(BOOL)clearCache;
+- (instancetype _Nonnull) initWithService:(AccedoOne *_Nonnull) service;
 
 @end
 

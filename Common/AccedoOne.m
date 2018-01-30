@@ -8,15 +8,18 @@
 //
 
 #import "AccedoOne.h"
+
+#import "AccedoOneDetect.h"
+#import "AccedoOneControl.h"
+#import "AccedoOnePublish.h"
+#import "AccedoOneDetect.h"
+#import "AccedoOneUserData.h"
+
 #import "AOFileUtils.h"
 #import "AOCacheHelper.h"
 #import "AOCache.h"
 #import "AOCacheOverNSCache.h"
 #import "AORequestMetadata.h"
-#import "AccedoOneDetect.h"
-#import "AccedoOneControl.h"
-#import "AccedoOnePublish.h"
-#import "AccedoOneUserData.h"
 
 NSString *const AOApplicationStateActive      = @"Active";
 NSString *const AOApplicationStateMaintenance = @"maintenance";
@@ -67,7 +70,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 
 @implementation AccedoOne
 
-#pragma mark - Lifecycle
+#pragma mark - Initialization
 
 - (instancetype) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid {
     return [self initWithURL:url appKey:appKey userID:uuid requestTimeout:kRequestTimeout];
@@ -76,88 +79,83 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 - (instancetype) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid requestTimeout:(NSTimeInterval)requestTimeout {
     
     if(self = [super init]) {
-        
         NSParameterAssert(uuid   != nil);
         NSParameterAssert(url    != nil);
         NSParameterAssert(appKey != nil);
-        
+
         self.detect.logLevel = AOServiceLogLevelNotInitialized;
         self.accedoOneURL    = url;
         self.requestTimeout  = requestTimeout;
-        self.appKey        = appKey;
-        
-        self.objectCache   = [AOCache cacheProvider:[AOCacheOverNSCache class] persistenceKey:@"ObjectCache" defaultExpiration:kMetadataCacheTimeout];
-        self.jsonService   = [[AOJSONService alloc] initWithURL:self.accedoOneURL requestTimeout:requestTimeout cacheHandler:self.objectCache];
-        
-        self.uuid          = uuid;
-        
+        self.appKey          = appKey;
+        self.uuid            = uuid;
+
+        self.objectCache     = [AOCache cacheProvider:[AOCacheOverNSCache class] persistenceKey:@"ObjectCache" defaultExpiration:kMetadataCacheTimeout];
+        self.jsonService     = [[AOJSONService alloc] initWithURL:self.accedoOneURL requestTimeout:requestTimeout cacheHandler:self.objectCache];
+
         [self initializeServiceEnvironment];
     }
     return self;
-}
-
--(AccedoOneInsight *) insight {
-    if (!_insight){
-        _insight = [[AccedoOneInsight alloc] initWithService:self];
-    }
-    return _insight;
-}
-
--(AccedoOneDetect *) detect {
-    if (!_detect){
-        _detect = [[AccedoOneDetect alloc] initWithService:self];
-    }
-    return _detect;
-}
-
--(AccedoOneControl *) control {
-    if (!_control){
-        _control = [[AccedoOneControl alloc] initWithService:self];
-    }
-    return _control;
-}
-
--(AccedoOnePublish *) publish {
-    if (!_publish){
-        _publish = [[AccedoOnePublish alloc] initWithService:self];
-    }
-    return _publish;
-}
-
--(AccedoOneUserData *) userdata {
-    if (!_userdata){
-        _userdata = [[AccedoOneUserData alloc] initWithService:self];
-    }
-    return _userdata;
 }
 
 - (void) initializeServiceEnvironment {
     //disable cache on the service (as caching is handled by the the AccedoOneService!)
     [self.jsonService setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     
-    self.sessionKey          = nil;
-    self.sessionExpiration   = nil;
-    
-    self.serviceAvailability = AccedoOneServiceAvailabilityOnline;
-    
+    self.sessionKey            = nil;
+    self.sessionExpiration     = nil;
+    self.serviceAvailability   = AccedoOneServiceAvailabilityOnline;
     self.sessionFetchWaitQueue = [[NSOperationQueue alloc] init];
     self.sessionFetchWaitQueue.name = @"tv.accedo.one.sessionFetchWaitQueue";
     self.sessionFetchWaitQueue.maxConcurrentOperationCount = 1;
 }
 
-#pragma mark - Application Status
+#pragma mark - Getters
+
+-(AccedoOneInsight *) insight {
+    if (!_insight) {
+        _insight = [[AccedoOneInsight alloc] initWithService:self];
+    }
+    return _insight;
+}
+
+-(AccedoOneDetect *) detect {
+    if (!_detect) {
+        _detect = [[AccedoOneDetect alloc] initWithService:self];
+    }
+    return _detect;
+}
+
+-(AccedoOneControl *) control {
+    if (!_control) {
+        _control = [[AccedoOneControl alloc] initWithService:self];
+    }
+    return _control;
+}
+
+-(AccedoOnePublish *) publish {
+    if (!_publish) {
+        _publish = [[AccedoOnePublish alloc] initWithService:self];
+    }
+    return _publish;
+}
+
+-(AccedoOneUserData *) userdata {
+    if (!_userdata) {
+        _userdata = [[AccedoOneUserData alloc] initWithService:self];
+    }
+    return _userdata;
+}
+
+#pragma mark - AccedoOneControlProtocol
 
 /**
  *  Check application availability
  *
  *  @param completionBlock A block executed on successful completion, passing it the status and message as a NSString
  */
-- (void) applicationStatus:(void (^)(NSString *status, NSString *message, AOError *err))completionBlock
-{
+- (void) applicationStatus:(void (^)(NSString *status, NSString *message, AOError *err))completionBlock {
     [self.control applicationStatus:completionBlock];
 }
-
-#pragma mark - Metadata
 
 /**
  *  Fetch all avaiable metadata values
@@ -207,32 +205,25 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.control metadataForKeys:keys gid:gid onComplete:completionBlock];
 }
 
-#pragma mark - Profile Information
-
 /**
  *  Fetch profile information
  *
  *  @param completionBlock block to be executed on completion, passing a dictionary as a parameter, or error if failure occured
  */
-- (void) profileInfo:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock;
-{
+- (void) profileInfo:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock {
     [self.control profileInfo:completionBlock];
 }
 
-- (void) profileInfoForGID:(nullable NSString*)gid onComplete:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock
-{
+- (void) profileInfoForGID:(nullable NSString*)gid onComplete:(nullable void (^)(NSDictionary* profileInfo, AOError* err))completionBlock {
     [self.control profileInfoForGID:gid onComplete:completionBlock];
 }
-
-#pragma mark - Assets
 
 /**
  *  Get all asset IDs
  *
  *  @param completionBlock block to be executed on success, passing a dictionary containing all assets as a parameter
  */
-- (void) allAssets:(void (^)(NSDictionary *assetsMetadata, AOError *err))completionBlock
-{
+- (void) allAssets:(void (^)(NSDictionary *assetsMetadata, AOError *err))completionBlock {
     [self.control allAssets:completionBlock];
 }
 
@@ -242,12 +233,11 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
  *  @param key the resource key
  *  @param completionBlock block to be executed on response, passing the resource as NSData
  */
-- (void) assetForKey:(NSString *)key onComplete:(void (^)(NSData *asset, AOError *err))completionBlock
-{
+- (void) assetForKey:(NSString *)key onComplete:(void (^)(NSData *asset, AOError *err))completionBlock {
     [self.control assetForKey:key onComplete:completionBlock];
 }
 
-#pragma mark - Content Entry Information
+#pragma mark - AccedoOnePublishProtocol (CMS)
 
 - (void) entryForId:(NSString*)entryId onComplete:(void (^)(NSDictionary *entry, AOError *err))completionBlock {
     [self.publish entryForId:entryId onComplete:completionBlock];
@@ -289,17 +279,19 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.publish entriesForType:typeId optionalParams:params onComplete:completionBlock];
 }
 
-- (void) allEntries:(void (^)(AOPageResult *result, AOError *err))completionBlock
-{
+- (void) allEntries:(void (^)(AOPageResult *result, AOError *err))completionBlock {
     [self.publish allEntries:completionBlock];
 }
 
-- (void) allEntriesForParams:(AOCMSOptionalParams *)params onComplete:(void (^)(AOPageResult *result, AOError *err))completionBlock
-{
+- (void) allEntriesForParams:(AOCMSOptionalParams *)params onComplete:(void (^)(AOPageResult *result, AOError *err))completionBlock {
     [self.publish allEntriesForParams:params onComplete:completionBlock];
 }
 
-#pragma mark - Logging (Analytics)
+-(void) localesOnComplete:(nullable void (^)(NSArray *_Nullable locales, AOError *_Nullable err))completionBlock {
+    [self.publish localesOnComplete:completionBlock];
+}
+
+#pragma mark - AccedoOneInsightProtocol (Analytics)
 
 /**
  *  Log the application launch (simple)
@@ -329,7 +321,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.insight applicationStop: clearCache];
 }
 
-#pragma mark - Logging (Remote)
+#pragma mark - AccedoOneDetectProtocol (Remote logging)
 
 /**
  *  Remote logging for debug and support purposes. Remote logging will only be fired if the requested log level (logLevel)
@@ -344,7 +336,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.detect logWithLevel:logLevel code:code message:message dimensions:dimensions];
 }
 
-#pragma mark - User Data
+#pragma mark - AccedoOneUserDataProtocol
 
 - (void) allDataForUser:(NSString *)userId scope:(AOUserDataScope)scope onComplete:(void (^)(NSDictionary *userData, AOError *err))completionBlock {
     [self.userdata allDataForUser:userId scope:scope onComplete:completionBlock];
@@ -362,13 +354,6 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.userdata storeValue:value key:key forUser:userId scope:scope onComplete:completionBlock];
 }
 
-#pragma mark - Locale
-
--(void) localesOnComplete:(nullable void (^)(NSArray *_Nullable locales, AOError *_Nullable err))completionBlock
-{
-    [self.publish localesOnComplete:completionBlock];
-}
-
 #pragma mark - Helpers (network requests handling)
 
 /**
@@ -384,7 +369,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
         }
         return;
     }
-    
+
     BOOL sessionQueueIsPaused = self.sessionFetchWaitQueue.isSuspended;
     
     if (!sessionQueueIsPaused) {
@@ -400,44 +385,40 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
  *  @param networkRequest block to be executed on successful completion, after the session has been parsed
  *  @param failureBlock   An error block
  */
-- (void) getSessionWithOperation:(void (^)(void))networkRequest onFailure:(AOErrorBlock)failureBlock
-{
+- (void) getSessionWithOperation:(void (^)(void))networkRequest onFailure:(AOErrorBlock)failureBlock {
     [self.sessionFetchWaitQueue setSuspended:YES];
     
     AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:kPathSession queryParams:@{@"appKey": self.appKey, @"uuid":self.uuid}];
     
-    [self.jsonService GET:request parser:nil success:^(id responseObject)
-     {
-         //A session key was created, update the availability status to online
-         self.serviceAvailability = AccedoOneServiceAvailabilityOnline;
-         
-         self.sessionKey = responseObject[@"sessionKey"];
-         [self.jsonService setHeaderValue:self.sessionKey headerField:@"X-Session"];
-         
-         NSString *sessionExpiryString = [responseObject valueForKey:@"expiration"];
-         
-         static NSDateFormatter *dateFormatter = nil;
-         static dispatch_once_t oncePredicate;
-         
-         dispatch_once(&oncePredicate, ^{
-             dateFormatter = [[NSDateFormatter alloc] init];
-             [dateFormatter setDateFormat:@"yyyyMMdd'T'HH:mm:ssZ"];
-             [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-             [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
-         });
-         
-         @synchronized(dateFormatter) {
-             self.sessionExpiration = [dateFormatter dateFromString:sessionExpiryString];
-         }
-         
-         [self.sessionFetchWaitQueue setSuspended:NO];
-         
-         if (networkRequest) {
-             networkRequest();
-         }
-     }
-                  failure:^(AOError *error)
-     {
+    [self.jsonService GET:request parser:nil success:^(id responseObject) {
+        //A session key was created, update the availability status to online
+        self.serviceAvailability = AccedoOneServiceAvailabilityOnline;
+        
+        self.sessionKey = responseObject[@"sessionKey"];
+        [self.jsonService setHeaderValue:self.sessionKey headerField:@"X-Session"];
+        
+        NSString *sessionExpiryString = [responseObject valueForKey:@"expiration"];
+        
+        static NSDateFormatter *dateFormatter = nil;
+        static dispatch_once_t oncePredicate;
+        
+        dispatch_once(&oncePredicate, ^{
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyyMMdd'T'HH:mm:ssZ"];
+            [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+            [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
+        });
+        
+        @synchronized(dateFormatter) {
+            self.sessionExpiration = [dateFormatter dateFromString:sessionExpiryString];
+        }
+        
+        [self.sessionFetchWaitQueue setSuspended:NO];
+        
+        if (networkRequest) {
+            networkRequest();
+        }
+    } failure:^(AOError *error) {
          //An attempt to create a session key failed, so the AccedoOneService enters offline mode
          self.serviceAvailability = AccedoOneServiceAvailabilityOffline;
          
@@ -447,6 +428,24 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
          
          [self.sessionFetchWaitQueue setSuspended:NO];
      }];
+}
+
+#pragma mark - AccedoOne
+
+- (void) setHeaderValue:(nonnull NSString *) value headerField:(nonnull NSString *) headerField {
+    [self.jsonService setHeaderValue:value headerField:headerField];
+}
+
+-(void) clearSession:(BOOL) clearCache {
+    // clear session
+    self.sessionKey = nil;
+    self.sessionExpiration = nil;
+    
+    // clear cache
+    if (clearCache) {
+        [self.objectCache clearAllObjects];
+        [self.control clearCache];
+    }
 }
 
 /**
@@ -462,45 +461,38 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
                          queryParams:(NSDictionary*)params
                           allowCache:(BOOL)allowCache
                            onSuccess:(AOSuccessBlock)successBlock
-                        failureBlock:(AOErrorBlock)failureBlock
-{
-    [self enqueueOperation:^
-     {
-         
-         NSString *cacheKey            = [AOCacheHelper cacheKeyForMethod:requestSuffix parameters:params];
-         AORequestMetadata * request  = [AORequestMetadata requestMetadataWithPath:requestSuffix queryParams:params headerParams:nil cacheKey:cacheKey];
-         request.cacheExpiration       = allowCache ? @(kMetadataCacheTimeout) : nil;
-         request.forceSendRequest      = YES;
-         NSTimeInterval cacheTimeStamp = [self.objectCache creationDateForKey:cacheKey];
-         
-         //check cache, and add cache-controll header if necessary...
-         if (cacheTimeStamp > 0 && allowCache)
-         {
-             NSString *ifModifiedSinceDate = [self ifModifiedSinceDateForCachedObject:cacheKey cache:self.objectCache];
-             request.headerParameters = @{kCacheControllHeader : ifModifiedSinceDate};
-         }
-         
-         [self.jsonService GET:request parser:nil success:^(id responseObject)
-          {
-              if (successBlock) {
-                  successBlock(responseObject);
-              }
-          }
-                       failure:^(AOError *error)
-          {
-              id cachedObject = [self.objectCache objectForKey:request.cacheKey];
-              
-              if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
-                  if (successBlock) {
-                      successBlock(cachedObject);
-                  }
-              } else if (failureBlock) {
-                  failureBlock(error);
-              }
-          }];
-     }
-                 onFailure:^(AOError *error)
-     {
+                        failureBlock:(AOErrorBlock)failureBlock {
+
+    [self enqueueOperation:^{
+
+        NSString *cacheKey = [AOCacheHelper cacheKeyForMethod:requestSuffix parameters:params];
+        AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:requestSuffix queryParams:params headerParams:nil cacheKey:cacheKey];
+        request.cacheExpiration = allowCache ? @(kMetadataCacheTimeout) : nil;
+        request.forceSendRequest = YES;
+        NSTimeInterval cacheTimeStamp = [self.objectCache creationDateForKey:cacheKey];
+        
+        //check cache, and add cache-controll header if necessary...
+        if (cacheTimeStamp > 0 && allowCache) {
+            NSString *ifModifiedSinceDate = [self ifModifiedSinceDateForCachedObject:cacheKey cache:self.objectCache];
+            request.headerParameters = @{kCacheControllHeader : ifModifiedSinceDate};
+        }
+
+        [self.jsonService GET:request parser:nil success:^(id responseObject) {
+            if (successBlock) {
+                successBlock(responseObject);
+            }
+        } failure:^(AOError *error) {
+            id cachedObject = [self.objectCache objectForKey:request.cacheKey];
+            
+            if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
+                if (successBlock) {
+                    successBlock(cachedObject);
+                }
+            } else if (failureBlock) {
+                failureBlock(error);
+            }
+        }];
+    } onFailure:^(AOError *error) {
          if (failureBlock) {
              failureBlock(error);
          }
@@ -518,35 +510,27 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
                                params:(id)params
                                  body:(NSData *)payload
                             onSuccess:(AOSuccessBlock)completionBlock
-                            onFailure:(AOErrorBlock)failureBlock
-{
-    [self enqueueOperation:^
-     {
-         AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:requestSuffix queryParams:params];
-         
-         request.body = payload;
-         
-         [self.jsonService POST:request parser:nil success:^(id responseObject)
-          {
-              if (completionBlock) {
-                  completionBlock(responseObject);
-              }
-          }
-                        failure:^(AOError *error)
-          {
-              if (failureBlock) {
-                  failureBlock(error);
-              }
-          }];
-     }
-                 onFailure:^(AOError *error)
-     {
-         if (failureBlock) {
-             failureBlock(error);
-         }
-     }];
-}
+                            onFailure:(AOErrorBlock)failureBlock {
 
+    [self enqueueOperation:^{
+        AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:requestSuffix queryParams:params];
+        request.body = payload;
+
+        [self.jsonService POST:request parser:nil success:^(id responseObject) {
+            if (completionBlock) {
+                completionBlock(responseObject);
+            }
+        } failure:^(AOError *error) {
+            if (failureBlock) {
+                failureBlock(error);
+            }
+         }];
+    } onFailure:^(AOError *error) {
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    }];
+}
 
 #pragma mark - Helpers (Offline usage)
 
@@ -573,8 +557,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     NSString *folderPath = [AOFileUtils pathToFolderInDocumentsDirectoryWithName:kLocalConfigFolder];
     NSString *filePath = [folderPath stringByAppendingPathComponent:kLocalConfigFileName];
     
-    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath])
-    {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     
@@ -606,8 +589,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     NSString *folderPath = [AOFileUtils pathToFolderInDocumentsDirectoryWithName:kLocalProfileFolder];
     NSString *filePath = [folderPath stringByAppendingPathComponent:kLocalProfileFileName];
     
-    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath])
-    {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:folderPath withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     
@@ -636,7 +618,6 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     });
     
     NSTimeInterval cachedObjectTimeStamp = [cache creationDateForKey:cacheKey];
-    
     NSDate *lastModified = [NSDate dateWithTimeIntervalSince1970:cachedObjectTimeStamp];
     
     return [dateFormatter stringFromDate:lastModified];
@@ -654,27 +635,11 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     return ((self.sessionKey) && (self.sessionExpiration) && ([self.sessionExpiration compare: present] == NSOrderedDescending));
 }
 
--(void) clearSession:(BOOL) clearCache {
-    // clear session
-    self.sessionKey = nil;
-    self.sessionExpiration = nil;
-    
-    // clear cache
-    if (clearCache) {
-        [self.objectCache clearAllObjects];
-        [self.control clearCache];
-    }
-}
-
 - (NSMutableDictionary*) localConfig {
     if (!_localConfig) {
         _localConfig = [[NSMutableDictionary alloc] init];
     }
     return _localConfig;
-}
-
-- (void) setHeaderValue:(nonnull NSString *) value headerField:(nonnull NSString *) headerField {
-    [self.jsonService setHeaderValue:value headerField:headerField];
 }
 
 @end
