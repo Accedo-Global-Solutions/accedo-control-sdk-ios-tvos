@@ -10,12 +10,13 @@
 #import "AccedoOneInsight.h"
 #import "AccedoOne.h"
 
-static NSString *const kPathAnalytics        = @"event/log";
+static NSString *const kPathAnalytics = @"event/log";
 
 @interface AccedoOneInsight ()
 @property (nonatomic, strong) AccedoOne * service;
 
 @end
+
 
 @implementation AccedoOneInsight
 
@@ -26,6 +27,7 @@ static NSString *const kPathAnalytics        = @"event/log";
     return self;
 }
 
+#pragma mark - AccedoOneInsightProtocol
 
 /**
  *  Log the application launch (simple)
@@ -38,7 +40,6 @@ static NSString *const kPathAnalytics        = @"event/log";
  *  Log the application launch
  */
 -(void) applicationStartSuccess:(AOSuccessBlock)completionBlock onFailure:(AOErrorBlock)failureBlock {
-    
     //[self sendAuthenticatedPOSTRequest:kPathAnalytics params:@{ @"eventType": @"START" } body:nil onSuccess:nil onFailure:nil];
     [self.service sendAuthenticatedPOSTRequest:kPathAnalytics params:nil body:[AORequestMetadata dictionaryToNSData:@{@"eventType": @"START"} error:nil] onSuccess:completionBlock onFailure:failureBlock];
 }
@@ -54,13 +55,8 @@ static NSString *const kPathAnalytics        = @"event/log";
  *  Log the application termination and optionally clear cache.
  */
 - (void) applicationStop:(BOOL)clearCache {
-    
     //[self sendAuthenticatedPOSTRequest:kPathAnalytics params:@{ @"eventType": @"QUIT" } body:nil onSuccess:nil onFailure:nil];
     [self.service sendAuthenticatedPOSTRequest:kPathAnalytics params:nil body:[AORequestMetadata dictionaryToNSData:@{@"eventType": @"QUIT"} error:nil] onSuccess:nil onFailure:nil];
-    
-   
 }
-
-
 
 @end

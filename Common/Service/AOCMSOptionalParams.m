@@ -48,11 +48,11 @@
         dict[@"at"] = [self atDateToString];
     }
 
-    if (self.size) {
+    if (self.size != nil) {
         dict[@"size"] = [self.size stringValue];
     }
 
-    if (self.offset) {
+    if (self.offset != nil) {
         dict[@"offset"] = [self.offset stringValue];
     }
 
