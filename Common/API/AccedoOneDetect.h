@@ -8,30 +8,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-
-/**
- * Log level types used for remote logging
- */
-typedef NS_ENUM(NSUInteger, AOServiceLogLevel) {
-    AOServiceLogLevelNotInitialized = NSNotFound,
-    AOServiceLogLevelOff            = 0,
-    AOServiceLogLevelError          = 1,
-    AOServiceLogLevelWarn           = 2,
-    AOServiceLogLevelInfo           = 3,
-    AOServiceLogLevelDebug          = 4
-};
+#import "AccedoOneDetectProtocol.h"
 
 @class AccedoOne;
 
-@interface AccedoOneDetect : NSObject
--(instancetype _Nonnull ) initWithService:(nonnull AccedoOne *) service;
+@interface AccedoOneDetect : NSObject <AccedoOneDetectProtocol>
 
-- (void) logWithLevel:(AOServiceLogLevel)logLevel code:(NSUInteger)code message:(nonnull  NSString *)message dimensions:(nullable NSDictionary *)dimensions;
+- (instancetype _Nonnull) initWithService:(nonnull AccedoOne *) service;
 
 @property (nonatomic, assign) AOServiceLogLevel logLevel;
 
 @end
-
-

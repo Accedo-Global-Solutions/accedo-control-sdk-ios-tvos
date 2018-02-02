@@ -31,55 +31,61 @@
 		8CE8C7851FEC7E6B0041C284 /* AccedoOne.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7821FEC7E6A0041C284 /* AccedoOne.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CE8C7861FEC7E6B0041C284 /* AccedoOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7831FEC7E6A0041C284 /* AccedoOne.m */; };
 		8CE8C78F1FEC7ECA0041C284 /* AccedoOnetvOS.pch in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C78E1FEC7ECA0041C284 /* AccedoOnetvOS.pch */; };
-		8CE8C7971FEC7EE20041C284 /* AOCMSOptionalParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7901FEC7EE20041C284 /* AOCMSOptionalParams.m */; };
-		8CE8C7981FEC7EE20041C284 /* AOServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7911FEC7EE20041C284 /* AOServiceComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C7991FEC7EE20041C284 /* AOService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7921FEC7EE20041C284 /* AOService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C79A1FEC7EE20041C284 /* AOObjectParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7931FEC7EE20041C284 /* AOObjectParserProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C79B1FEC7EE20041C284 /* AOService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7941FEC7EE20041C284 /* AOService.m */; };
-		8CE8C79C1FEC7EE20041C284 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7951FEC7EE20041C284 /* AOCMSOptionalParams.h */; };
-		8CE8C79D1FEC7EE20041C284 /* AOServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7961FEC7EE20041C284 /* AOServiceComponent.m */; };
-		8CE8C7A21FEC7EF10041C284 /* AOPagingMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C79E1FEC7EF10041C284 /* AOPagingMetadata.m */; };
-		8CE8C7A31FEC7EF10041C284 /* AOPagingMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C79F1FEC7EF10041C284 /* AOPagingMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C7A41FEC7EF10041C284 /* AORequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7A01FEC7EF10041C284 /* AORequestMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C7A51FEC7EF10041C284 /* AORequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A11FEC7EF10041C284 /* AORequestMetadata.m */; };
-		8CE8C7B01FEC7EFF0041C284 /* AOAsynchBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A61FEC7EFF0041C284 /* AOAsynchBlockOperation.m */; };
-		8CE8C7B11FEC7EFF0041C284 /* AOError.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A71FEC7EFF0041C284 /* AOError.m */; };
-		8CE8C7B21FEC7EFF0041C284 /* AOFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7A81FEC7EFF0041C284 /* AOFileUtils.m */; };
-		8CE8C7B31FEC7EFF0041C284 /* AOError.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7A91FEC7EFF0041C284 /* AOError.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C7B41FEC7EFF0041C284 /* NSString+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7AA1FEC7EFF0041C284 /* NSString+AO.m */; };
-		8CE8C7B51FEC7EFF0041C284 /* NSArray+AO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AB1FEC7EFF0041C284 /* NSArray+AO.h */; };
-		8CE8C7B61FEC7EFF0041C284 /* NSArray+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7AC1FEC7EFF0041C284 /* NSArray+AO.m */; };
-		8CE8C7B71FEC7EFF0041C284 /* AOAsynchBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AD1FEC7EFF0041C284 /* AOAsynchBlockOperation.h */; };
-		8CE8C7B81FEC7EFF0041C284 /* NSString+AO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AE1FEC7EFF0041C284 /* NSString+AO.h */; };
-		8CE8C7B91FEC7EFF0041C284 /* AOFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7AF1FEC7EFF0041C284 /* AOFileUtils.h */; };
-		8CE8C7C11FEC7F180041C284 /* AOCacheDTO.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7BA1FEC7F180041C284 /* AOCacheDTO.h */; };
-		8CE8C7C21FEC7F180041C284 /* AOCacheDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7BB1FEC7F180041C284 /* AOCacheDTO.m */; };
-		8CE8C7C31FEC7F180041C284 /* AOCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7BC1FEC7F180041C284 /* AOCacheHelper.m */; };
-		8CE8C7C41FEC7F180041C284 /* AOService+CacheController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7BD1FEC7F180041C284 /* AOService+CacheController.h */; };
-		8CE8C7C51FEC7F180041C284 /* AOService+CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7BE1FEC7F180041C284 /* AOService+CacheController.m */; };
-		8CE8C7C61FEC7F180041C284 /* AOCacheHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7BF1FEC7F180041C284 /* AOCacheHelper.h */; };
-		8CE8C7C71FEC7F180041C284 /* AOCacheHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7C01FEC7F180041C284 /* AOCacheHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CE8C7CF1FEC7F2B0041C284 /* AOCacheOverPINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7C81FEC7F2B0041C284 /* AOCacheOverPINCache.m */; };
-		8CE8C7D11FEC7F2B0041C284 /* AOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7CA1FEC7F2B0041C284 /* AOCache.h */; };
-		8CE8C7D21FEC7F2B0041C284 /* AOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7CB1FEC7F2B0041C284 /* AOCache.m */; };
-		8CE8C7D31FEC7F2B0041C284 /* AOCacheOverPINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7CC1FEC7F2B0041C284 /* AOCacheOverPINCache.h */; };
-		8CE8C7D41FEC7F2B0041C284 /* AOCacheOverNSCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7CD1FEC7F2B0041C284 /* AOCacheOverNSCache.h */; };
-		8CE8C7D51FEC7F2B0041C284 /* AOCacheOverNSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7CE1FEC7F2B0041C284 /* AOCacheOverNSCache.m */; };
-		8CE8C7D81FEC7F3E0041C284 /* AOCacheAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE8C7D61FEC7F3E0041C284 /* AOCacheAtom.h */; };
-		8CE8C7D91FEC7F3E0041C284 /* AOCacheAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE8C7D71FEC7F3E0041C284 /* AOCacheAtom.m */; };
-		8CF755BD1FED3B50000D7070 /* AccedoOneInsight.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B31FED3B50000D7070 /* AccedoOneInsight.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CF755BE1FED3B50000D7070 /* AccedoOneUserData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B41FED3B50000D7070 /* AccedoOneUserData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CF755BF1FED3B50000D7070 /* AccedoOneInsight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755B51FED3B50000D7070 /* AccedoOneInsight.m */; };
-		8CF755C01FED3B50000D7070 /* AccedoOneDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755B61FED3B50000D7070 /* AccedoOneDetect.m */; };
-		8CF755C11FED3B50000D7070 /* AccedoOneDetect.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B71FED3B50000D7070 /* AccedoOneDetect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CF755C21FED3B50000D7070 /* AccedoOneControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B81FED3B50000D7070 /* AccedoOneControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CF755C31FED3B50000D7070 /* AccedoOnePublish.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF755B91FED3B50000D7070 /* AccedoOnePublish.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CF755C41FED3B50000D7070 /* AccedoOneControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755BA1FED3B50000D7070 /* AccedoOneControl.m */; };
-		8CF755C51FED3B50000D7070 /* AccedoOneUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755BB1FED3B50000D7070 /* AccedoOneUserData.m */; };
-		8CF755C61FED3B50000D7070 /* AccedoOnePublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF755BC1FED3B50000D7070 /* AccedoOnePublish.m */; };
 		97015C22C3CAD8985863D8B9 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D91BE977DBD7D1FE179AD89F /* AFURLRequestSerialization.m */; };
 		9DD6D05F8FB8AD92B755E3F4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40C21E45A2949895407CDB /* AFNetworkReachabilityManager.m */; };
 		B5BF2C33B9183F5B27F6FE44 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA39A3BDDCE8DEAE1134E26A /* AFURLSessionManager.m */; };
+		DC2AD4372020A4E100C9FC61 /* AOCacheDTO.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD3FC2020A4E000C9FC61 /* AOCacheDTO.h */; };
+		DC2AD4382020A4E100C9FC61 /* AOService+CacheController.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD3FD2020A4E000C9FC61 /* AOService+CacheController.h */; };
+		DC2AD4392020A4E100C9FC61 /* AOCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD3FE2020A4E000C9FC61 /* AOCacheHelper.m */; };
+		DC2AD43A2020A4E100C9FC61 /* AOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4002020A4E000C9FC61 /* AOCache.h */; };
+		DC2AD43B2020A4E100C9FC61 /* AOCacheOverNSCache.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4012020A4E000C9FC61 /* AOCacheOverNSCache.h */; };
+		DC2AD43C2020A4E100C9FC61 /* AOCacheOverPINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4022020A4E000C9FC61 /* AOCacheOverPINCache.h */; };
+		DC2AD43D2020A4E100C9FC61 /* AOCacheAtom.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4042020A4E000C9FC61 /* AOCacheAtom.m */; };
+		DC2AD43E2020A4E100C9FC61 /* AOCacheAtom.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4052020A4E000C9FC61 /* AOCacheAtom.h */; };
+		DC2AD43F2020A4E100C9FC61 /* AOCacheOverPINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4062020A4E000C9FC61 /* AOCacheOverPINCache.m */; };
+		DC2AD4402020A4E100C9FC61 /* AOCacheOverNSCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4072020A4E000C9FC61 /* AOCacheOverNSCache.m */; };
+		DC2AD4412020A4E100C9FC61 /* AOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4082020A4E000C9FC61 /* AOCache.m */; };
+		DC2AD4422020A4E100C9FC61 /* AOService+CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4092020A4E000C9FC61 /* AOService+CacheController.m */; };
+		DC2AD4432020A4E100C9FC61 /* AOCacheDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD40A2020A4E000C9FC61 /* AOCacheDTO.m */; };
+		DC2AD4442020A4E100C9FC61 /* AOCacheHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD40B2020A4E000C9FC61 /* AOCacheHelper.h */; };
+		DC2AD4452020A4E100C9FC61 /* AOCacheHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD40C2020A4E000C9FC61 /* AOCacheHandler.h */; };
+		DC2AD4462020A4E100C9FC61 /* AORequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD40E2020A4E000C9FC61 /* AORequestMetadata.m */; };
+		DC2AD4472020A4E100C9FC61 /* AOPagingMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD40F2020A4E000C9FC61 /* AOPagingMetadata.m */; };
+		DC2AD4482020A4E100C9FC61 /* AOPagingMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4102020A4E000C9FC61 /* AOPagingMetadata.h */; };
+		DC2AD4492020A4E100C9FC61 /* AORequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4112020A4E000C9FC61 /* AORequestMetadata.h */; };
+		DC2AD44A2020A4E100C9FC61 /* AccedoOneControl.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4132020A4E100C9FC61 /* AccedoOneControl.h */; };
+		DC2AD44B2020A4E100C9FC61 /* AccedoOnePublish.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4142020A4E100C9FC61 /* AccedoOnePublish.m */; };
+		DC2AD44C2020A4E100C9FC61 /* AccedoOneInsight.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4152020A4E100C9FC61 /* AccedoOneInsight.m */; };
+		DC2AD44D2020A4E100C9FC61 /* AccedoOneDetect.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4162020A4E100C9FC61 /* AccedoOneDetect.h */; };
+		DC2AD44E2020A4E100C9FC61 /* AccedoOneUserData.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4172020A4E100C9FC61 /* AccedoOneUserData.h */; };
+		DC2AD44F2020A4E100C9FC61 /* AccedoOneControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4182020A4E100C9FC61 /* AccedoOneControl.m */; };
+		DC2AD4502020A4E100C9FC61 /* AccedoOneInsight.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4192020A4E100C9FC61 /* AccedoOneInsight.h */; };
+		DC2AD4512020A4E100C9FC61 /* AccedoOnePublish.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41A2020A4E100C9FC61 /* AccedoOnePublish.h */; };
+		DC2AD4522020A4E100C9FC61 /* AccedoOneDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD41B2020A4E100C9FC61 /* AccedoOneDetect.m */; };
+		DC2AD4532020A4E100C9FC61 /* AccedoOneUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD41C2020A4E100C9FC61 /* AccedoOneUserData.m */; };
+		DC2AD4542020A4E100C9FC61 /* AccedoOneInsightProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41E2020A4E100C9FC61 /* AccedoOneInsightProtocol.h */; };
+		DC2AD4552020A4E100C9FC61 /* AccedoOneDetectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41F2020A4E100C9FC61 /* AccedoOneDetectProtocol.h */; };
+		DC2AD4562020A4E100C9FC61 /* AccedoOneUserDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4202020A4E100C9FC61 /* AccedoOneUserDataProtocol.h */; };
+		DC2AD4572020A4E100C9FC61 /* AccedoOnePublishProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4212020A4E100C9FC61 /* AccedoOnePublishProtocol.h */; };
+		DC2AD4582020A4E100C9FC61 /* AccedoOneCacheProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4222020A4E100C9FC61 /* AccedoOneCacheProtocol.h */; };
+		DC2AD4592020A4E100C9FC61 /* AccedoOneControlProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4232020A4E100C9FC61 /* AccedoOneControlProtocol.h */; };
+		DC2AD45A2020A4E100C9FC61 /* AOService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4252020A4E100C9FC61 /* AOService.m */; };
+		DC2AD45B2020A4E100C9FC61 /* AOServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4262020A4E100C9FC61 /* AOServiceComponent.h */; };
+		DC2AD45C2020A4E100C9FC61 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4272020A4E100C9FC61 /* AOCMSOptionalParams.h */; };
+		DC2AD45D2020A4E100C9FC61 /* AOService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4282020A4E100C9FC61 /* AOService.h */; };
+		DC2AD45E2020A4E100C9FC61 /* AOCMSOptionalParams.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4292020A4E100C9FC61 /* AOCMSOptionalParams.m */; };
+		DC2AD45F2020A4E100C9FC61 /* AOServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD42A2020A4E100C9FC61 /* AOServiceComponent.m */; };
+		DC2AD4602020A4E100C9FC61 /* AOObjectParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42B2020A4E100C9FC61 /* AOObjectParserProtocol.h */; };
+		DC2AD4612020A4E100C9FC61 /* AOError.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42D2020A4E100C9FC61 /* AOError.h */; };
+		DC2AD4622020A4E100C9FC61 /* AOAsynchBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42E2020A4E100C9FC61 /* AOAsynchBlockOperation.h */; };
+		DC2AD4632020A4E100C9FC61 /* NSString+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD42F2020A4E100C9FC61 /* NSString+AO.m */; };
+		DC2AD4642020A4E100C9FC61 /* AOFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4302020A4E100C9FC61 /* AOFileUtils.m */; };
+		DC2AD4652020A4E100C9FC61 /* NSArray+AO.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4312020A4E100C9FC61 /* NSArray+AO.h */; };
+		DC2AD4662020A4E100C9FC61 /* AOError.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4322020A4E100C9FC61 /* AOError.m */; };
+		DC2AD4672020A4E100C9FC61 /* AOAsynchBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4332020A4E100C9FC61 /* AOAsynchBlockOperation.m */; };
+		DC2AD4682020A4E100C9FC61 /* NSString+AO.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4342020A4E100C9FC61 /* NSString+AO.h */; };
+		DC2AD4692020A4E100C9FC61 /* NSArray+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4352020A4E100C9FC61 /* NSArray+AO.m */; };
+		DC2AD46A2020A4E100C9FC61 /* AOFileUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4362020A4E100C9FC61 /* AOFileUtils.h */; };
 		E0666CFD60F86EC4A0F80A4F /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D38AC160881372CDF9A0D36 /* PINDiskCache.m */; };
 		EF0AF1561B5B1CBD719B1E9D /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A21BD8ED62B36A9F8A2C37F /* PINCache.m */; };
 /* End PBXBuildFile section */
@@ -115,52 +121,6 @@
 		8CE8C7821FEC7E6A0041C284 /* AccedoOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOne.h; path = ../../Common/AccedoOne.h; sourceTree = "<group>"; };
 		8CE8C7831FEC7E6A0041C284 /* AccedoOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOne.m; path = ../../Common/AccedoOne.m; sourceTree = "<group>"; };
 		8CE8C78E1FEC7ECA0041C284 /* AccedoOnetvOS.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccedoOnetvOS.pch; sourceTree = "<group>"; };
-		8CE8C7901FEC7EE20041C284 /* AOCMSOptionalParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCMSOptionalParams.m; path = ../../../Common/Service/AOCMSOptionalParams.m; sourceTree = "<group>"; };
-		8CE8C7911FEC7EE20041C284 /* AOServiceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOServiceComponent.h; path = ../../../Common/Service/AOServiceComponent.h; sourceTree = "<group>"; };
-		8CE8C7921FEC7EE20041C284 /* AOService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOService.h; path = ../../../Common/Service/AOService.h; sourceTree = "<group>"; };
-		8CE8C7931FEC7EE20041C284 /* AOObjectParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOObjectParserProtocol.h; path = ../../../Common/Service/AOObjectParserProtocol.h; sourceTree = "<group>"; };
-		8CE8C7941FEC7EE20041C284 /* AOService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOService.m; path = ../../../Common/Service/AOService.m; sourceTree = "<group>"; };
-		8CE8C7951FEC7EE20041C284 /* AOCMSOptionalParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCMSOptionalParams.h; path = ../../../Common/Service/AOCMSOptionalParams.h; sourceTree = "<group>"; };
-		8CE8C7961FEC7EE20041C284 /* AOServiceComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOServiceComponent.m; path = ../../../Common/Service/AOServiceComponent.m; sourceTree = "<group>"; };
-		8CE8C79E1FEC7EF10041C284 /* AOPagingMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOPagingMetadata.m; path = ../../../Common/Request/AOPagingMetadata.m; sourceTree = "<group>"; };
-		8CE8C79F1FEC7EF10041C284 /* AOPagingMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOPagingMetadata.h; path = ../../../Common/Request/AOPagingMetadata.h; sourceTree = "<group>"; };
-		8CE8C7A01FEC7EF10041C284 /* AORequestMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AORequestMetadata.h; path = ../../../Common/Request/AORequestMetadata.h; sourceTree = "<group>"; };
-		8CE8C7A11FEC7EF10041C284 /* AORequestMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AORequestMetadata.m; path = ../../../Common/Request/AORequestMetadata.m; sourceTree = "<group>"; };
-		8CE8C7A61FEC7EFF0041C284 /* AOAsynchBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOAsynchBlockOperation.m; path = ../../../Common/Utils/AOAsynchBlockOperation.m; sourceTree = "<group>"; };
-		8CE8C7A71FEC7EFF0041C284 /* AOError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOError.m; path = ../../../Common/Utils/AOError.m; sourceTree = "<group>"; };
-		8CE8C7A81FEC7EFF0041C284 /* AOFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOFileUtils.m; path = ../../../Common/Utils/AOFileUtils.m; sourceTree = "<group>"; };
-		8CE8C7A91FEC7EFF0041C284 /* AOError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOError.h; path = ../../../Common/Utils/AOError.h; sourceTree = "<group>"; };
-		8CE8C7AA1FEC7EFF0041C284 /* NSString+AO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+AO.m"; path = "../../../Common/Utils/NSString+AO.m"; sourceTree = "<group>"; };
-		8CE8C7AB1FEC7EFF0041C284 /* NSArray+AO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+AO.h"; path = "../../../Common/Utils/NSArray+AO.h"; sourceTree = "<group>"; };
-		8CE8C7AC1FEC7EFF0041C284 /* NSArray+AO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+AO.m"; path = "../../../Common/Utils/NSArray+AO.m"; sourceTree = "<group>"; };
-		8CE8C7AD1FEC7EFF0041C284 /* AOAsynchBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOAsynchBlockOperation.h; path = ../../../Common/Utils/AOAsynchBlockOperation.h; sourceTree = "<group>"; };
-		8CE8C7AE1FEC7EFF0041C284 /* NSString+AO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+AO.h"; path = "../../../Common/Utils/NSString+AO.h"; sourceTree = "<group>"; };
-		8CE8C7AF1FEC7EFF0041C284 /* AOFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOFileUtils.h; path = ../../../Common/Utils/AOFileUtils.h; sourceTree = "<group>"; };
-		8CE8C7BA1FEC7F180041C284 /* AOCacheDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheDTO.h; path = ../../../Common/Cache/AOCacheDTO.h; sourceTree = "<group>"; };
-		8CE8C7BB1FEC7F180041C284 /* AOCacheDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheDTO.m; path = ../../../Common/Cache/AOCacheDTO.m; sourceTree = "<group>"; };
-		8CE8C7BC1FEC7F180041C284 /* AOCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheHelper.m; path = ../../../Common/Cache/AOCacheHelper.m; sourceTree = "<group>"; };
-		8CE8C7BD1FEC7F180041C284 /* AOService+CacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AOService+CacheController.h"; path = "../../../Common/Cache/AOService+CacheController.h"; sourceTree = "<group>"; };
-		8CE8C7BE1FEC7F180041C284 /* AOService+CacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AOService+CacheController.m"; path = "../../../Common/Cache/AOService+CacheController.m"; sourceTree = "<group>"; };
-		8CE8C7BF1FEC7F180041C284 /* AOCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheHelper.h; path = ../../../Common/Cache/AOCacheHelper.h; sourceTree = "<group>"; };
-		8CE8C7C01FEC7F180041C284 /* AOCacheHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheHandler.h; path = ../../../Common/Cache/AOCacheHandler.h; sourceTree = "<group>"; };
-		8CE8C7C81FEC7F2B0041C284 /* AOCacheOverPINCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheOverPINCache.m; path = ../../../../Common/Cache/Providers/AOCacheOverPINCache.m; sourceTree = "<group>"; };
-		8CE8C7CA1FEC7F2B0041C284 /* AOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCache.h; path = ../../../../Common/Cache/Providers/AOCache.h; sourceTree = "<group>"; };
-		8CE8C7CB1FEC7F2B0041C284 /* AOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCache.m; path = ../../../../Common/Cache/Providers/AOCache.m; sourceTree = "<group>"; };
-		8CE8C7CC1FEC7F2B0041C284 /* AOCacheOverPINCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheOverPINCache.h; path = ../../../../Common/Cache/Providers/AOCacheOverPINCache.h; sourceTree = "<group>"; };
-		8CE8C7CD1FEC7F2B0041C284 /* AOCacheOverNSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheOverNSCache.h; path = ../../../../Common/Cache/Providers/AOCacheOverNSCache.h; sourceTree = "<group>"; };
-		8CE8C7CE1FEC7F2B0041C284 /* AOCacheOverNSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheOverNSCache.m; path = ../../../../Common/Cache/Providers/AOCacheOverNSCache.m; sourceTree = "<group>"; };
-		8CE8C7D61FEC7F3E0041C284 /* AOCacheAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AOCacheAtom.h; path = ../../../../../Common/Cache/Providers/Model/AOCacheAtom.h; sourceTree = "<group>"; };
-		8CE8C7D71FEC7F3E0041C284 /* AOCacheAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AOCacheAtom.m; path = ../../../../../Common/Cache/Providers/Model/AOCacheAtom.m; sourceTree = "<group>"; };
-		8CF755B31FED3B50000D7070 /* AccedoOneInsight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneInsight.h; path = ../../../Common/API/AccedoOneInsight.h; sourceTree = "<group>"; };
-		8CF755B41FED3B50000D7070 /* AccedoOneUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneUserData.h; path = ../../../Common/API/AccedoOneUserData.h; sourceTree = "<group>"; };
-		8CF755B51FED3B50000D7070 /* AccedoOneInsight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneInsight.m; path = ../../../Common/API/AccedoOneInsight.m; sourceTree = "<group>"; };
-		8CF755B61FED3B50000D7070 /* AccedoOneDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneDetect.m; path = ../../../Common/API/AccedoOneDetect.m; sourceTree = "<group>"; };
-		8CF755B71FED3B50000D7070 /* AccedoOneDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneDetect.h; path = ../../../Common/API/AccedoOneDetect.h; sourceTree = "<group>"; };
-		8CF755B81FED3B50000D7070 /* AccedoOneControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOneControl.h; path = ../../../Common/API/AccedoOneControl.h; sourceTree = "<group>"; };
-		8CF755B91FED3B50000D7070 /* AccedoOnePublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccedoOnePublish.h; path = ../../../Common/API/AccedoOnePublish.h; sourceTree = "<group>"; };
-		8CF755BA1FED3B50000D7070 /* AccedoOneControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneControl.m; path = ../../../Common/API/AccedoOneControl.m; sourceTree = "<group>"; };
-		8CF755BB1FED3B50000D7070 /* AccedoOneUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOneUserData.m; path = ../../../Common/API/AccedoOneUserData.m; sourceTree = "<group>"; };
-		8CF755BC1FED3B50000D7070 /* AccedoOnePublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccedoOnePublish.m; path = ../../../Common/API/AccedoOnePublish.m; sourceTree = "<group>"; };
 		90EFC088A0B42467801D03AE /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		98B06F0309ED0B071376DFB2 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		A966E324C01A1BE08B761EC0 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -168,6 +128,58 @@
 		C976D427024A762BEB948054 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		D6D54405BC271BEB7125EBFE /* PINCacheDependencies.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheDependencies.h; path = AccedoOnetvOS/Libraries/Symbols/PINCacheDependencies.h; sourceTree = "<group>"; };
 		D91BE977DBD7D1FE179AD89F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		DC2AD3FC2020A4E000C9FC61 /* AOCacheDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCacheDTO.h; sourceTree = "<group>"; };
+		DC2AD3FD2020A4E000C9FC61 /* AOService+CacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AOService+CacheController.h"; sourceTree = "<group>"; };
+		DC2AD3FE2020A4E000C9FC61 /* AOCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCacheHelper.m; sourceTree = "<group>"; };
+		DC2AD4002020A4E000C9FC61 /* AOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCache.h; sourceTree = "<group>"; };
+		DC2AD4012020A4E000C9FC61 /* AOCacheOverNSCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCacheOverNSCache.h; sourceTree = "<group>"; };
+		DC2AD4022020A4E000C9FC61 /* AOCacheOverPINCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCacheOverPINCache.h; sourceTree = "<group>"; };
+		DC2AD4042020A4E000C9FC61 /* AOCacheAtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCacheAtom.m; sourceTree = "<group>"; };
+		DC2AD4052020A4E000C9FC61 /* AOCacheAtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCacheAtom.h; sourceTree = "<group>"; };
+		DC2AD4062020A4E000C9FC61 /* AOCacheOverPINCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCacheOverPINCache.m; sourceTree = "<group>"; };
+		DC2AD4072020A4E000C9FC61 /* AOCacheOverNSCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCacheOverNSCache.m; sourceTree = "<group>"; };
+		DC2AD4082020A4E000C9FC61 /* AOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCache.m; sourceTree = "<group>"; };
+		DC2AD4092020A4E000C9FC61 /* AOService+CacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AOService+CacheController.m"; sourceTree = "<group>"; };
+		DC2AD40A2020A4E000C9FC61 /* AOCacheDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCacheDTO.m; sourceTree = "<group>"; };
+		DC2AD40B2020A4E000C9FC61 /* AOCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCacheHelper.h; sourceTree = "<group>"; };
+		DC2AD40C2020A4E000C9FC61 /* AOCacheHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCacheHandler.h; sourceTree = "<group>"; };
+		DC2AD40E2020A4E000C9FC61 /* AORequestMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AORequestMetadata.m; sourceTree = "<group>"; };
+		DC2AD40F2020A4E000C9FC61 /* AOPagingMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOPagingMetadata.m; sourceTree = "<group>"; };
+		DC2AD4102020A4E000C9FC61 /* AOPagingMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOPagingMetadata.h; sourceTree = "<group>"; };
+		DC2AD4112020A4E000C9FC61 /* AORequestMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AORequestMetadata.h; sourceTree = "<group>"; };
+		DC2AD4132020A4E100C9FC61 /* AccedoOneControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneControl.h; sourceTree = "<group>"; };
+		DC2AD4142020A4E100C9FC61 /* AccedoOnePublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccedoOnePublish.m; sourceTree = "<group>"; };
+		DC2AD4152020A4E100C9FC61 /* AccedoOneInsight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccedoOneInsight.m; sourceTree = "<group>"; };
+		DC2AD4162020A4E100C9FC61 /* AccedoOneDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneDetect.h; sourceTree = "<group>"; };
+		DC2AD4172020A4E100C9FC61 /* AccedoOneUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneUserData.h; sourceTree = "<group>"; };
+		DC2AD4182020A4E100C9FC61 /* AccedoOneControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccedoOneControl.m; sourceTree = "<group>"; };
+		DC2AD4192020A4E100C9FC61 /* AccedoOneInsight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneInsight.h; sourceTree = "<group>"; };
+		DC2AD41A2020A4E100C9FC61 /* AccedoOnePublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOnePublish.h; sourceTree = "<group>"; };
+		DC2AD41B2020A4E100C9FC61 /* AccedoOneDetect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccedoOneDetect.m; sourceTree = "<group>"; };
+		DC2AD41C2020A4E100C9FC61 /* AccedoOneUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccedoOneUserData.m; sourceTree = "<group>"; };
+		DC2AD41E2020A4E100C9FC61 /* AccedoOneInsightProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneInsightProtocol.h; sourceTree = "<group>"; };
+		DC2AD41F2020A4E100C9FC61 /* AccedoOneDetectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneDetectProtocol.h; sourceTree = "<group>"; };
+		DC2AD4202020A4E100C9FC61 /* AccedoOneUserDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneUserDataProtocol.h; sourceTree = "<group>"; };
+		DC2AD4212020A4E100C9FC61 /* AccedoOnePublishProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOnePublishProtocol.h; sourceTree = "<group>"; };
+		DC2AD4222020A4E100C9FC61 /* AccedoOneCacheProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneCacheProtocol.h; sourceTree = "<group>"; };
+		DC2AD4232020A4E100C9FC61 /* AccedoOneControlProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccedoOneControlProtocol.h; sourceTree = "<group>"; };
+		DC2AD4252020A4E100C9FC61 /* AOService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOService.m; sourceTree = "<group>"; };
+		DC2AD4262020A4E100C9FC61 /* AOServiceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOServiceComponent.h; sourceTree = "<group>"; };
+		DC2AD4272020A4E100C9FC61 /* AOCMSOptionalParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOCMSOptionalParams.h; sourceTree = "<group>"; };
+		DC2AD4282020A4E100C9FC61 /* AOService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOService.h; sourceTree = "<group>"; };
+		DC2AD4292020A4E100C9FC61 /* AOCMSOptionalParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOCMSOptionalParams.m; sourceTree = "<group>"; };
+		DC2AD42A2020A4E100C9FC61 /* AOServiceComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOServiceComponent.m; sourceTree = "<group>"; };
+		DC2AD42B2020A4E100C9FC61 /* AOObjectParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOObjectParserProtocol.h; sourceTree = "<group>"; };
+		DC2AD42D2020A4E100C9FC61 /* AOError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOError.h; sourceTree = "<group>"; };
+		DC2AD42E2020A4E100C9FC61 /* AOAsynchBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOAsynchBlockOperation.h; sourceTree = "<group>"; };
+		DC2AD42F2020A4E100C9FC61 /* NSString+AO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AO.m"; sourceTree = "<group>"; };
+		DC2AD4302020A4E100C9FC61 /* AOFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOFileUtils.m; sourceTree = "<group>"; };
+		DC2AD4312020A4E100C9FC61 /* NSArray+AO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AO.h"; sourceTree = "<group>"; };
+		DC2AD4322020A4E100C9FC61 /* AOError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOError.m; sourceTree = "<group>"; };
+		DC2AD4332020A4E100C9FC61 /* AOAsynchBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOAsynchBlockOperation.m; sourceTree = "<group>"; };
+		DC2AD4342020A4E100C9FC61 /* NSString+AO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AO.h"; sourceTree = "<group>"; };
+		DC2AD4352020A4E100C9FC61 /* NSArray+AO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AO.m"; sourceTree = "<group>"; };
+		DC2AD4362020A4E100C9FC61 /* AOFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOFileUtils.h; sourceTree = "<group>"; };
 		E8C40C071D6219C4C25780E3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		EA39A3BDDCE8DEAE1134E26A /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AccedoOnetvOS/Libraries/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		EB84B9BAB9AE77EE05FAC625 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AccedoOnetvOS/Libraries/AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
@@ -217,11 +229,12 @@
 		8CE8C70D1FEC79E50041C284 /* AccedoOnetvOS */ = {
 			isa = PBXGroup;
 			children = (
-				8CF755B21FED3B3F000D7070 /* API */,
-				8CE8C78D1FEC7E9E0041C284 /* Service */,
-				8CE8C78C1FEC7E970041C284 /* Request */,
-				8CE8C78B1FEC7E890041C284 /* Utils */,
-				8CE8C7881FEC7E740041C284 /* Cache */,
+				DC2AD4122020A4E100C9FC61 /* API */,
+				DC2AD3FB2020A4E000C9FC61 /* Cache */,
+				DC2AD41D2020A4E100C9FC61 /* Protocols */,
+				DC2AD40D2020A4E000C9FC61 /* Request */,
+				DC2AD4242020A4E100C9FC61 /* Service */,
+				DC2AD42C2020A4E100C9FC61 /* Utils */,
 				8CE8C7821FEC7E6A0041C284 /* AccedoOne.h */,
 				8CE8C7831FEC7E6A0041C284 /* AccedoOne.m */,
 				8CE8C70E1FEC79E50041C284 /* AccedoOnetvOS.h */,
@@ -238,103 +251,6 @@
 				8CE8C71B1FEC79E50041C284 /* Info.plist */,
 			);
 			path = AccedoOnetvOSTests;
-			sourceTree = "<group>";
-		};
-		8CE8C7881FEC7E740041C284 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				8CE8C7BA1FEC7F180041C284 /* AOCacheDTO.h */,
-				8CE8C7BB1FEC7F180041C284 /* AOCacheDTO.m */,
-				8CE8C7C01FEC7F180041C284 /* AOCacheHandler.h */,
-				8CE8C7BF1FEC7F180041C284 /* AOCacheHelper.h */,
-				8CE8C7BC1FEC7F180041C284 /* AOCacheHelper.m */,
-				8CE8C7BD1FEC7F180041C284 /* AOService+CacheController.h */,
-				8CE8C7BE1FEC7F180041C284 /* AOService+CacheController.m */,
-				8CE8C7891FEC7E7A0041C284 /* Providers */,
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
-		8CE8C7891FEC7E7A0041C284 /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-				8CE8C7CA1FEC7F2B0041C284 /* AOCache.h */,
-				8CE8C7CB1FEC7F2B0041C284 /* AOCache.m */,
-				8CE8C7CD1FEC7F2B0041C284 /* AOCacheOverNSCache.h */,
-				8CE8C7CE1FEC7F2B0041C284 /* AOCacheOverNSCache.m */,
-				8CE8C7CC1FEC7F2B0041C284 /* AOCacheOverPINCache.h */,
-				8CE8C7C81FEC7F2B0041C284 /* AOCacheOverPINCache.m */,
-				8CE8C78A1FEC7E810041C284 /* Model */,
-			);
-			path = Providers;
-			sourceTree = "<group>";
-		};
-		8CE8C78A1FEC7E810041C284 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8CE8C7D61FEC7F3E0041C284 /* AOCacheAtom.h */,
-				8CE8C7D71FEC7F3E0041C284 /* AOCacheAtom.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8CE8C78B1FEC7E890041C284 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8CE8C7AD1FEC7EFF0041C284 /* AOAsynchBlockOperation.h */,
-				8CE8C7A61FEC7EFF0041C284 /* AOAsynchBlockOperation.m */,
-				8CE8C7A91FEC7EFF0041C284 /* AOError.h */,
-				8CE8C7A71FEC7EFF0041C284 /* AOError.m */,
-				8CE8C7AF1FEC7EFF0041C284 /* AOFileUtils.h */,
-				8CE8C7A81FEC7EFF0041C284 /* AOFileUtils.m */,
-				8CE8C7AB1FEC7EFF0041C284 /* NSArray+AO.h */,
-				8CE8C7AC1FEC7EFF0041C284 /* NSArray+AO.m */,
-				8CE8C7AE1FEC7EFF0041C284 /* NSString+AO.h */,
-				8CE8C7AA1FEC7EFF0041C284 /* NSString+AO.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		8CE8C78C1FEC7E970041C284 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				8CE8C79F1FEC7EF10041C284 /* AOPagingMetadata.h */,
-				8CE8C79E1FEC7EF10041C284 /* AOPagingMetadata.m */,
-				8CE8C7A01FEC7EF10041C284 /* AORequestMetadata.h */,
-				8CE8C7A11FEC7EF10041C284 /* AORequestMetadata.m */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		8CE8C78D1FEC7E9E0041C284 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				8CE8C7951FEC7EE20041C284 /* AOCMSOptionalParams.h */,
-				8CE8C7901FEC7EE20041C284 /* AOCMSOptionalParams.m */,
-				8CE8C7931FEC7EE20041C284 /* AOObjectParserProtocol.h */,
-				8CE8C7921FEC7EE20041C284 /* AOService.h */,
-				8CE8C7941FEC7EE20041C284 /* AOService.m */,
-				8CE8C7911FEC7EE20041C284 /* AOServiceComponent.h */,
-				8CE8C7961FEC7EE20041C284 /* AOServiceComponent.m */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		8CF755B21FED3B3F000D7070 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				8CF755B81FED3B50000D7070 /* AccedoOneControl.h */,
-				8CF755BA1FED3B50000D7070 /* AccedoOneControl.m */,
-				8CF755B71FED3B50000D7070 /* AccedoOneDetect.h */,
-				8CF755B61FED3B50000D7070 /* AccedoOneDetect.m */,
-				8CF755B31FED3B50000D7070 /* AccedoOneInsight.h */,
-				8CF755B51FED3B50000D7070 /* AccedoOneInsight.m */,
-				8CF755B91FED3B50000D7070 /* AccedoOnePublish.h */,
-				8CF755BC1FED3B50000D7070 /* AccedoOnePublish.m */,
-				8CF755B41FED3B50000D7070 /* AccedoOneUserData.h */,
-				8CF755BB1FED3B50000D7070 /* AccedoOneUserData.m */,
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 		B3A19992AE8CD774416C09E7 /* AFNetworking */ = {
@@ -355,6 +271,122 @@
 				BD73EEFA6EB617336E8A21F3 /* AFHTTPSessionManager.h */,
 			);
 			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		DC2AD3FB2020A4E000C9FC61 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD3FF2020A4E000C9FC61 /* Providers */,
+				DC2AD3FC2020A4E000C9FC61 /* AOCacheDTO.h */,
+				DC2AD40A2020A4E000C9FC61 /* AOCacheDTO.m */,
+				DC2AD3FE2020A4E000C9FC61 /* AOCacheHelper.m */,
+				DC2AD3FD2020A4E000C9FC61 /* AOService+CacheController.h */,
+				DC2AD4092020A4E000C9FC61 /* AOService+CacheController.m */,
+				DC2AD40B2020A4E000C9FC61 /* AOCacheHelper.h */,
+				DC2AD40C2020A4E000C9FC61 /* AOCacheHandler.h */,
+			);
+			name = Cache;
+			path = ../../Common/Cache;
+			sourceTree = "<group>";
+		};
+		DC2AD3FF2020A4E000C9FC61 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD4002020A4E000C9FC61 /* AOCache.h */,
+				DC2AD4012020A4E000C9FC61 /* AOCacheOverNSCache.h */,
+				DC2AD4022020A4E000C9FC61 /* AOCacheOverPINCache.h */,
+				DC2AD4032020A4E000C9FC61 /* Model */,
+				DC2AD4062020A4E000C9FC61 /* AOCacheOverPINCache.m */,
+				DC2AD4072020A4E000C9FC61 /* AOCacheOverNSCache.m */,
+				DC2AD4082020A4E000C9FC61 /* AOCache.m */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		DC2AD4032020A4E000C9FC61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD4042020A4E000C9FC61 /* AOCacheAtom.m */,
+				DC2AD4052020A4E000C9FC61 /* AOCacheAtom.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC2AD40D2020A4E000C9FC61 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD4102020A4E000C9FC61 /* AOPagingMetadata.h */,
+				DC2AD40F2020A4E000C9FC61 /* AOPagingMetadata.m */,
+				DC2AD4112020A4E000C9FC61 /* AORequestMetadata.h */,
+				DC2AD40E2020A4E000C9FC61 /* AORequestMetadata.m */,
+			);
+			name = Request;
+			path = ../../Common/Request;
+			sourceTree = "<group>";
+		};
+		DC2AD4122020A4E100C9FC61 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD4132020A4E100C9FC61 /* AccedoOneControl.h */,
+				DC2AD4182020A4E100C9FC61 /* AccedoOneControl.m */,
+				DC2AD4162020A4E100C9FC61 /* AccedoOneDetect.h */,
+				DC2AD41B2020A4E100C9FC61 /* AccedoOneDetect.m */,
+				DC2AD4192020A4E100C9FC61 /* AccedoOneInsight.h */,
+				DC2AD4152020A4E100C9FC61 /* AccedoOneInsight.m */,
+				DC2AD41A2020A4E100C9FC61 /* AccedoOnePublish.h */,
+				DC2AD4142020A4E100C9FC61 /* AccedoOnePublish.m */,
+				DC2AD4172020A4E100C9FC61 /* AccedoOneUserData.h */,
+				DC2AD41C2020A4E100C9FC61 /* AccedoOneUserData.m */,
+			);
+			name = API;
+			path = ../../Common/API;
+			sourceTree = "<group>";
+		};
+		DC2AD41D2020A4E100C9FC61 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD4232020A4E100C9FC61 /* AccedoOneControlProtocol.h */,
+				DC2AD41F2020A4E100C9FC61 /* AccedoOneDetectProtocol.h */,
+				DC2AD41E2020A4E100C9FC61 /* AccedoOneInsightProtocol.h */,
+				DC2AD4212020A4E100C9FC61 /* AccedoOnePublishProtocol.h */,
+				DC2AD4202020A4E100C9FC61 /* AccedoOneUserDataProtocol.h */,
+				DC2AD4222020A4E100C9FC61 /* AccedoOneCacheProtocol.h */,
+			);
+			name = Protocols;
+			path = ../../Common/Protocols;
+			sourceTree = "<group>";
+		};
+		DC2AD4242020A4E100C9FC61 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD4282020A4E100C9FC61 /* AOService.h */,
+				DC2AD4252020A4E100C9FC61 /* AOService.m */,
+				DC2AD4262020A4E100C9FC61 /* AOServiceComponent.h */,
+				DC2AD42A2020A4E100C9FC61 /* AOServiceComponent.m */,
+				DC2AD4272020A4E100C9FC61 /* AOCMSOptionalParams.h */,
+				DC2AD4292020A4E100C9FC61 /* AOCMSOptionalParams.m */,
+				DC2AD42B2020A4E100C9FC61 /* AOObjectParserProtocol.h */,
+			);
+			name = Service;
+			path = ../../Common/Service;
+			sourceTree = "<group>";
+		};
+		DC2AD42C2020A4E100C9FC61 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DC2AD42D2020A4E100C9FC61 /* AOError.h */,
+				DC2AD4322020A4E100C9FC61 /* AOError.m */,
+				DC2AD4342020A4E100C9FC61 /* NSString+AO.h */,
+				DC2AD42F2020A4E100C9FC61 /* NSString+AO.m */,
+				DC2AD4312020A4E100C9FC61 /* NSArray+AO.h */,
+				DC2AD4352020A4E100C9FC61 /* NSArray+AO.m */,
+				DC2AD42E2020A4E100C9FC61 /* AOAsynchBlockOperation.h */,
+				DC2AD4332020A4E100C9FC61 /* AOAsynchBlockOperation.m */,
+				DC2AD4362020A4E100C9FC61 /* AOFileUtils.h */,
+				DC2AD4302020A4E100C9FC61 /* AOFileUtils.m */,
+			);
+			name = Utils;
+			path = ../../Common/Utils;
 			sourceTree = "<group>";
 		};
 		DE466F672BD53F89E80B1D08 /* PINCache */ = {
@@ -387,33 +419,39 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CE8C7B71FEC7EFF0041C284 /* AOAsynchBlockOperation.h in Headers */,
-				8CE8C7B31FEC7EFF0041C284 /* AOError.h in Headers */,
-				8CE8C7A41FEC7EF10041C284 /* AORequestMetadata.h in Headers */,
-				8CE8C7991FEC7EE20041C284 /* AOService.h in Headers */,
-				8CE8C7981FEC7EE20041C284 /* AOServiceComponent.h in Headers */,
-				8CE8C7C71FEC7F180041C284 /* AOCacheHandler.h in Headers */,
-				8CF755C31FED3B50000D7070 /* AccedoOnePublish.h in Headers */,
-				8CF755BD1FED3B50000D7070 /* AccedoOneInsight.h in Headers */,
-				8CF755C11FED3B50000D7070 /* AccedoOneDetect.h in Headers */,
-				8CF755BE1FED3B50000D7070 /* AccedoOneUserData.h in Headers */,
-				8CF755C21FED3B50000D7070 /* AccedoOneControl.h in Headers */,
-				8CE8C7A31FEC7EF10041C284 /* AOPagingMetadata.h in Headers */,
-				8CE8C79A1FEC7EE20041C284 /* AOObjectParserProtocol.h in Headers */,
 				8CE8C7851FEC7E6B0041C284 /* AccedoOne.h in Headers */,
-				8CE8C7D11FEC7F2B0041C284 /* AOCache.h in Headers */,
-				8CE8C7D81FEC7F3E0041C284 /* AOCacheAtom.h in Headers */,
+				DC2AD44D2020A4E100C9FC61 /* AccedoOneDetect.h in Headers */,
+				DC2AD45C2020A4E100C9FC61 /* AOCMSOptionalParams.h in Headers */,
+				DC2AD43A2020A4E100C9FC61 /* AOCache.h in Headers */,
+				DC2AD44E2020A4E100C9FC61 /* AccedoOneUserData.h in Headers */,
+				DC2AD4572020A4E100C9FC61 /* AccedoOnePublishProtocol.h in Headers */,
+				DC2AD4622020A4E100C9FC61 /* AOAsynchBlockOperation.h in Headers */,
+				DC2AD4512020A4E100C9FC61 /* AccedoOnePublish.h in Headers */,
+				DC2AD4652020A4E100C9FC61 /* NSArray+AO.h in Headers */,
+				DC2AD4372020A4E100C9FC61 /* AOCacheDTO.h in Headers */,
+				DC2AD4502020A4E100C9FC61 /* AccedoOneInsight.h in Headers */,
+				DC2AD45D2020A4E100C9FC61 /* AOService.h in Headers */,
 				8CE8C71C1FEC79E50041C284 /* AccedoOnetvOS.h in Headers */,
-				8CE8C7B81FEC7EFF0041C284 /* NSString+AO.h in Headers */,
-				8CE8C7D41FEC7F2B0041C284 /* AOCacheOverNSCache.h in Headers */,
-				8CE8C7C41FEC7F180041C284 /* AOService+CacheController.h in Headers */,
-				8CE8C7C11FEC7F180041C284 /* AOCacheDTO.h in Headers */,
 				8CE8C78F1FEC7ECA0041C284 /* AccedoOnetvOS.pch in Headers */,
-				8CE8C7D31FEC7F2B0041C284 /* AOCacheOverPINCache.h in Headers */,
-				8CE8C7B91FEC7EFF0041C284 /* AOFileUtils.h in Headers */,
-				8CE8C79C1FEC7EE20041C284 /* AOCMSOptionalParams.h in Headers */,
-				8CE8C7C61FEC7F180041C284 /* AOCacheHelper.h in Headers */,
-				8CE8C7B51FEC7EFF0041C284 /* NSArray+AO.h in Headers */,
+				DC2AD43B2020A4E100C9FC61 /* AOCacheOverNSCache.h in Headers */,
+				DC2AD4562020A4E100C9FC61 /* AccedoOneUserDataProtocol.h in Headers */,
+				DC2AD43E2020A4E100C9FC61 /* AOCacheAtom.h in Headers */,
+				DC2AD4482020A4E100C9FC61 /* AOPagingMetadata.h in Headers */,
+				DC2AD4602020A4E100C9FC61 /* AOObjectParserProtocol.h in Headers */,
+				DC2AD44A2020A4E100C9FC61 /* AccedoOneControl.h in Headers */,
+				DC2AD4542020A4E100C9FC61 /* AccedoOneInsightProtocol.h in Headers */,
+				DC2AD4452020A4E100C9FC61 /* AOCacheHandler.h in Headers */,
+				DC2AD4682020A4E100C9FC61 /* NSString+AO.h in Headers */,
+				DC2AD45B2020A4E100C9FC61 /* AOServiceComponent.h in Headers */,
+				DC2AD4552020A4E100C9FC61 /* AccedoOneDetectProtocol.h in Headers */,
+				DC2AD43C2020A4E100C9FC61 /* AOCacheOverPINCache.h in Headers */,
+				DC2AD4582020A4E100C9FC61 /* AccedoOneCacheProtocol.h in Headers */,
+				DC2AD4592020A4E100C9FC61 /* AccedoOneControlProtocol.h in Headers */,
+				DC2AD46A2020A4E100C9FC61 /* AOFileUtils.h in Headers */,
+				DC2AD4612020A4E100C9FC61 /* AOError.h in Headers */,
+				DC2AD4492020A4E100C9FC61 /* AORequestMetadata.h in Headers */,
+				DC2AD4382020A4E100C9FC61 /* AOService+CacheController.h in Headers */,
+				DC2AD4442020A4E100C9FC61 /* AOCacheHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,37 +574,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CE8C79B1FEC7EE20041C284 /* AOService.m in Sources */,
 				8CE8C7861FEC7E6B0041C284 /* AccedoOne.m in Sources */,
-				8CE8C7D51FEC7F2B0041C284 /* AOCacheOverNSCache.m in Sources */,
-				8CE8C7D91FEC7F3E0041C284 /* AOCacheAtom.m in Sources */,
-				8CE8C7C31FEC7F180041C284 /* AOCacheHelper.m in Sources */,
-				8CF755C61FED3B50000D7070 /* AccedoOnePublish.m in Sources */,
-				8CE8C7B61FEC7EFF0041C284 /* NSArray+AO.m in Sources */,
-				8CE8C7B01FEC7EFF0041C284 /* AOAsynchBlockOperation.m in Sources */,
-				8CE8C7B41FEC7EFF0041C284 /* NSString+AO.m in Sources */,
-				8CF755C01FED3B50000D7070 /* AccedoOneDetect.m in Sources */,
-				8CE8C7A51FEC7EF10041C284 /* AORequestMetadata.m in Sources */,
-				8CE8C7C21FEC7F180041C284 /* AOCacheDTO.m in Sources */,
-				8CE8C7D21FEC7F2B0041C284 /* AOCache.m in Sources */,
-				8CE8C7C51FEC7F180041C284 /* AOService+CacheController.m in Sources */,
-				8CF755C41FED3B50000D7070 /* AccedoOneControl.m in Sources */,
-				8CF755BF1FED3B50000D7070 /* AccedoOneInsight.m in Sources */,
-				8CE8C7CF1FEC7F2B0041C284 /* AOCacheOverPINCache.m in Sources */,
-				8CE8C7B21FEC7EFF0041C284 /* AOFileUtils.m in Sources */,
-				8CE8C7A21FEC7EF10041C284 /* AOPagingMetadata.m in Sources */,
-				8CE8C7971FEC7EE20041C284 /* AOCMSOptionalParams.m in Sources */,
-				8CE8C7B11FEC7EFF0041C284 /* AOError.m in Sources */,
-				8CE8C79D1FEC7EE20041C284 /* AOServiceComponent.m in Sources */,
+				DC2AD45F2020A4E100C9FC61 /* AOServiceComponent.m in Sources */,
+				DC2AD4692020A4E100C9FC61 /* NSArray+AO.m in Sources */,
+				DC2AD4412020A4E100C9FC61 /* AOCache.m in Sources */,
+				DC2AD4462020A4E100C9FC61 /* AORequestMetadata.m in Sources */,
+				DC2AD44F2020A4E100C9FC61 /* AccedoOneControl.m in Sources */,
+				DC2AD4672020A4E100C9FC61 /* AOAsynchBlockOperation.m in Sources */,
 				2BAC7FDC9BB9292247C1FEEA /* AFURLResponseSerialization.m in Sources */,
+				DC2AD4402020A4E100C9FC61 /* AOCacheOverNSCache.m in Sources */,
 				80A8AAA01AA9D337FA7BC343 /* AFHTTPSessionManager.m in Sources */,
+				DC2AD43F2020A4E100C9FC61 /* AOCacheOverPINCache.m in Sources */,
 				B5BF2C33B9183F5B27F6FE44 /* AFURLSessionManager.m in Sources */,
+				DC2AD4662020A4E100C9FC61 /* AOError.m in Sources */,
+				DC2AD4472020A4E100C9FC61 /* AOPagingMetadata.m in Sources */,
+				DC2AD4632020A4E100C9FC61 /* NSString+AO.m in Sources */,
+				DC2AD4432020A4E100C9FC61 /* AOCacheDTO.m in Sources */,
 				97015C22C3CAD8985863D8B9 /* AFURLRequestSerialization.m in Sources */,
 				9DD6D05F8FB8AD92B755E3F4 /* AFNetworkReachabilityManager.m in Sources */,
+				DC2AD44C2020A4E100C9FC61 /* AccedoOneInsight.m in Sources */,
 				5C4E55718DB1D50671EC233B /* AFSecurityPolicy.m in Sources */,
-				8CF755C51FED3B50000D7070 /* AccedoOneUserData.m in Sources */,
+				DC2AD4522020A4E100C9FC61 /* AccedoOneDetect.m in Sources */,
+				DC2AD4532020A4E100C9FC61 /* AccedoOneUserData.m in Sources */,
+				DC2AD44B2020A4E100C9FC61 /* AccedoOnePublish.m in Sources */,
+				DC2AD4642020A4E100C9FC61 /* AOFileUtils.m in Sources */,
+				DC2AD4422020A4E100C9FC61 /* AOService+CacheController.m in Sources */,
+				DC2AD45E2020A4E100C9FC61 /* AOCMSOptionalParams.m in Sources */,
+				DC2AD45A2020A4E100C9FC61 /* AOService.m in Sources */,
 				EF0AF1561B5B1CBD719B1E9D /* PINCache.m in Sources */,
 				061852C5EDE4E6AC11004AAD /* PINMemoryCache.m in Sources */,
+				DC2AD43D2020A4E100C9FC61 /* AOCacheAtom.m in Sources */,
+				DC2AD4392020A4E100C9FC61 /* AOCacheHelper.m in Sources */,
 				E0666CFD60F86EC4A0F80A4F /* PINDiskCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

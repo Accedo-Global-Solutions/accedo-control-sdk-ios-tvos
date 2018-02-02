@@ -121,7 +121,7 @@
     {
         if ([self.cacheHandler conformsToProtocol:@protocol(AOTimeBasedCacheHandler)] /*&& request.cacheExpiration*/)
         {
-            NSTimeInterval expiration = request.cacheExpiration ? [request.cacheExpiration doubleValue] : kAODefaultExpirationTime;
+            NSTimeInterval expiration = request.cacheExpiration != nil ? [request.cacheExpiration doubleValue] : kAODefaultExpirationTime;
 
             [(id<AOTimeBasedCacheHandler>)self.cacheHandler setObject:result forKey:request.cacheKey withTimeStamp:[[NSDate date] timeIntervalSince1970] withExpirationInterval:expiration];
         }
