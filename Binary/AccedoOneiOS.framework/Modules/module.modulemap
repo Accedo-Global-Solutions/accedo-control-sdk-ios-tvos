@@ -1,6 +1,0 @@
-framework module AccedoOneiOS {
-  umbrella header "AccedoOneiOS.h"
-
-  export *
-  module * { export * }
-}

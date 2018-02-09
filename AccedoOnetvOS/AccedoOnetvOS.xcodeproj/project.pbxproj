@@ -48,35 +48,35 @@
 		DC2AD4422020A4E100C9FC61 /* AOService+CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4092020A4E000C9FC61 /* AOService+CacheController.m */; };
 		DC2AD4432020A4E100C9FC61 /* AOCacheDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD40A2020A4E000C9FC61 /* AOCacheDTO.m */; };
 		DC2AD4442020A4E100C9FC61 /* AOCacheHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD40B2020A4E000C9FC61 /* AOCacheHelper.h */; };
-		DC2AD4452020A4E100C9FC61 /* AOCacheHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD40C2020A4E000C9FC61 /* AOCacheHandler.h */; };
+		DC2AD4452020A4E100C9FC61 /* AOCacheHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD40C2020A4E000C9FC61 /* AOCacheHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD4462020A4E100C9FC61 /* AORequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD40E2020A4E000C9FC61 /* AORequestMetadata.m */; };
 		DC2AD4472020A4E100C9FC61 /* AOPagingMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD40F2020A4E000C9FC61 /* AOPagingMetadata.m */; };
-		DC2AD4482020A4E100C9FC61 /* AOPagingMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4102020A4E000C9FC61 /* AOPagingMetadata.h */; };
-		DC2AD4492020A4E100C9FC61 /* AORequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4112020A4E000C9FC61 /* AORequestMetadata.h */; };
-		DC2AD44A2020A4E100C9FC61 /* AccedoOneControl.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4132020A4E100C9FC61 /* AccedoOneControl.h */; };
+		DC2AD4482020A4E100C9FC61 /* AOPagingMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4102020A4E000C9FC61 /* AOPagingMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4492020A4E100C9FC61 /* AORequestMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4112020A4E000C9FC61 /* AORequestMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD44A2020A4E100C9FC61 /* AccedoOneControl.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4132020A4E100C9FC61 /* AccedoOneControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD44B2020A4E100C9FC61 /* AccedoOnePublish.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4142020A4E100C9FC61 /* AccedoOnePublish.m */; };
 		DC2AD44C2020A4E100C9FC61 /* AccedoOneInsight.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4152020A4E100C9FC61 /* AccedoOneInsight.m */; };
-		DC2AD44D2020A4E100C9FC61 /* AccedoOneDetect.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4162020A4E100C9FC61 /* AccedoOneDetect.h */; };
-		DC2AD44E2020A4E100C9FC61 /* AccedoOneUserData.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4172020A4E100C9FC61 /* AccedoOneUserData.h */; };
+		DC2AD44D2020A4E100C9FC61 /* AccedoOneDetect.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4162020A4E100C9FC61 /* AccedoOneDetect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD44E2020A4E100C9FC61 /* AccedoOneUserData.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4172020A4E100C9FC61 /* AccedoOneUserData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD44F2020A4E100C9FC61 /* AccedoOneControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4182020A4E100C9FC61 /* AccedoOneControl.m */; };
-		DC2AD4502020A4E100C9FC61 /* AccedoOneInsight.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4192020A4E100C9FC61 /* AccedoOneInsight.h */; };
-		DC2AD4512020A4E100C9FC61 /* AccedoOnePublish.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41A2020A4E100C9FC61 /* AccedoOnePublish.h */; };
+		DC2AD4502020A4E100C9FC61 /* AccedoOneInsight.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4192020A4E100C9FC61 /* AccedoOneInsight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4512020A4E100C9FC61 /* AccedoOnePublish.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41A2020A4E100C9FC61 /* AccedoOnePublish.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD4522020A4E100C9FC61 /* AccedoOneDetect.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD41B2020A4E100C9FC61 /* AccedoOneDetect.m */; };
 		DC2AD4532020A4E100C9FC61 /* AccedoOneUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD41C2020A4E100C9FC61 /* AccedoOneUserData.m */; };
-		DC2AD4542020A4E100C9FC61 /* AccedoOneInsightProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41E2020A4E100C9FC61 /* AccedoOneInsightProtocol.h */; };
-		DC2AD4552020A4E100C9FC61 /* AccedoOneDetectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41F2020A4E100C9FC61 /* AccedoOneDetectProtocol.h */; };
-		DC2AD4562020A4E100C9FC61 /* AccedoOneUserDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4202020A4E100C9FC61 /* AccedoOneUserDataProtocol.h */; };
-		DC2AD4572020A4E100C9FC61 /* AccedoOnePublishProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4212020A4E100C9FC61 /* AccedoOnePublishProtocol.h */; };
-		DC2AD4582020A4E100C9FC61 /* AccedoOneCacheProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4222020A4E100C9FC61 /* AccedoOneCacheProtocol.h */; };
-		DC2AD4592020A4E100C9FC61 /* AccedoOneControlProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4232020A4E100C9FC61 /* AccedoOneControlProtocol.h */; };
+		DC2AD4542020A4E100C9FC61 /* AccedoOneInsightProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41E2020A4E100C9FC61 /* AccedoOneInsightProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4552020A4E100C9FC61 /* AccedoOneDetectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD41F2020A4E100C9FC61 /* AccedoOneDetectProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4562020A4E100C9FC61 /* AccedoOneUserDataProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4202020A4E100C9FC61 /* AccedoOneUserDataProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4572020A4E100C9FC61 /* AccedoOnePublishProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4212020A4E100C9FC61 /* AccedoOnePublishProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4582020A4E100C9FC61 /* AccedoOneCacheProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4222020A4E100C9FC61 /* AccedoOneCacheProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4592020A4E100C9FC61 /* AccedoOneControlProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4232020A4E100C9FC61 /* AccedoOneControlProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD45A2020A4E100C9FC61 /* AOService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4252020A4E100C9FC61 /* AOService.m */; };
-		DC2AD45B2020A4E100C9FC61 /* AOServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4262020A4E100C9FC61 /* AOServiceComponent.h */; };
-		DC2AD45C2020A4E100C9FC61 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4272020A4E100C9FC61 /* AOCMSOptionalParams.h */; };
-		DC2AD45D2020A4E100C9FC61 /* AOService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4282020A4E100C9FC61 /* AOService.h */; };
+		DC2AD45B2020A4E100C9FC61 /* AOServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4262020A4E100C9FC61 /* AOServiceComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD45C2020A4E100C9FC61 /* AOCMSOptionalParams.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4272020A4E100C9FC61 /* AOCMSOptionalParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD45D2020A4E100C9FC61 /* AOService.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD4282020A4E100C9FC61 /* AOService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD45E2020A4E100C9FC61 /* AOCMSOptionalParams.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4292020A4E100C9FC61 /* AOCMSOptionalParams.m */; };
 		DC2AD45F2020A4E100C9FC61 /* AOServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD42A2020A4E100C9FC61 /* AOServiceComponent.m */; };
-		DC2AD4602020A4E100C9FC61 /* AOObjectParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42B2020A4E100C9FC61 /* AOObjectParserProtocol.h */; };
-		DC2AD4612020A4E100C9FC61 /* AOError.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42D2020A4E100C9FC61 /* AOError.h */; };
+		DC2AD4602020A4E100C9FC61 /* AOObjectParserProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42B2020A4E100C9FC61 /* AOObjectParserProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC2AD4612020A4E100C9FC61 /* AOError.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42D2020A4E100C9FC61 /* AOError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC2AD4622020A4E100C9FC61 /* AOAsynchBlockOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DC2AD42E2020A4E100C9FC61 /* AOAsynchBlockOperation.h */; };
 		DC2AD4632020A4E100C9FC61 /* NSString+AO.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD42F2020A4E100C9FC61 /* NSString+AO.m */; };
 		DC2AD4642020A4E100C9FC61 /* AOFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2AD4302020A4E100C9FC61 /* AOFileUtils.m */; };
@@ -422,35 +422,35 @@
 				8CE8C7851FEC7E6B0041C284 /* AccedoOne.h in Headers */,
 				DC2AD44D2020A4E100C9FC61 /* AccedoOneDetect.h in Headers */,
 				DC2AD45C2020A4E100C9FC61 /* AOCMSOptionalParams.h in Headers */,
-				DC2AD43A2020A4E100C9FC61 /* AOCache.h in Headers */,
-				DC2AD44E2020A4E100C9FC61 /* AccedoOneUserData.h in Headers */,
 				DC2AD4572020A4E100C9FC61 /* AccedoOnePublishProtocol.h in Headers */,
-				DC2AD4622020A4E100C9FC61 /* AOAsynchBlockOperation.h in Headers */,
-				DC2AD4512020A4E100C9FC61 /* AccedoOnePublish.h in Headers */,
-				DC2AD4652020A4E100C9FC61 /* NSArray+AO.h in Headers */,
-				DC2AD4372020A4E100C9FC61 /* AOCacheDTO.h in Headers */,
-				DC2AD4502020A4E100C9FC61 /* AccedoOneInsight.h in Headers */,
 				DC2AD45D2020A4E100C9FC61 /* AOService.h in Headers */,
-				8CE8C71C1FEC79E50041C284 /* AccedoOnetvOS.h in Headers */,
-				8CE8C78F1FEC7ECA0041C284 /* AccedoOnetvOS.pch in Headers */,
-				DC2AD43B2020A4E100C9FC61 /* AOCacheOverNSCache.h in Headers */,
 				DC2AD4562020A4E100C9FC61 /* AccedoOneUserDataProtocol.h in Headers */,
-				DC2AD43E2020A4E100C9FC61 /* AOCacheAtom.h in Headers */,
 				DC2AD4482020A4E100C9FC61 /* AOPagingMetadata.h in Headers */,
 				DC2AD4602020A4E100C9FC61 /* AOObjectParserProtocol.h in Headers */,
-				DC2AD44A2020A4E100C9FC61 /* AccedoOneControl.h in Headers */,
-				DC2AD4542020A4E100C9FC61 /* AccedoOneInsightProtocol.h in Headers */,
 				DC2AD4452020A4E100C9FC61 /* AOCacheHandler.h in Headers */,
-				DC2AD4682020A4E100C9FC61 /* NSString+AO.h in Headers */,
-				DC2AD45B2020A4E100C9FC61 /* AOServiceComponent.h in Headers */,
 				DC2AD4552020A4E100C9FC61 /* AccedoOneDetectProtocol.h in Headers */,
-				DC2AD43C2020A4E100C9FC61 /* AOCacheOverPINCache.h in Headers */,
 				DC2AD4582020A4E100C9FC61 /* AccedoOneCacheProtocol.h in Headers */,
 				DC2AD4592020A4E100C9FC61 /* AccedoOneControlProtocol.h in Headers */,
-				DC2AD46A2020A4E100C9FC61 /* AOFileUtils.h in Headers */,
 				DC2AD4612020A4E100C9FC61 /* AOError.h in Headers */,
+				DC2AD4512020A4E100C9FC61 /* AccedoOnePublish.h in Headers */,
+				DC2AD4502020A4E100C9FC61 /* AccedoOneInsight.h in Headers */,
+				DC2AD4542020A4E100C9FC61 /* AccedoOneInsightProtocol.h in Headers */,
 				DC2AD4492020A4E100C9FC61 /* AORequestMetadata.h in Headers */,
+				DC2AD44E2020A4E100C9FC61 /* AccedoOneUserData.h in Headers */,
+				DC2AD4622020A4E100C9FC61 /* AOAsynchBlockOperation.h in Headers */,
+				DC2AD44A2020A4E100C9FC61 /* AccedoOneControl.h in Headers */,
+				DC2AD45B2020A4E100C9FC61 /* AOServiceComponent.h in Headers */,
+				DC2AD43A2020A4E100C9FC61 /* AOCache.h in Headers */,
+				DC2AD4372020A4E100C9FC61 /* AOCacheDTO.h in Headers */,
+				8CE8C78F1FEC7ECA0041C284 /* AccedoOnetvOS.pch in Headers */,
+				DC2AD43B2020A4E100C9FC61 /* AOCacheOverNSCache.h in Headers */,
+				DC2AD43E2020A4E100C9FC61 /* AOCacheAtom.h in Headers */,
+				DC2AD46A2020A4E100C9FC61 /* AOFileUtils.h in Headers */,
+				DC2AD4682020A4E100C9FC61 /* NSString+AO.h in Headers */,
+				DC2AD43C2020A4E100C9FC61 /* AOCacheOverPINCache.h in Headers */,
 				DC2AD4382020A4E100C9FC61 /* AOService+CacheController.h in Headers */,
+				DC2AD4652020A4E100C9FC61 /* NSArray+AO.h in Headers */,
+				8CE8C71C1FEC79E50041C284 /* AccedoOnetvOS.h in Headers */,
 				DC2AD4442020A4E100C9FC61 /* AOCacheHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

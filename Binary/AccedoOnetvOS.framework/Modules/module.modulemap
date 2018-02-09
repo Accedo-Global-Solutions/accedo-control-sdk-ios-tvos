@@ -1,6 +1,0 @@
-framework module AccedoOnetvOS {
-  umbrella header "AccedoOnetvOS.h"
-
-  export *
-  module * { export * }
-}
