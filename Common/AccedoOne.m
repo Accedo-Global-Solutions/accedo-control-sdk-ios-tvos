@@ -14,7 +14,7 @@
 #import "AccedoOnePublish.h"
 #import "AccedoOneDetect.h"
 #import "AccedoOneUserData.h"
-
+#import "AOCacheOverPINCache.h"
 #import "AOFileUtils.h"
 #import "AOCacheHelper.h"
 #import "AOCache.h"
@@ -89,7 +89,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
         self.appKey          = appKey;
         self.uuid            = uuid;
 
-        self.objectCache     = [AOCache cacheProvider:[AOCacheOverNSCache class] persistenceKey:@"ObjectCache" defaultExpiration:kMetadataCacheTimeout];
+        self.objectCache     = [AOCache cacheProvider:[AOCacheOverPINCache class] persistenceKey:@"ObjectCache" defaultExpiration:kMetadataCacheTimeout];
         self.jsonService     = [[AOJSONService alloc] initWithURL:self.accedoOneURL requestTimeout:requestTimeout cacheHandler:self.objectCache];
 
         [self initializeServiceEnvironment];

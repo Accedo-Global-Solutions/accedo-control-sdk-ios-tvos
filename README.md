@@ -27,6 +27,24 @@ The SDK allows creating a client instance tied to a guid (device id) and an appl
  - Automatic and seamless fallback to cache versions of Control calls, whenever there's a service outage. 
  - Automatic pagination support for Publish calls.
 
+## Usage
+
+For cocoapods based projects:
+
+platform :ios, "9.0"
+use_frameworks!
+target "YourAccedoOneApp" do
+	pod "AccedoOneiOS"
+end
+
+platform :tvos, "9.0"
+use_frameworks!
+target "YourAccedoOneApp" do
+	pod "AccedoOnetvOS"
+end
+
+or you can drop the AccedoOne SDK in your project as a .framework
+
 ## Documentation
 
 # Session Management
@@ -489,64 +507,7 @@ accedoOne.storeValue("value", key: "key", forUser: "userid", scope: AOUserDataSc
 }
 ```
 
-
-
-
-
-
 You may also want to refer to the [Accedo One Rest API documentation](https://developer.one.accedo.tv/) that this SDK uses behind the scenes.
-
-## Usage
-
-For cocoapods based projects:
-
-platform :ios, "9.0"
-use_frameworks!
-target "YourAccedoOneApp" do
-	pod "AccedoOneiOS"
-end
-
-platform :tvos, "9.0"
-use_frameworks!
-target "YourAccedoOneApp" do
-	pod "AccedoOnetvOS"
-end
-
-or you can drop the AccedoOne SDK in your project as a .framework
-
-## Examples
-Below are a few examples on how to access certain parts of Accedo One via this SDK.
-
-
-The SDK provides you with async calls for almost every API it exposes. 
-
-
-Example:
-
-@import AccedoOneiOS;
-
-```
-	//Initialization
-	NSString * apparidURL = @"https://appgrid-api.cloud.accedo.tv/";
-    NSString * apparidKey = @"APP_KEY";
-	NSString * uuid = @"UUID";
-    AccedoOne * accedoOneService = [[AccedoOne alloc] initWithURL:apparidURL appKey:apparidKey userID:uuid];
-    
-    [accedoOneService allMetadata:^(NSDictionary * _Nonnull allMetadata, AOError * _Nonnull err) {
-        NSLog(@"allMetadata: %@", allMetadata);
-    }];
-    
-    
-```
-
-### Publish example
-
-```
-    [accedoOneService allEntries:^(AOPageResult * _Nonnull result, AOError * _Nonnull err) {
-        NSLog(@"allEntries: %@",result.content); 
-    }];
-	
-```
 
 ## More information & Links
 
