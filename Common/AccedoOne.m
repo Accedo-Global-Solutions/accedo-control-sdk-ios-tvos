@@ -65,6 +65,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 @property (nonatomic, strong) AccedoOnePublish   * publish;
 @property (nonatomic, strong) AccedoOneUserData  * userdata;
 
+@property (nonatomic, strong) NSNumber * assetCacheExpirationInterval;
 @end
 
 
@@ -77,7 +78,10 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 }
 
 - (instancetype) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid requestTimeout:(NSTimeInterval)requestTimeout {
-    
+    return [self initWithURL:url appKey:appKey userID:uuid requestTimeout:requestTimeout assetExpirationCacheTimeout:Nil];
+}
+
+- (instancetype _Nonnull ) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid requestTimeout:(NSTimeInterval)requestTimeout assetExpirationCacheTimeout: (NSNumber *) assetExpirationCacheTimeout {
     if(self = [super init]) {
         NSParameterAssert(uuid   != nil);
         NSParameterAssert(url    != nil);
@@ -92,10 +96,12 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
         self.objectCache     = [AOCache cacheProvider:[AOCacheOverPINCache class] persistenceKey:@"ObjectCache" defaultExpiration:kMetadataCacheTimeout];
         self.jsonService     = [[AOJSONService alloc] initWithURL:self.accedoOneURL requestTimeout:requestTimeout cacheHandler:self.objectCache];
 
+        self.assetCacheExpirationInterval = assetExpirationCacheTimeout;
         [self initializeServiceEnvironment];
     }
     return self;
 }
+
 
 - (void) initializeServiceEnvironment {
     //disable cache on the service (as caching is handled by the the AccedoOneService!)
@@ -127,7 +133,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 
 -(AccedoOneControl *) control {
     if (!_control) {
-        _control = [[AccedoOneControl alloc] initWithService:self];
+        _control = [[AccedoOneControl alloc] initWithService:self assetCacheExpirationInterval: self.assetCacheExpirationInterval];
     }
     return _control;
 }

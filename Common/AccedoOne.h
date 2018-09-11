@@ -44,6 +44,7 @@ extern NSString * _Nonnull const AOApplicationStateMaintenance;
  */
 - (instancetype _Nonnull ) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid;
 - (instancetype _Nonnull ) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid requestTimeout:(NSTimeInterval)requestTimeout;
+- (instancetype _Nonnull ) initWithURL:(nonnull NSString *)url appKey:(nonnull NSString *)appKey userID:(nonnull NSString *)uuid requestTimeout:(NSTimeInterval)requestTimeout assetExpirationCacheTimeout: (NSNumber *) assetExpirationCacheTimeout;
 
 #pragma mark - AccedoOne
 

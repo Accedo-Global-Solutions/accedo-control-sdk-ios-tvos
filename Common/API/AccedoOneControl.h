@@ -15,7 +15,7 @@
 
 @interface AccedoOneControl : NSObject <AccedoOneControlProtocol>
 
-- (instancetype _Nonnull) initWithService:(AccedoOne *_Nonnull) service;
+- (instancetype _Nonnull) initWithService:(AccedoOne *_Nonnull) service assetCacheExpirationInterval: (NSNumber *) assetCacheExpirationInterval;
 - (void) clearCache;
 
 @end

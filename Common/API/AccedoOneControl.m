@@ -24,16 +24,19 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
 @interface AccedoOneControl ()
 @property (nonatomic, strong) AccedoOne * service;
 @property (nonatomic, strong) AOService *httpService;
+@property (strong) NSNumber * assetCacheExpirationInterval;
 @property (nonatomic, strong) id<AOTimeBasedCacheHandler> assetCache; //used to cache assets (images, resource files, etc..)
 @end
 
 
 @implementation AccedoOneControl
 
--(instancetype) initWithService:(AccedoOne *) service {
+-(instancetype) initWithService:(AccedoOne *) service assetCacheExpirationInterval: (NSNumber *) assetCacheExpirationInterval{
     if (self = [super init]) {
         _service = service;
-        self.assetCache = [AOCache cacheProvider:[AOCacheOverPINCache class] persistenceKey:@"AssetCache" defaultExpiration:kAssetCacheTimeout];
+
+        self.assetCacheExpirationInterval = assetCacheExpirationInterval;
+        self.assetCache = [AOCache cacheProvider:[AOCacheOverPINCache class] persistenceKey:@"AssetCache" defaultExpiration:self.assetCacheExpirationInterval ? [self.assetCacheExpirationInterval doubleValue] : kAssetCacheTimeout];
         self.httpService = [[AOService alloc] initWithURL:service.accedoOneURL requestTimeout:service.requestTimeout cacheHandler:self.assetCache];
         [self.httpService setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     }
@@ -237,7 +240,7 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
 
              NSString *cacheKey = [AOCacheHelper cacheKeyForMethod:assetPath parameters:nil];
              AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:cacheKey];
-             request.cacheExpiration = @(kAssetCacheTimeout);
+             request.cacheExpiration = self.assetCacheExpirationInterval ? self.assetCacheExpirationInterval : @(kAssetCacheTimeout);
              request.forceSendRequest = YES;
              
              NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:cacheKey];
