@@ -73,7 +73,7 @@ The API supports offline caching, if the Accedo One API is offline it returns th
 
 ```objective-c
 	NSString * apparidURL = @"https://appgrid-api.cloud.accedo.tv/";
-    NSString * apparidKey = @"REMOVED";
+    NSString * apparidKey = @"";
     NSBundle * bundleId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
     NSString * uuid       = [NSString stringWithFormat:@"%@.UUID", bundleId ? bundleId : @"tv.accedo.AppgridSDK" ];
     AccedoOne * accedoOne = [[AccedoOne alloc] initWithURL:apparidURL appKey:apparidKey userID:uuid];
@@ -81,7 +81,7 @@ The API supports offline caching, if the Accedo One API is offline it returns th
 
 ```swift
 	let apparidURL:String = "https://appgrid-api.cloud.accedo.tv/";
-	let apparidKey:String = "REMOVED";
+	let apparidKey:String = "";
 	let uuid: String = String(format: "%@.UUID", Bundle.main.infoDictionary?["CFBundleIdentifier"] as! CVarArg)
 	let accedoOne:AccedoOne = AccedoOne(url: apparidURL, appKey: apparidKey, userID: uuid);
 ```

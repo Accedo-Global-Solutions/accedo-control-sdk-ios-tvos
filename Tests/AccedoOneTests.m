@@ -29,7 +29,7 @@ static const int kTCExpectationTimeout = 3000; //30 //seconds
    
     
     NSString * apparidURL = @"https://appgrid-api.cloud.accedo.tv/";
-    NSString * apparidKey = @"REMOVED";
+    NSString * apparidKey = @"";
     NSBundle * bundleId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
     NSString * uuid       = [NSString stringWithFormat:kAOUUIDKey, bundleId ? bundleId : @"tv.accedo.AppgridSDK" ];
     self.appGridService = [[AccedoOne alloc] initWithURL:apparidURL appKey:apparidKey userID:uuid];
