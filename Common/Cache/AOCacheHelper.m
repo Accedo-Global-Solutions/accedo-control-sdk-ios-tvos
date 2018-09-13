@@ -19,7 +19,13 @@
     NSArray *allKeys1 = [[parameters allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     NSArray *allKeys2 = [[pathParams allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 
-    NSMutableString *returnValue = [NSMutableString stringWithString:methodName];
+    NSMutableString *returnValue = nil;
+    NSRange range = [methodName rangeOfString:@"?"];
+    if ( range.location!=NSNotFound ){
+        returnValue = [NSMutableString stringWithString:[methodName substringToIndex:range.location]];
+    }else {
+        returnValue = [NSMutableString stringWithString:methodName];
+    }
 
     for(NSString *key in allKeys1) {
         [returnValue appendFormat:@"-%@:%@", key, parameters[key]];
