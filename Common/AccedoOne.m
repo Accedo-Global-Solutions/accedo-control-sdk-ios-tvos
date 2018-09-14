@@ -555,7 +555,10 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 }
 
 - (void) addDictionary:(NSDictionary *) dictionary toOfflineAccedoOneConfigWithKey:(NSString *) key {
-    self.localConfig[key] = dictionary;
+
+    @synchronized(self.localConfig){
+        self.localConfig[key] = dictionary;
+    }
     [self flushOfflineAccedoOneConfig];
 }
 
