@@ -34,7 +34,7 @@
     if (queue)
     {
         // Someone is already waiting for the cache state to be determined. We just add ourselves as well to the existing callback queue.
-        TLog(@"AO-[cache]: Already fetching: Enqueue for callback");
+        //TLog(@"AO-[cache]: Already fetching: Enqueue for callback");
         [queue addObject:cacheDTO];
         loading = YES;
     }
@@ -59,7 +59,7 @@
         logState = @"CacheStateAvailable";
     }
 
-    TLog(@"AO-[cache]: Cache state for key:%@ => %@", cacheDTO.cacheKey, logState);
+    //TLog(@"AO-[cache]: Cache state for key:%@ => %@", cacheDTO.cacheKey, logState);
 
     return state;
 }
@@ -134,7 +134,7 @@
 
 - (void) notifyCallersForKey:(NSString *)key result:(id)result error:(AOError *)error
 {
-    NSArray *blocksToCall = [self popBlocksToCallForKey:key];
+    NSArray *blocksToCall = [self blocksToCallForKey:key];
 
     for (AOCacheDTO * block in blocksToCall)
     {
@@ -147,6 +147,7 @@
             block.success(result);
         }
     }
+    [self removeKeyFromQueue:key];
 }
 
 #pragma mark - Ready block invokers
@@ -184,14 +185,7 @@
 
 #pragma mark - Data Structure manipulation
 
-- (NSArray *)popBlocksToCallForKey:(NSString *)key
-{
-    NSArray * blocksToCall = [self blocksToCallForKey:key];
-    
-    [self removeKeyFromQueue:key];
-    
-    return blocksToCall;
-}
+
 
 - (NSArray *)blocksToCallForKey:(NSString *)key
 {

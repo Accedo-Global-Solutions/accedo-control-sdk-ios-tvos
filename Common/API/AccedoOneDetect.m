@@ -47,7 +47,7 @@ static NSString *const kPathLogInfo  = @"application/log/info";
         [self getLevel:^(AOServiceLogLevel configuredLogLevel) {
              [self logToRemoteServiceCode:code message:message dimensions:dimensions requestedLogLevel:logLevel];
         } onFailure:^(AOError *error) {
-             ELog(@"AO-[error]: AccedoOneService logWithLevel failed with error: %@", error);
+             //ELog(@"AO-[error]: AccedoOneService logWithLevel failed with error: %@", error);
         }];
     } else {
         [self logToRemoteServiceCode:code message:message dimensions:dimensions requestedLogLevel:logLevel];
@@ -155,7 +155,7 @@ static NSString *const kPathLogInfo  = @"application/log/info";
         result = AOServiceLogLevelInfo;
     }
     else {
-        ELog(@"AO-[error]: AAccedoOneService failed to map logLevel (%@) to a known value (AccedoOneServiceLogLevel). Fallback to:  AccedoOneServiceLogLevelOff", logLevel);
+        //ELog(@"AO-[error]: AAccedoOneService failed to map logLevel (%@) to a known value (AccedoOneServiceLogLevel). Fallback to:  AccedoOneServiceLogLevelOff", logLevel);
     }
 
     return result;

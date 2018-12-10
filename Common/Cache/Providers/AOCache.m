@@ -61,7 +61,7 @@
     if (atom != nil) {
         [self.internalCache setObject:atom forKey:key];
     } else {
-        WLog(@"AO-[cache]: ]Nil atom was tried to be stored in cache");
+        //WLog(@"AO-[cache]: ]Nil atom was tried to be stored in cache");
     }
 }
 
@@ -121,7 +121,7 @@
 
     if (a && a.payload == nil)
     {
-        ELog(@"AO-[cache]: Cached object with empty payload in Cache!!!!");
+        //ELog(@"AO-[cache]: Cached object with empty payload in Cache!!!!");
         [self clearObjectForKey:key];
     }
 
@@ -163,7 +163,7 @@
         return NO;
     }
 
-    TLog(@"AO-[cache]: isKeyExpired? key: %@ | %@ | payload: %@", key, [a hasExpired] ? @"YES" : @"NO", a.payload);
+    //TLog(@"AO-[cache]: isKeyExpired? key: %@ | %@ | payload: %@", key, [a hasExpired] ? @"YES" : @"NO", a.payload);
 
     return [a hasExpired];
 }

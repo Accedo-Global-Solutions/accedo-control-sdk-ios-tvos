@@ -383,7 +383,7 @@ static const NSUInteger kLogMaxErrorLength    = 112;
             if (! error)
             {
 #ifdef DEBUG
-                DLog(@"AO-[service]\n%@ REQUEST: %@\nHEADERS: %@\nRESPONSE-[ok]: %@", method, request.URL.absoluteString, [request allHTTPHeaderFields], [responseObject isKindOfClass:[NSDictionary class]] || [responseObject isKindOfClass:[NSArray class]] ? [self truncatedString:[responseObject description] maxLength:kLogMaxResponseLength] : @"BINARY-FORMAT: LOG SKIPPED!" );
+                //DLog(@"AO-[service]\n%@ REQUEST: %@\nHEADERS: %@\nRESPONSE-[ok]: %@", method, request.URL.absoluteString, [request allHTTPHeaderFields], [responseObject isKindOfClass:[NSDictionary class]] || [responseObject isKindOfClass:[NSArray class]] ? [self truncatedString:[responseObject description] maxLength:kLogMaxResponseLength] : @"BINARY-FORMAT: LOG SKIPPED!" );
 #endif
                 AOParseBlock parseBlock = ^void(id parsedObject, AOError* parseError) {
                     if (requestMetadata.cacheKey) {
@@ -418,7 +418,7 @@ static const NSUInteger kLogMaxErrorLength    = 112;
             else //error...
             {
 #ifdef DEBUG
-                DLog(@"AO-[service]\n%@ REQUEST: %@\nHEADERS: %@\nRESPONSE-[fail]: %@", method, request.URL.absoluteString, [request allHTTPHeaderFields], [self truncatedString:[error description] maxLength:kLogMaxErrorLength]);
+                //DLog(@"AO-[service]\n%@ REQUEST: %@\nHEADERS: %@\nRESPONSE-[fail]: %@", method, request.URL.absoluteString, [request allHTTPHeaderFields], [self truncatedString:[error description] maxLength:kLogMaxErrorLength]);
 #endif
                 NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                 NSInteger statusCode = httpResponse.statusCode;
