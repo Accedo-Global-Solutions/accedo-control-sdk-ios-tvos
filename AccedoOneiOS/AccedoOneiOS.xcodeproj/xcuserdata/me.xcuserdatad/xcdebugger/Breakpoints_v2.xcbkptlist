@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Common/API/AccedoOneControl.m"
-            timestampString = "558540630.918015"
+            timestampString = "566562872.991056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "-assetForKey:onComplete:"
             landmarkType = "7">
          </BreakpointContent>
@@ -49,6 +49,84 @@
             endingLineNumber = "25"
             landmarkName = "+cacheKeyForMethod:parameters:pathParameters:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Tests/AccedoOneTests.m"
+            timestampString = "566562872.9919339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "-testAllAssets"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[AppGridSDKFrameworkTests testAllAssets]_block_invoke"
+                  moduleName = "AccedoOneiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/me/Workspace/accedo-one-sdk-ios-tvos/Tests/AccedoOneTests.m"
+                  timestampString = "566562873.470663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[AppGridSDKFrameworkTests testAllAssets]_block_invoke"
+                  moduleName = "AccedoOneiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/me/Workspace/accedo-one-sdk-ios-tvos/Tests/AccedoOneTests.m"
+                  timestampString = "566562873.472602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "502">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[AppGridSDKFrameworkTests testAllAssets]_block_invoke"
+                  moduleName = "AccedoOneiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/me/Workspace/accedo-one-sdk-ios-tvos/Tests/AccedoOneTests.m"
+                  timestampString = "566562873.474215"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "569">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[AppGridSDKFrameworkTests testAllAssets]_block_invoke"
+                  moduleName = "AccedoOneiOSTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/me/Workspace/accedo-one-sdk-ios-tvos/Tests/AccedoOneTests.m"
+                  timestampString = "566562873.476241"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

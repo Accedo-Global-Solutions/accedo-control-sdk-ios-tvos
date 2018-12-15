@@ -20,10 +20,6 @@
 #import "AccedoOneCacheProtocol.h"
 #import "AOCMSOptionalParams.h"
 
-typedef NS_ENUM(NSUInteger, AccedoOneServiceAvailability) {
-    AccedoOneServiceAvailabilityOnline,
-    AccedoOneServiceAvailabilityOffline
-};
 
 /**
  * Application Status constants
@@ -68,7 +64,7 @@ extern NSString * _Nonnull const AOApplicationStateMaintenance;
 
 @property (nonatomic, strong, readonly) NSString * _Nonnull accedoOneURL;
 @property (nonatomic, assign, readonly) NSTimeInterval requestTimeout;
-@property (nonatomic, assign) AccedoOneServiceAvailability serviceAvailability;
+
 
 @end
 

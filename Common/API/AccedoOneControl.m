@@ -79,26 +79,20 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
 
     NSDictionary* params = gid ? @{@"gid" : gid} : nil;
     NSString* offlineKey = gid ? [NSString stringWithFormat:@"%@?gid=%@", kPathGetProfileInfo, gid] : kPathGetProfileInfo;
-    
-    if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
-        [self.service sendAuthenticatedGETRequest:kPathGetProfileInfo queryParams:params allowCache:YES onSuccess:^(NSDictionary *response) {
-            [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:offlineKey];
-            
-            if (completionBlock) {
-                completionBlock(response, nil);
-            }
-        } failureBlock:^(AOError *error) {
-            if (completionBlock) {
-                completionBlock(nil, error);
-            }
-        }];
-    } else {
-        NSDictionary* cached = [self.service dictionaryFromOfflineAccedoOneProfileWithKey:offlineKey];
-        
+
+    [self.service sendAuthenticatedGETRequest:kPathGetProfileInfo queryParams:params allowCache:YES onSuccess:^(NSDictionary *response) {
+        [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:offlineKey];
+
         if (completionBlock) {
-            completionBlock(cached, cached ? nil : [AOError errorWithMessage:@"Offline profile info not present!"]);
+            completionBlock(response, nil);
         }
-    }
+    } failureBlock:^(AOError *error) {
+        if (completionBlock) {
+            NSDictionary* cached = [self.service dictionaryFromOfflineAccedoOneProfileWithKey:offlineKey];
+            completionBlock(cached, cached ? nil : error);
+        }
+    }];
+
 }
 
 /**
@@ -115,25 +109,20 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
     NSDictionary * params = gid ? @{@"gid" : gid} : nil;
     NSString * offlineKey = gid ? [NSString stringWithFormat:@"%@?gid=%@", kPathGetMetadata, gid] : kPathGetMetadata;
     
-    if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
-        [self.service sendAuthenticatedGETRequest:kPathGetMetadata queryParams:params allowCache:YES onSuccess:^(NSDictionary *response) {
-            [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:offlineKey];
-            
-            if (completionBlock) {
-                completionBlock(response, nil);
-            }
-        } failureBlock:^(AOError *error) {
-            if (completionBlock) {
-                completionBlock(nil, error);
-            }
-        }];
-    } else {
-        NSDictionary * cachedMetadata = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:offlineKey];
-        
+
+    [self.service sendAuthenticatedGETRequest:kPathGetMetadata queryParams:params allowCache:YES onSuccess:^(NSDictionary *response) {
+        [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:offlineKey];
+
         if (completionBlock) {
-            completionBlock(cachedMetadata, cachedMetadata ? nil : [AOError errorWithMessage:@"Offline metadata not present!"]);
+            completionBlock(response, nil);
         }
-    }
+    } failureBlock:^(AOError *error) {
+        NSDictionary * cachedMetadata = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:offlineKey];
+        if (completionBlock) {
+            completionBlock(cachedMetadata , cachedMetadata ? nil : error);
+        }
+    }];
+
 }
 
 /**
@@ -191,27 +180,18 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
  *  @param completionBlock block to be executed on success, passing a dictionary containing all assets as a parameter
  */
 - (void) allAssets:(void (^)(NSDictionary *assetsMetadata, AOError *err))completionBlock {
-
-    if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
-        [self.service sendAuthenticatedGETRequest:kPathAsset queryParams:nil allowCache:YES onSuccess:^(NSDictionary *response) {
-             [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:kPathAsset];
-
-             if (completionBlock) {
-                 completionBlock(response, nil);
-             }
-        }
-        failureBlock:^(AOError *error) {
-             if (completionBlock) {
-                 completionBlock(nil, error);
-             }
-         }];
-    } else {
-        NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:kPathAsset];
+    [self.service sendAuthenticatedGETRequest:kPathAsset queryParams:nil allowCache:YES onSuccess:^(NSDictionary *response) {
+        [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:kPathAsset];
 
         if (completionBlock) {
-            completionBlock(cachedResource, cachedResource ? nil : [AOError errorWithMessage:@"Offline metadata not present!"]);
+            completionBlock(response, nil);
         }
-    }
+    } failureBlock:^(AOError *error) {
+        if (completionBlock) {
+            NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:kPathAsset];
+            completionBlock(cachedResource,cachedResource ? nil :  error);
+        }
+    }];
 }
 
 /**
@@ -229,7 +209,7 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
     
     [self allAssets:^(NSDictionary *allAssets, AOError *err) {
 
-        if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
+        if (allAssets) {
 
             NSString *assetPath = allAssets[key];
              
@@ -238,16 +218,16 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
                  return;
              }
 
-             NSString *cacheKey = [AOCacheHelper cacheKeyForMethod:assetPath parameters:nil];
-             AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:cacheKey];
+
+             AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:key];
              request.cacheExpiration = self.assetCacheExpirationInterval ? self.assetCacheExpirationInterval : @(kAssetCacheTimeout);
              request.forceSendRequest = YES;
              
-             NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:cacheKey];
+             NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:key];
              
              //check cache, and add cache-controll header if necessary...
              if (cacheTimeStamp > 0) { //do not add "If-Modified-Since" if object not in cache (to avoid getting HTTP 304)
-                 NSString *ifModifiedSinceDate = [self.service ifModifiedSinceDateForCachedObject:cacheKey cache:self.assetCache];
+                 NSString *ifModifiedSinceDate = [self.service ifModifiedSinceDateForCachedObject:key cache:self.assetCache];
                  request.headerParameters = @{kCacheControllHeader : ifModifiedSinceDate};
              }
              
@@ -256,7 +236,7 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
                      completionBlock(responseObject, nil);
                  }
              } failure:^(AOError *error) {
-                 id cachedObject = [self.assetCache objectForKey:cacheKey];
+                 id cachedObject = [self.assetCache objectForKey:key];
                  
                  if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
                      if (completionBlock) {

@@ -109,7 +109,6 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     
     self.sessionKey            = nil;
     self.sessionExpiration     = nil;
-    self.serviceAvailability   = AccedoOneServiceAvailabilityOnline;
     self.sessionFetchWaitQueue = [[NSOperationQueue alloc] init];
     self.sessionFetchWaitQueue.name = @"tv.accedo.one.sessionFetchWaitQueue";
     self.sessionFetchWaitQueue.maxConcurrentOperationCount = 1;
@@ -398,8 +397,6 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     
     [self.jsonService GET:request parser:nil success:^(id responseObject) {
         //A session key was created, update the availability status to online
-        self.serviceAvailability = AccedoOneServiceAvailabilityOnline;
-        
         self.sessionKey = responseObject[@"sessionKey"];
         [self.jsonService setHeaderValue:self.sessionKey headerField:@"X-Session"];
         
@@ -426,8 +423,6 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
         }
     } failure:^(AOError *error) {
          //An attempt to create a session key failed, so the AccedoOneService enters offline mode
-         self.serviceAvailability = AccedoOneServiceAvailabilityOffline;
-         
          if (failureBlock) {
              failureBlock(error);
          }

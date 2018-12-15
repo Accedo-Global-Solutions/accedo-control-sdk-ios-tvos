@@ -183,26 +183,18 @@ static NSString *const kPathLocales          = @"locales";
 }
 
 -(void) localesOnComplete:(nullable void (^)(NSArray *_Nullable locales, AOError *_Nullable err))completionBlock {
-
-    if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
-        [self.service sendAuthenticatedGETRequest:kPathLocales queryParams:nil allowCache:NO onSuccess:^(NSDictionary *response) {
-            [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:kPathLocales];
-            
-            if (completionBlock) {
-                completionBlock(response[@"locales"], nil);
-            }
-        } failureBlock:^(AOError *error) {
-             if (completionBlock) {
-                 completionBlock(nil, error);
-             }
-         }];
-    } else {
-        NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:kPathLocales];
+    [self.service sendAuthenticatedGETRequest:kPathLocales queryParams:nil allowCache:NO onSuccess:^(NSDictionary *response) {
+        [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:kPathLocales];
 
         if (completionBlock) {
-            completionBlock(cachedResource[@"locales"], cachedResource[@"locales"] ? nil : [AOError errorWithMessage:@"Offline metadata not present!"]);
+            completionBlock(response[@"locales"], nil);
         }
-    }
+    } failureBlock:^(AOError *error) {
+        if (completionBlock) {
+            NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:kPathLocales];
+            completionBlock(cachedResource[@"locales"],cachedResource[@"locales"] ? nil: error);
+        }
+    }];
 }
 
 #pragma mark - Helper (Entry fetching)
@@ -276,15 +268,11 @@ static NSString *const kPathLocales          = @"locales";
                 [self.service addDictionary:@{@"kOfflineEntries":result} toOfflineAccedoOneConfigWithKey:entriesCacheKey];
             }
             
-            if (completionBlock) {
-                if (self.service.serviceAvailability == AccedoOneServiceAvailabilityOnline) {
-                    completionBlock(blockError ? nil: result, blockError);
-                } else {
-                    // attempt to retrieve from cache...
-                    NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:entriesCacheKey];
-                    AOError * resultError = blockError ? blockError : [AOError errorWithMessage:@"Offline metadata not present!"];
-                    completionBlock(cachedResource[@"kOfflineEntries"], cachedResource ? nil : resultError );
-                }
+            if (blockError) {
+                NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:entriesCacheKey];
+                completionBlock(cachedResource[@"kOfflineEntries"] , cachedResource ? nil : blockError);
+            } else {
+                completionBlock(result, nil);
             }
         });
     });
