@@ -194,6 +194,23 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
     }];
 }
 
+- (void) allAssetsForGID:(nullable NSString *)gid onComplete:(nullable void (^)(NSDictionary * _Nullable assetsMetadata, AOError *_Nullable err))completionBlock {
+    NSDictionary * params = gid ? @{@"gid" : gid} : nil;
+    [self.service sendAuthenticatedGETRequest:kPathAsset queryParams:params allowCache:YES onSuccess:^(NSDictionary *response) {
+        [self.service addDictionary:response toOfflineAccedoOneConfigWithKey:kPathAsset];
+
+        if (completionBlock) {
+            completionBlock(response, nil);
+        }
+    } failureBlock:^(AOError *error) {
+        if (completionBlock) {
+            NSDictionary * cachedResource = [self.service dictionaryFromOfflineAccedoOneConfigWithKey:kPathAsset];
+            completionBlock(cachedResource,cachedResource ? nil :  error);
+        }
+    }];
+}
+
+
 /**
  *  Download an asset with a given key.
  *

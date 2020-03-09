@@ -24,6 +24,8 @@
 - (void) metadataForKeys:(nonnull NSArray<NSString *>*)keys gid:(nullable NSString *)gid onComplete:(nullable void (^)(id _Nullable metadata, AOError * _Nullable error))completionBlock;
 
 - (void) allAssets:(nullable void (^)(NSDictionary * _Nullable assetsMetadata, AOError *_Nullable err))completionBlock;
+- (void) allAssetsForGID:(nullable NSString *)gid onComplete:(nullable void (^)(NSDictionary * _Nullable assetsMetadata, AOError *_Nullable err))completionBlock;
+
 - (void) assetForKey:(nonnull NSString *)key onComplete:(nullable void (^)(NSData * _Nullable asset, AOError * _Nullable err))completionBlock;
 
 @end

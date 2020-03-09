@@ -232,6 +232,10 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.control allAssets:completionBlock];
 }
 
+- (void) allAssetsForGID:(nullable NSString *)gid onComplete:(nullable void (^)(NSDictionary * _Nullable assetsMetadata, AOError *_Nullable err))completionBlock {
+    [self.control allAssetsForGID: gid onComplete: completionBlock];
+}
+
 /**
  *  Download an asset with a given key.
  *
@@ -468,6 +472,7 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
 
         NSString *cacheKey = [AOCacheHelper cacheKeyForMethod:requestSuffix parameters:params];
         AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:requestSuffix queryParams:params headerParams:nil cacheKey:cacheKey];
+        
         request.cacheExpiration = allowCache ? @(kMetadataCacheTimeout) : nil;
         request.forceSendRequest = YES;
         NSTimeInterval cacheTimeStamp = [self.objectCache creationDateForKey:cacheKey];

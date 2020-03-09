@@ -28,11 +28,11 @@ create_archives () {
 }
 
 create_release () {
-	
+
 	if ! [ -d "Release/$1" ]; then
 		mkdir "Release/$1"
 	fi
-	
+
 	cp -r Binary/AccedoOneiOS.framework "Release/$1"
 	cp -r Binary/AccedoOnetvOS.framework "Release/$1"
 	cp Binary/AccedoOneiOS.zip "Release/$1"
@@ -47,9 +47,9 @@ generate_podspecs () {
 }
 
 main () {
-	if [ -z "$*" ]; then 
+	if [ -z "$*" ]; then
 		err_log "usage: ./release.sh version (ex: ./release.sh 1.0.0 )";
-		exit 0 
+		exit 0
 	fi
 
 	echo "$1"
@@ -65,6 +65,7 @@ main () {
 				generate_podspecs $1
 			fi
 		fi
+		echo "remember: pod trunk push !!!!"
 		exit 0
 	else
 		exit 1
