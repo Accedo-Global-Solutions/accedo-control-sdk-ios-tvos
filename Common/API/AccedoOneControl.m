@@ -211,6 +211,64 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
 }
 
 
+- (void) assetForKey:(nonnull NSString *)key GID: (nonnull NSString *)gid onComplete:(nullable void (^)(NSData * _Nullable asset, AOError * _Nullable err))completionBlock {
+    if (!key) {
+        if (completionBlock) completionBlock(nil, [AOError errorWithMessage:@"AccedoOneService: key cannot be null!"]);
+        return;
+    }
+
+    [self allAssetsForGID: gid  onComplete: ^(NSDictionary *allAssets, AOError *err) {
+
+        if (allAssets) {
+
+            NSString *assetPath = allAssets[key];
+
+            if (!assetPath) {
+                if (completionBlock) completionBlock(nil, [AOError errorWithMessage:@"AccedoOneService: no asset (url) for provided key!"]);
+                return;
+            }
+
+
+            AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:key];
+            request.cacheExpiration = self.assetCacheExpirationInterval ? self.assetCacheExpirationInterval : @(kAssetCacheTimeout);
+            request.forceSendRequest = YES;
+
+            NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:key];
+
+            //check cache, and add cache-controll header if necessary...
+            if (cacheTimeStamp > 0) { //do not add "If-Modified-Since" if object not in cache (to avoid getting HTTP 304)
+                NSString *ifModifiedSinceDate = [self.service ifModifiedSinceDateForCachedObject:key cache:self.assetCache];
+                request.headerParameters = @{kCacheControllHeader : ifModifiedSinceDate};
+            }
+
+            [self.httpService GET:request parser:nil success:^(id responseObject) {
+                if (completionBlock) {
+                    completionBlock(responseObject, nil);
+                }
+            } failure:^(AOError *error) {
+                id cachedObject = [self.assetCache objectForKey:key];
+
+                if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
+                    if (completionBlock) {
+                        completionBlock(cachedObject, nil);
+                    }
+                } else {
+                    if (completionBlock) {
+                        completionBlock(nil, error);
+                    }
+                }
+            }];
+        } else {
+            NSData * cachedResource = (NSData *)[self.assetCache objectForKey:key];
+
+            if (completionBlock) {
+                completionBlock(cachedResource, cachedResource ? nil : [AOError errorWithMessage:@"Resource not in cache!"]);
+            }
+        }
+    }];
+}
+
+
 /**
  *  Download an asset with a given key.
  *

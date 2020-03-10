@@ -246,6 +246,11 @@ static NSString *const kCacheControllHeader  = @"If-Modified-Since";
     [self.control assetForKey:key onComplete:completionBlock];
 }
 
+- (void) assetForKey:(nonnull NSString *)key GID: (nonnull NSString *)gid onComplete:(nullable void (^)(NSData * _Nullable asset, AOError * _Nullable err))completionBlock {
+    [self.control assetForKey: key GID: gid onComplete: completionBlock];
+}
+
+
 #pragma mark - AccedoOnePublishProtocol (CMS)
 
 - (void) entryForId:(NSString*)entryId onComplete:(void (^)(NSDictionary *entry, AOError *err))completionBlock {
