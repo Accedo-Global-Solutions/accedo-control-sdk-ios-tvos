@@ -1,0 +1,166 @@
+2020-06-01 13:22:58.670 xcodebuild[89019:3917559]  DTDeviceKit: Failed to mount DDI from '<DVTFilePath:0x7f927447b760:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/13.1/DeveloperDiskImage.dmg'>', error=-402652958: Error Domain=com.apple.dtdevicekit Code=806 "Failed to prepare device for development." UserInfo={AssociatedMobileDeviceFunction=AMDeviceMountImage, NSUnderlyingError=0x7f92740adf30 {Error Domain=com.apple.dt.MobileDeviceErrorDomain Code=-402652958 "The device is locked." UserInfo={MobileDeviceErrorCode=(0xE80000E2), com.apple.dtdevicekit.stacktrace=(
+	0   DTDeviceKitBase                     0x000000011396981a DTDKCreateNSErrorFromAMDErrorCode + 233
+	1   DTDeviceKitBase                     0x00000001139a88a9 -[DTDKMobileDeviceToken _mountDeveloperDiskImage:withError:] + 1034
+	2   DTDeviceKitBase                     0x00000001139a95e7 __58-[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:]_block_invoke + 779
+	3   libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	4   libdispatch.dylib                   0x00007fff6b4446ec _dispatch_lane_barrier_sync_invoke_and_complete + 60
+	5   DTDeviceKitBase                     0x00000001139a927a -[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:] + 199
+	6   IDEiOSSupportCore                   0x000000011355d741 __37-[DVTiOSDevice(Connect) hasConnected]_block_invoke_2 + 265
+	7   DVTFoundation                       0x00000001023bc7f4 __DVT_CALLING_CLIENT_BLOCK__ + 7
+	8   DVTFoundation                       0x00000001023c168b __DVTDispatchGroupAsync_block_invoke + 1194
+	9   libdispatch.dylib                   0x00007fff6b4376c4 _dispatch_call_block_and_release + 12
+	10  libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	11  libdispatch.dylib                   0x00007fff6b43a890 _dispatch_continuation_pop + 534
+	12  libdispatch.dylib                   0x00007fff6b439f16 _dispatch_async_redirect_invoke + 703
+	13  libdispatch.dylib                   0x00007fff6b446957 _dispatch_root_queue_drain + 326
+	14  libdispatch.dylib                   0x00007fff6b447097 _dispatch_worker_thread2 + 92
+	15  libsystem_pthread.dylib             0x00007fff6b6929f7 _pthread_wqthread + 220
+	16  libsystem_pthread.dylib             0x00007fff6b691b77 start_wqthread + 15
+), DVTRadarComponentKey=261622, NSLocalizedDescription=The device is locked.}}, NSLocalizedRecoverySuggestion=If you are certain that Xcode supports development on this device, try disconnecting and reconnecting the device., NSLocalizedFailure=This operation can fail if the version of the OS on the device is newer than the version of Xcode that is running., DVTRadarComponentKey=487927, NSLocalizedDescription=Failed to prepare device for development.}
+2020-06-01 13:22:58.670 xcodebuild[89019:3917559]  iPhoneConnect: 📱<DVTiOSDevice (0x7f92741aaa60), Gabor’s iPhone, iPhone, 13.1.1 (17A854), 8834ee25a18ad7cf364aa323903f6140c404335e> unable to mount developer disk image, (Error Domain=com.apple.dtdevicekit Code=806 "Failed to prepare device for development." UserInfo={AssociatedMobileDeviceFunction=AMDeviceMountImage, NSUnderlyingError=0x7f92740adf30 {Error Domain=com.apple.dt.MobileDeviceErrorDomain Code=-402652958 "The device is locked." UserInfo={MobileDeviceErrorCode=(0xE80000E2), com.apple.dtdevicekit.stacktrace=(
+	0   DTDeviceKitBase                     0x000000011396981a DTDKCreateNSErrorFromAMDErrorCode + 233
+	1   DTDeviceKitBase                     0x00000001139a88a9 -[DTDKMobileDeviceToken _mountDeveloperDiskImage:withError:] + 1034
+	2   DTDeviceKitBase                     0x00000001139a95e7 __58-[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:]_block_invoke + 779
+	3   libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	4   libdispatch.dylib                   0x00007fff6b4446ec _dispatch_lane_barrier_sync_invoke_and_complete + 60
+	5   DTDeviceKitBase                     0x00000001139a927a -[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:] + 199
+	6   IDEiOSSupportCore                   0x000000011355d741 __37-[DVTiOSDevice(Connect) hasConnected]_block_invoke_2 + 265
+	7   DVTFoundation                       0x00000001023bc7f4 __DVT_CALLING_CLIENT_BLOCK__ + 7
+	8   DVTFoundation                       0x00000001023c168b __DVTDispatchGroupAsync_block_invoke + 1194
+	9   libdispatch.dylib                   0x00007fff6b4376c4 _dispatch_call_block_and_release + 12
+	10  libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	11  libdispatch.dylib                   0x00007fff6b43a890 _dispatch_continuation_pop + 534
+	12  libdispatch.dylib                   0x00007fff6b439f16 _dispatch_async_redirect_invoke + 703
+	13  libdispatch.dylib                   0x00007fff6b446957 _dispatch_root_queue_drain + 326
+	14  libdispatch.dylib                   0x00007fff6b447097 _dispatch_worker_thread2 + 92
+	15  libsystem_pthread.dylib             0x00007fff6b6929f7 _pthread_wqthread + 220
+	16  libsystem_pthread.dylib             0x00007fff6b691b77 start_wqthread + 15
+), DVTRadarComponentKey=261622, NSLocalizedDescription=The device is locked.}}, NSLocalizedRecoverySuggestion=If you are certain that Xcode supports development on this device, try disconnecting and reconnecting the device., NSLocalizedFailure=This operation can fail if the version of the OS on the device is newer than the version of Xcode that is running., DVTRadarComponentKey=487927, NSLocalizedDescription=Failed to prepare device for development.}) {
+    AssociatedMobileDeviceFunction = AMDeviceMountImage;
+    DVTRadarComponentKey = 487927;
+    NSLocalizedDescription = "Failed to prepare device for development.";
+    NSLocalizedFailure = "This operation can fail if the version of the OS on the device is newer than the version of Xcode that is running.";
+    NSLocalizedRecoverySuggestion = "If you are certain that Xcode supports development on this device, try disconnecting and reconnecting the device.";
+    NSUnderlyingError = "Error Domain=com.apple.dt.MobileDeviceErrorDomain Code=-402652958 \"The device is locked.\" UserInfo={MobileDeviceErrorCode=(0xE80000E2), com.apple.dtdevicekit.stacktrace=(\n\t0   DTDeviceKitBase                     0x000000011396981a DTDKCreateNSErrorFromAMDErrorCode + 233\n\t1   DTDeviceKitBase                     0x00000001139a88a9 -[DTDKMobileDeviceToken _mountDeveloperDiskImage:withError:] + 1034\n\t2   DTDeviceKitBase                     0x00000001139a95e7 __58-[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:]_block_invoke + 779\n\t3   libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8\n\t4   libdispatch.dylib                   0x00007fff6b4446ec _dispatch_lane_barrier_sync_invoke_and_complete + 60\n\t5   DTDeviceKitBase                     0x00000001139a927a -[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:] + 199\n\t6   IDEiOSSupportCore                   0x000000011355d741 __37-[DVTiOSDevice(Connect) hasConnected]_block_invoke_2 + 265\n\t7   DVTFoundation                       0x00000001023bc7f4 __DVT_CALLING_CLIENT_BLOCK__ + 7\n\t8   DVTFoundation                       0x00000001023c168b __DVTDispatchGroupAsync_block_invoke + 1194\n\t9   libdispatch.dylib                   0x00007fff6b4376c4 _dispatch_call_block_and_release + 12\n\t10  libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8\n\t11  libdispatch.dylib                   0x00007fff6b43a890 _dispatch_continuation_pop + 534\n\t12  libdispatch.dylib                   0x00007fff6b439f16 _dispatch_async_redirect_invoke + 703\n\t13  libdispatch.dylib                   0x00007fff6b446957 _dispatch_root_queue_drain + 326\n\t14  libdispatch.dylib                   0x00007fff6b447097 _dispatch_worker_thread2 + 92\n\t15  libsystem_pthread.dylib             0x00007fff6b6929f7 _pthread_wqthread + 220\n\t16  libsystem_pthread.dylib             0x00007fff6b691b77 start_wqthread + 15\n), DVTRadarComponentKey=261622, NSLocalizedDescription=The device is locked.}";
+}
+2020-06-01 13:22:58.671 xcodebuild[89019:3917491] [MT] iPhoneConnect: 📱<DVTiOSDevice (0x7f92741aaa60), Gabor’s iPhone, iPhone, 13.1.1 (17A854), 8834ee25a18ad7cf364aa323903f6140c404335e> -- An error occurred whilst preparing device for development -- Failed to prepare device for development.
+Domain: com.apple.dtdevicekit
+Code: 806
+Recovery Suggestion: If you are certain that Xcode supports development on this device, try disconnecting and reconnecting the device.
+User Info: {
+    AssociatedMobileDeviceFunction = AMDeviceMountImage;
+    DVTRadarComponentKey = 487927;
+    NSLocalizedFailure = "This operation can fail if the version of the OS on the device is newer than the version of Xcode that is running.";
+}
+--
+The device is locked.
+Domain: com.apple.dt.MobileDeviceErrorDomain
+Code: -402652958
+User Info: {
+    DVTRadarComponentKey = 261622;
+    MobileDeviceErrorCode = "(0xE80000E2)";
+    "com.apple.dtdevicekit.stacktrace" = (
+	0   DTDeviceKitBase                     0x000000011396981a DTDKCreateNSErrorFromAMDErrorCode + 233
+	1   DTDeviceKitBase                     0x00000001139a88a9 -[DTDKMobileDeviceToken _mountDeveloperDiskImage:withError:] + 1034
+	2   DTDeviceKitBase                     0x00000001139a95e7 __58-[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:]_block_invoke + 779
+	3   libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	4   libdispatch.dylib                   0x00007fff6b4446ec _dispatch_lane_barrier_sync_invoke_and_complete + 60
+	5   DTDeviceKitBase                     0x00000001139a927a -[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:] + 199
+	6   IDEiOSSupportCore                   0x000000011355d741 __37-[DVTiOSDevice(Connect) hasConnected]_block_invoke_2 + 265
+	7   DVTFoundation                       0x00000001023bc7f4 __DVT_CALLING_CLIENT_BLOCK__ + 7
+	8   DVTFoundation                       0x00000001023c168b __DVTDispatchGroupAsync_block_invoke + 1194
+	9   libdispatch.dylib                   0x00007fff6b4376c4 _dispatch_call_block_and_release + 12
+	10  libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	11  libdispatch.dylib                   0x00007fff6b43a890 _dispatch_continuation_pop + 534
+	12  libdispatch.dylib                   0x00007fff6b439f16 _dispatch_async_redirect_invoke + 703
+	13  libdispatch.dylib                   0x00007fff6b446957 _dispatch_root_queue_drain + 326
+	14  libdispatch.dylib                   0x00007fff6b447097 _dispatch_worker_thread2 + 92
+	15  libsystem_pthread.dylib             0x00007fff6b6929f7 _pthread_wqthread + 220
+	16  libsystem_pthread.dylib             0x00007fff6b691b77 start_wqthread + 15
+);
+}
+--
+2020-06-01 13:22:58.671 xcodebuild[89019:3917491] [MT] iPhoneConnect: 📱<DVTiOSDevice (0x7f92741aaa60), Gabor’s iPhone, iPhone, 13.1.1 (17A854), 8834ee25a18ad7cf364aa323903f6140c404335e> == Underlying device preparation errors ==
+2020-06-01 13:22:58.671 xcodebuild[89019:3917491] [MT] iPhoneConnect: Failed _shouldMakeReadyForDevelopment check even though device is not locked by passcode.
+Domain: com.apple.platform.iphoneos
+Code: 5
+Failure Reason: allowsSecureServices: 1. isConnected: 0. Platform: <DVTPlatform:0x7f926ac3ffc0:'com.apple.platform.iphoneos':<DVTFilePath:0x7f926ac3fd40:'/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform'>>. DTDKDeviceIdentifierIsIDID: 0
+User Info: {
+    DVTDeviceDescription = "\Ud83d\Udcf1<DVTiOSDevice (0x7f92741aaa60), Gabor\U2019s iPhone, iPhone, 13.1.1 (17A854), 8834ee25a18ad7cf364aa323903f6140c404335e>";
+}
+--
+2020-06-01 13:22:58.671 xcodebuild[89019:3917491] [MT] iPhoneConnect: Failed to prepare device for development.
+Domain: com.apple.dtdevicekit
+Code: 806
+Recovery Suggestion: If you are certain that Xcode supports development on this device, try disconnecting and reconnecting the device.
+User Info: {
+    AssociatedMobileDeviceFunction = AMDeviceMountImage;
+    DVTRadarComponentKey = 487927;
+    NSLocalizedFailure = "This operation can fail if the version of the OS on the device is newer than the version of Xcode that is running.";
+}
+--
+The device is locked.
+Domain: com.apple.dt.MobileDeviceErrorDomain
+Code: -402652958
+User Info: {
+    DVTRadarComponentKey = 261622;
+    MobileDeviceErrorCode = "(0xE80000E2)";
+    "com.apple.dtdevicekit.stacktrace" = (
+	0   DTDeviceKitBase                     0x000000011396981a DTDKCreateNSErrorFromAMDErrorCode + 233
+	1   DTDeviceKitBase                     0x00000001139a88a9 -[DTDKMobileDeviceToken _mountDeveloperDiskImage:withError:] + 1034
+	2   DTDeviceKitBase                     0x00000001139a95e7 __58-[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:]_block_invoke + 779
+	3   libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	4   libdispatch.dylib                   0x00007fff6b4446ec _dispatch_lane_barrier_sync_invoke_and_complete + 60
+	5   DTDeviceKitBase                     0x00000001139a927a -[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:] + 199
+	6   IDEiOSSupportCore                   0x000000011355d741 __37-[DVTiOSDevice(Connect) hasConnected]_block_invoke_2 + 265
+	7   DVTFoundation                       0x00000001023bc7f4 __DVT_CALLING_CLIENT_BLOCK__ + 7
+	8   DVTFoundation                       0x00000001023c168b __DVTDispatchGroupAsync_block_invoke + 1194
+	9   libdispatch.dylib                   0x00007fff6b4376c4 _dispatch_call_block_and_release + 12
+	10  libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	11  libdispatch.dylib                   0x00007fff6b43a890 _dispatch_continuation_pop + 534
+	12  libdispatch.dylib                   0x00007fff6b439f16 _dispatch_async_redirect_invoke + 703
+	13  libdispatch.dylib                   0x00007fff6b446957 _dispatch_root_queue_drain + 326
+	14  libdispatch.dylib                   0x00007fff6b447097 _dispatch_worker_thread2 + 92
+	15  libsystem_pthread.dylib             0x00007fff6b6929f7 _pthread_wqthread + 220
+	16  libsystem_pthread.dylib             0x00007fff6b691b77 start_wqthread + 15
+);
+}
+--
+2020-06-01 13:22:58.671 xcodebuild[89019:3917491] [MT] iPhoneConnect: Failed to prepare device for development.
+Domain: com.apple.dtdevicekit
+Code: 806
+Recovery Suggestion: If you are certain that Xcode supports development on this device, try disconnecting and reconnecting the device.
+User Info: {
+    AssociatedMobileDeviceFunction = AMDeviceMountImage;
+    DVTRadarComponentKey = 487927;
+    NSLocalizedFailure = "This operation can fail if the version of the OS on the device is newer than the version of Xcode that is running.";
+}
+--
+The device is locked.
+Domain: com.apple.dt.MobileDeviceErrorDomain
+Code: -402652958
+User Info: {
+    DVTRadarComponentKey = 261622;
+    MobileDeviceErrorCode = "(0xE80000E2)";
+    "com.apple.dtdevicekit.stacktrace" = (
+	0   DTDeviceKitBase                     0x000000011396981a DTDKCreateNSErrorFromAMDErrorCode + 233
+	1   DTDeviceKitBase                     0x00000001139a88a9 -[DTDKMobileDeviceToken _mountDeveloperDiskImage:withError:] + 1034
+	2   DTDeviceKitBase                     0x00000001139a95e7 __58-[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:]_block_invoke + 779
+	3   libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	4   libdispatch.dylib                   0x00007fff6b4446ec _dispatch_lane_barrier_sync_invoke_and_complete + 60
+	5   DTDeviceKitBase                     0x00000001139a927a -[DTDKMobileDeviceToken mountDeveloperDiskImageWithError:] + 199
+	6   IDEiOSSupportCore                   0x000000011355d741 __37-[DVTiOSDevice(Connect) hasConnected]_block_invoke_2 + 265
+	7   DVTFoundation                       0x00000001023bc7f4 __DVT_CALLING_CLIENT_BLOCK__ + 7
+	8   DVTFoundation                       0x00000001023c168b __DVTDispatchGroupAsync_block_invoke + 1194
+	9   libdispatch.dylib                   0x00007fff6b4376c4 _dispatch_call_block_and_release + 12
+	10  libdispatch.dylib                   0x00007fff6b438658 _dispatch_client_callout + 8
+	11  libdispatch.dylib                   0x00007fff6b43a890 _dispatch_continuation_pop + 534
+	12  libdispatch.dylib                   0x00007fff6b439f16 _dispatch_async_redirect_invoke + 703
+	13  libdispatch.dylib                   0x00007fff6b446957 _dispatch_root_queue_drain + 326
+	14  libdispatch.dylib                   0x00007fff6b447097 _dispatch_worker_thread2 + 92
+	15  libsystem_pthread.dylib             0x00007fff6b6929f7 _pthread_wqthread + 220
+	16  libsystem_pthread.dylib             0x00007fff6b691b77 start_wqthread + 15
+);
+}
+--
+2020-06-01 13:22:58.671 xcodebuild[89019:3917491] [MT] iPhoneConnect: 📱<DVTiOSDevice (0x7f92741aaa60), Gabor’s iPhone, iPhone, 13.1.1 (17A854), 8834ee25a18ad7cf364aa323903f6140c404335e> == END: Underlying device preparation errors ==

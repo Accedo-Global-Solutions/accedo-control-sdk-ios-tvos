@@ -17,7 +17,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "222"
             endingLineNumber = "222"
-            landmarkName = "-assetForKey:onComplete:"
+            landmarkName = "-assetForKey:GID:onComplete:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

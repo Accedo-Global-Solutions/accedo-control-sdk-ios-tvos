@@ -376,9 +376,22 @@ static const NSUInteger kLogMaxErrorLength    = 112;
 
     NSURLSessionDataTask *task = nil;
 
-    task = [self.manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
-    {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
+
+
+
+
+
+
+    //task = [self.manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error)
+    //{
+
+    task = [self.manager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
+        //NSLog(@"upload: %f", uploadProgress.fractionCompleted);
+    } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
+        //NSLog(@"upload: %f", downloadProgress.fractionCompleted);
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
         {
             if (! error)
             {

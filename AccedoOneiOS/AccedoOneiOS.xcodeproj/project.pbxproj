@@ -107,6 +107,7 @@
 		0B4C4CAA57088B6440BCD1EE /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AccedoOneiOS/Libraries/AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		171617FD97E628A8F514CF4C /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = AccedoOneiOS/Libraries/PINCache/PINDiskCache.h; sourceTree = "<group>"; };
 		3946882FFF12E2619D3A5703 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = AccedoOneiOS/Libraries/PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		663D915AB55E916ED65102D1 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AccedoOneiOS/Libraries/AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		68E3006F8B63DC1681ABE7C0 /* PINCacheDependencies.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheDependencies.h; path = AccedoOneiOS/Libraries/Symbols/PINCacheDependencies.h; sourceTree = "<group>"; };
 		6D9FB648366CC9373FD24328 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AccedoOneiOS/Libraries/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		78ED5BBDF43B1B89BCDA55BA /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = AccedoOneiOS/Libraries/PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
@@ -221,6 +222,7 @@
 				0B4C4CAA57088B6440BCD1EE /* AFURLResponseSerialization.h */,
 				B2F52813B9A07BEA33EBCCB4 /* AFNetworking.h */,
 				9019A6B2A939F203E7A540DB /* AFHTTPSessionManager.h */,
+				663D915AB55E916ED65102D1 /* AFCompatibilityMacros.h */,
 			);
 			name = AFNetworking;
 			sourceTree = "<group>";

@@ -64,6 +64,7 @@ extern NSString * _Nonnull const AOApplicationStateMaintenance;
 
 @property (nonatomic, strong, readonly) NSString * _Nonnull accedoOneURL;
 @property (nonatomic, assign, readonly) NSTimeInterval requestTimeout;
+@property (nonatomic, assign, readonly) NSString * _Nullable sessionKey;
 
 
 @end
