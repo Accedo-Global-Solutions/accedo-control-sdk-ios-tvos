@@ -15,8 +15,8 @@
             timestampString = "566562872.991056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "-assetForKey:GID:onComplete:"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,7 +72,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - 6efe4a5fe4961a23"
+                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - be9a73672f1333d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -88,7 +88,7 @@
                   offsetFromSymbolStart = "102">
                </Location>
                <Location
-                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - 6efe4a5fe4961a23"
+                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - be9a73672f1333d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -104,7 +104,7 @@
                   offsetFromSymbolStart = "502">
                </Location>
                <Location
-                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - 6efe4a5fe4961a23"
+                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - be9a73672f1333d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -120,7 +120,7 @@
                   offsetFromSymbolStart = "569">
                </Location>
                <Location
-                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - 6efe4a5fe4961a23"
+                  uuid = "A08CAAF6-8551-43D1-BCB2-1EED885698FA - be9a73672f1333d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -136,6 +136,70 @@
                   offsetFromSymbolStart = "672">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD3722CF-A1F9-479D-90CD-87F8E820BBB7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Common/Cache/AOService+CacheController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-cacheResult:forRequest:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EA8259B-A2F0-4C3B-BEDC-8EC52FA89D1D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Common/AccedoOne.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
+            landmarkName = "-sendAuthenticatedGETRequest:queryParams:allowCache:onSuccess:failureBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BF955CD-C982-4D2E-AF58-551A53A13414"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Common/Cache/AOCacheHelper.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "+cacheKeyForMethod:parameters:pathParameters:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B680BF7-5B5E-4025-806F-A3E704C7B0DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Common/Cache/AOCacheHelper.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "+cacheKeyForMethod:parameters:pathParameters:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

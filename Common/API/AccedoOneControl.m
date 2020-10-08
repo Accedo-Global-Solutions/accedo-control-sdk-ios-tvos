@@ -217,6 +217,8 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
         return;
     }
 
+	NSString * cacheKey = [NSString stringWithFormat:@"-%@-%@-", key, gid];
+
     [self allAssetsForGID: gid  onComplete: ^(NSDictionary *allAssets, AOError *err) {
 
         if (allAssets) {
@@ -229,15 +231,15 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
             }
 
 
-            AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:key];
+            AORequestMetadata * request = [AORequestMetadata requestMetadataWithPath:assetPath queryParams:nil headerParams:nil cacheKey:cacheKey];
             request.cacheExpiration = self.assetCacheExpirationInterval ? self.assetCacheExpirationInterval : @(kAssetCacheTimeout);
             request.forceSendRequest = YES;
 
-            NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:key];
+            NSTimeInterval cacheTimeStamp = [self.assetCache creationDateForKey:cacheKey];
 
             //check cache, and add cache-controll header if necessary...
             if (cacheTimeStamp > 0) { //do not add "If-Modified-Since" if object not in cache (to avoid getting HTTP 304)
-                NSString *ifModifiedSinceDate = [self.service ifModifiedSinceDateForCachedObject:key cache:self.assetCache];
+                NSString *ifModifiedSinceDate = [self.service ifModifiedSinceDateForCachedObject:cacheKey cache:self.assetCache];
                 request.headerParameters = @{kCacheControllHeader : ifModifiedSinceDate};
             }
 
@@ -246,7 +248,7 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
                     completionBlock(responseObject, nil);
                 }
             } failure:^(AOError *error) {
-                id cachedObject = [self.assetCache objectForKey:key];
+                id cachedObject = [self.assetCache objectForKey:cacheKey];
 
                 if (error.code == 304 && cachedObject) { //Resource not modified(!): return it from cache!
                     if (completionBlock) {
@@ -259,7 +261,7 @@ static int const kAssetCacheTimeout         = 604800; //seconds (1 week)
                 }
             }];
         } else {
-            NSData * cachedResource = (NSData *)[self.assetCache objectForKey:key];
+            NSData * cachedResource = (NSData *)[self.assetCache objectForKey:cacheKey];
 
             if (completionBlock) {
                 completionBlock(cachedResource, cachedResource ? nil : [AOError errorWithMessage:@"Resource not in cache!"]);
