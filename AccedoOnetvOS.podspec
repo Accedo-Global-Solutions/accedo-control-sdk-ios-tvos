@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.license      = "Copyright © 2017 Accedo Broadband Inc. All rights reserved."
   s.authors      = "Accedo Broadband Inc."
   s.requires_arc = true
+  s.deprecated = true
   s.platform     = :tvos
   s.vendored_frameworks = 'Release/1.0.15/AccedoOnetvOS.framework'
   s.tvos.deployment_target  = "9.0"

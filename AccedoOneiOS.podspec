@@ -6,6 +6,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://appgrid.docs.apiary.io/#"
   s.license      = "Copyright © 2017 Accedo Broadband Inc. All rights reserved."
   s.authors      = "Accedo Broadband Inc."
+  s.deprecated = true
   s.requires_arc = true
   s.platform     = :ios
   s.vendored_frameworks = 'Release/1.0.15/AccedoOneiOS.framework'
