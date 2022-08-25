@@ -1,3 +1,7 @@
+# This library will be deprecated
+
+
+
 # Accedo One SDK for iOS and tvOS
 
 ```
